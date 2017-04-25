@@ -5,25 +5,19 @@
 }
 
 .popover {
+    font-size: 14pt;
+    width: 120px;
+    height: 50px;
     z-index: 9999;
     position: static;
-    left: 50px;
-    top: 50px;
-    
-}
-/*
-.popover {
-    font-size: 14pt;
-    width: 350px;
-    height: 200px;
-    z-index: 9999;
-    position: fixed;
     background: rgba(240, 173, 78, 1.0);
+    border-radius: 0 !important;
+    border: 0;
 }
 
 .popover.right .arrow:after {
     border-right-color: rgba(240, 173, 78, 1.0);
-}*/
+}
 
 .title-header {
     color: #FFFFFF;
