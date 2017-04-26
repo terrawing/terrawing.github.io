@@ -2,6 +2,39 @@
     .text-vertical-left .title-header {
         font-size: 3.0em;
     }
+    
+    .btn-responsive {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0px;
+    }
+    
+    .regular-text-white {
+        font-family: inherit;
+        line-height: 14pt;
+        font-size: 12pt;
+        color: white;
+    }
+    
+    .regular-text-grey {
+        font-family: inherit;
+        line-height: 14pt;
+        font-size: 12pt;
+        color: rgba(24,24,24, 0.9)
+    }
+}
+
+@media only screen and (min-width: 640px) {
+    .skill-list {
+        column-count: 2;
+        padding: 0px;
+    }
+
+}
+
+.header-buttons {
+    margin-right: 2em;
 }
 
 .popover {
@@ -26,4 +59,62 @@
 .title-subtext {
     color: rgb(232, 232, 232);
     line-height: 35px;
+}
+
+.regular-title-orange {
+    color: rgba(240, 173, 78, 1.0);
+    font-weight: bold;
+}
+
+.regular-title-white {
+    color: white;
+    font-weight: bold;
+}
+
+.regular-text-white {
+    font-family: inherit;
+    line-height: 21pt;
+    color: white;
+}
+
+.regular-text-grey {
+    font-family: inherit;
+    line-height: 21pt;
+    color: rgba(24,24,24, 0.9)
+}
+
+
+/* tags sliding */
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
 }

@@ -10,6 +10,14 @@ body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+p {
+    font-size: 15pt;
+}
+
+li.list {
+    font-size: 15pt;
+    line-height: 32pt;
+}
 
 .text-vertical-left {
     display: table-cell;
@@ -18,6 +26,13 @@ body {
     padding-top: 35%;
     /*padding-left: 100px;
     padding-bottom: 100px;*/
+}
+
+.text-vertical-topleft {
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 4%;
 }
 
 .text-vertical-left h1 {
@@ -33,7 +48,8 @@ body {
     border-radius: 0;
     /*color: #fff;*/
     background-color: rgba(0,0,0,0.4);
-    color: rgb(119, 119, 119);
+    /*color: rgb(119, 119, 119);*/
+    color: rgb(232, 232, 232);
 }
 
 .btn-dark:hover,
@@ -71,7 +87,7 @@ hr.small {
     width: 100%;
     height: 100%;
     /*background: url(../images/garden.jpg) no-repeat center center scroll;*/
-    background: linear-gradient(rgba(20,20,20, 0.9), rgba(20,20,20, .5)), url(../images/garden.jpg) no-repeat center center fixed;
+    background: linear-gradient(rgba(24,24,24, 0.9), rgba(24,24,24, .5)), url(../images/garden.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -85,6 +101,16 @@ hr.small {
     padding: 50px 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(24,24,24, 0.9);
+}
+
+/* skill */
+
+.skill {
+    padding: 50px 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(240, 173, 78, 1.0);
 }
 
 /* Services */
