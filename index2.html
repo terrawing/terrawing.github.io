@@ -14,14 +14,17 @@
         <!-- Scrolling Nav JavaScript -->
         <script src="js/jquery.easing.min.js"></script>
         <script src="js/scrolling-nav.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/modernizer.js"></script>
         <!-- CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/theme.css">       
         <link rel="stylesheet" href="css/scrolling-nav.css">
+        <link rel="stylesheet" href="css/timeline.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     </head>
-    <body class="homespacer" data-content="">
+    <body class="homespacer">
         <title>William Wong's Portfolio</title>
         <!-- Navigation -->
         <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><span class="glyphicon glyphicon-menu-hamburger"></a>
@@ -33,22 +36,22 @@
                 </li>
                 <li><div>&nbsp;</div></li>
                 <li>
-                    <a class="page-scroll icon-links" id="popover" href="#top" title="Home" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-home"></span></a>
+                    <a class="page-scroll icon-links" id="popoverhome" onmouseout="runthis()" href="#top" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-home"></span></a>
                 </li>
                 <li>
-                    <a class="page-scroll icon-links" href="#about" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-user"></span></a>
+                    <a class="page-scroll icon-links" id="popoverabout" href="#about" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-user"></span></a>
                 </li>
                 <li>
-                    <a class="page-scroll icon-links" href="#prototype" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-blackboard"></span></a>
+                    <a class="page-scroll icon-links" id="popoverprototype" href="#prototype" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-blackboard"></span></a>
                 </li>
                 <li>
-                    <a class="page-scroll icon-links" href="#portfolio" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-picture"></span></a>
+                    <a class="page-scroll icon-links" id="popoverdesign" href="#design" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-picture"></span></a>
                 </li>
                 <li>
-                    <a class="page-scroll icon-links" href="#coding" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-wrench"></span></a>
+                    <a class="page-scroll icon-links" id="popovercoding" href="#coding" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-wrench"></span></a>
                 </li>
                 <li>
-                    <a class="page-scroll icon-links" href="#contact" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-phone"></span></a>
+                    <a class="page-scroll icon-links" id="popovercontact" href="#contact" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-phone"></span></a>
                 </li>
             </ul>
         </nav>
@@ -62,7 +65,12 @@
                     <h1 class="title-header">Delivering the feel of simplicity.</h1>
                     <h3 class="title-subtext">Hello, my name is William Wong and I am a freelance designer specializing in user experience, graphic design and web development.</h3>
                     <br>
-                    <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#about" class="btn btn-dark btn-lg btn-responsive header-buttons page-scroll">Find Out More</a>
+                            <a href="#design" class="btn btn-dark btn-lg btn-responsive header-buttons page-scroll">See My Work</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,17 +78,185 @@
     
     <!-- About -->
     <section id="about" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+        <div class="container-fluid">
+            <div class="row slideanim">
+                <div class="col-lg-1"></div>
+                <div class="text-vertical-topleft col-lg-8">
+                    <h2 class="regular-title-orange">Nice to meet you!</h2>
+                    <br>
+                    <section class="cd-horizontal-timeline">
+	<div class="timeline">
+		<div class="events-wrapper">
+			<div class="events">
+				<ol>
+					<li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>
+					<li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
+					<li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
+					<li><a href="#0" data-date="20/05/2014">20 May</a></li>
+					<li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
+					<li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
+					<li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
+					<li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
+					<li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
+					<li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
+					<li><a href="#0" data-date="03/03/2015">3 Mar</a></li>
+				</ol>
+
+				<span class="filling-line" aria-hidden="true"></span>
+			</div> <!-- .events -->
+		</div> <!-- .events-wrapper -->
+			
+		<ul class="cd-timeline-navigation">
+			<li><a href="#0" class="prev inactive">Prev</a></li>
+			<li><a href="#0" class="next">Next</a></li>
+		</ul> <!-- .cd-timeline-navigation -->
+	</div> <!-- .timeline -->
+
+	<div class="events-content">
+		<ol>
+			<li class="selected" data-date="16/01/2014">
+				<h2>Horizontal Timeline</h2>
+				<em>January 16th, 2014</em>
+				<p>	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+				</p>
+			</li>
+
+			<li data-date="28/02/2014">
+				<h2>Event title here</h2>
+				<em>February 28th, 2014</em>
+				<p>	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+				</p>
+			</li>
+
+			<li data-date="20/04/2014">
+				<h2>Event title here</h2>
+				<em>March 20th, 2014</em>
+				<p>	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+				</p>
+			</li>
+
+			<li data-date="20/05/2014">
+				<h2>Event title here</h2>
+				<em>May 20th, 2014</em>
+				<p>	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+				</p>
+			</li>
+
+			<li data-date="09/07/2014">
+				<h2>Event title here</h2>
+				<em>July 9th, 2014</em>
+				<p>	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+				</p>
+			</li>
+
+			<li data-date="30/08/2014">
+				<h2>Event title here</h2>
+				<em>August 30th, 2014</em>
+				<p>	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+				</p>
+			</li>
+
+			<li data-date="15/09/2014">
+				<h2>Event title here</h2>
+				<em>September 15th, 2014</em>
+				<p>	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+				</p>
+			</li>
+
+			<li data-date="01/11/2014">
+				<h2>Event title here</h2>
+				<em>November 1st, 2014</em>
+				<p>	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+				</p>
+			</li>
+
+			<li data-date="10/12/2014">
+				<h2>Event title here</h2>
+				<em>December 10th, 2014</em>
+				<p>	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+				</p>
+			</li>
+
+			<li data-date="19/01/2015">
+				<h2>Event title here</h2>
+				<em>January 19th, 2015</em>
+				<p>	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+				</p>
+			</li>
+
+			<li data-date="03/03/2015">
+				<h2>Event title here</h2>
+				<em>March 3rd, 2015</em>
+				<p>	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+				</p>
+			</li>
+		</ol>
+	</div> <!-- .events-content -->
+</section>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#skill" class="btn btn-dark btn-lg btn-responsive header-buttons page-scroll slideanim">Check my skills</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
+    
+    <!-- Skill -->
+    <section id="skill" class="skill">
+        <div class="container-fluid slideanim">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="text-vertical-topleft col-lg-2">
+                    <h2 class="regular-title-white">Skills</h2>
+                </div>
+                <div class="col-lg-5" style="padding-top: 4%;">
+                    <ul class="regular-title-grey skill-list">
+                        <li class="list">Web Development</li>
+                        <li class="list">Mobile Development</li>
+                        <li class="list">Adobe Suite</li>
+                        <li class="list">Prototyping Tools</li>
+                        <li class="list">Corporate Identity</li>
+                        <li class="list">Brand Strategy</li>
+
+                        <li class="list">Sketching & Drawing</li>
+                        <li class="list">Microsoft Office</li>
+                        <li class="list">Teamwork</li>
+                        <li class="list">Personal Management</li>
+                        <li class="list">Communication</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-8">
+                    <p>Check out my <a class="text-link" target="blank" href="https://www.linkedin.com/in/williamwong20">Linkedin profile</a> or view my <a class="text-link" target="blank" href=#">resume</a> for additional skills.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    
+    <footer>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg page-scroll"><span class="glyphicon glyphicon-menu-up"></span></a>
+    </footer>
         
     </body>
 </html>
