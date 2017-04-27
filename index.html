@@ -166,7 +166,34 @@
                     <div class="background-box">
                         <div class="row">
                             <div class="col-md-12">
+                                <ul class="nav nav-pills nav-padding">
+                                    <li class="active"><a class="text-link" data-toggle="pill" href="#home">Home</a></li>
+                                    <li><a class="text-link" data-toggle="pill" href="#menu1">Menu 1</a></li>
+                                    <li><a class="text-link" data-toggle="pill" href="#menu2">Menu 2</a></li>
+                                    <li><a class="text-link" data-toggle="pill" href="#menu3">Menu 3</a></li>
+                                </ul>
                                 
+                                <div class="tab-content">
+                                    <div id="home" class="tab-pane fade in active">
+                                        <ul class="list-inline">
+                                            <li data-toggle="modal" data-target="#prototypeModal"><a href="#myGallery" data-slide-to="0" class="text-link"><img class="img-thumbnail img-gallery" src="http://lorempixel.com/200/133/nature/1"><br>Caption</a></li>
+                                            <li data-toggle="modal" data-target="#prototypeModal"><a href="#myGallery" data-slide-to="1" class="text-link"><img class="img-thumbnail img-gallery" src="http://lorempixel.com/200/133/nature/2"><br>Caption</a></li>
+                                            <li data-toggle="modal" data-target="#prototypeModal"><a href="#myGallery" data-slide-to="2" class="text-link"><img class="img-thumbnail img-gallery" src="http://lorempixel.com/200/133/nature/3"><br>Caption</a></li>
+                                            <li data-toggle="modal" data-target="#prototypeModal"><a href="#myGallery" data-slide-to="3" class="text-link"><img class="img-thumbnail img-gallery" src="http://lorempixel.com/200/133/nature/4"><br>Caption</a></li>
+                                            <li data-toggle="modal" data-target="#prototypeModal"><a href="#myGallery" data-slide-to="4" class="text-link"><img class="img-thumbnail img-gallery" src="http://lorempixel.com/200/133/nature/5"><br>Caption</a></li>
+                                            <li data-toggle="modal" data-target="#prototypeModal"><a href="#myGallery" data-slide-to="5" class="text-link"><img class="img-thumbnail img-gallery" src="http://lorempixel.com/200/133/nature/6"><br>Caption</a></li>
+                                            <!--end of thumbnails--> 
+                                        </ul>
+                                    </div>
+                                    <div id="menu1" class="tab-pane fade">
+                                        <ul class="list-inline">
+                                            <li data-toggle="modal" data-target="#prototypeModal2"><a href="#myGallery2" data-slide-to="0" class="text-link"><img class="img-thumbnail img-gallery" src="http://lorempixel.com/200/133/nature/1"><br>Caption</a></li>
+                                            <li data-toggle="modal" data-target="#prototypeModal2"><a href="#myGallery2" data-slide-to="1" class="text-link"><img class="img-thumbnail img-gallery" src="http://lorempixel.com/200/133/nature/2"><br>Caption</a></li>
+                                            <li data-toggle="modal" data-target="#prototypeModal2"><a href="#myGallery2" data-slide-to="2" class="text-link"><img class="img-thumbnail img-gallery" src="http://lorempixel.com/200/133/nature/3"><br>Caption</a></li>
+                                            <!--end of thumbnails--> 
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -176,8 +203,83 @@
         </div>
         <!-- /.container -->
     </section>
-
     
+    <!-- Prototype Modal -->
+    <div class="modal fade" id="prototypeModal" tabindex='-1'>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="regular-title-white">Rough Ideas</h3>
+                </div>
+                <div class="modal-body">
+                    <!--begin carousel-->
+                    <div id="myGallery" class="carousel slide" data-interval="true">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="images/garden.jpg" alt="item0">
+                                <div class="carousel-caption">
+                                    <p>LA is always so much fun!</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="http://lorempixel.com/600/400/nature/2" alt="item1">
+                            </div>
+                            <div class="item">
+                                <img src="http://lorempixel.com/600/400/nature/3" alt="item2">
+                            </div>
+                            <div class="item">
+                                <img src="http://lorempixel.com/600/400/nature/4" alt="item3">
+                            </div>
+                            <div class="item">
+                                <img src="http://lorempixel.com/600/400/nature/5" alt="item4">
+                            </div>
+                            <div class="item">
+                                <img src="http://lorempixel.com/600/400/nature/6" alt="item5">
+                            </div>
+                        </div><!--end carousel-inner-->
+                        <!--Begin Previous and Next buttons-->
+                        <a class="left carousel-control" href="#myGallery" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myGallery" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </div>
+                    <!--end carousel-->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="prototypeModal2" tabindex='-1'>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="regular-title-white">Rough Sketches</h3>
+                </div>
+                <div class="modal-body">
+                    <!--begin carousel-->
+                    <div id="myGallery2" class="carousel slide" data-interval="true">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="images/garden.jpg" alt="item0">
+                                <div class="carousel-caption">
+                                    <p>LA is always so much fun!</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="http://lorempixel.com/600/400/nature/2" alt="item1">
+                            </div>
+                            <div class="item">
+                                <img src="http://lorempixel.com/600/400/nature/3" alt="item2">
+                            </div>
+                        </div><!--end carousel-inner-->
+                        <!--Begin Previous and Next buttons-->
+                        <a class="left carousel-control" href="#myGallery2" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myGallery2" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    </div>
+                    <!--end carousel-->
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <a id="to-top" href="#top" class="btn btn-dark btn-lg page-scroll"><span class="glyphicon glyphicon-menu-up"></span></a>
     </footer>

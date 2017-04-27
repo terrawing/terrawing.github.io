@@ -25,9 +25,19 @@ p {
     filter: none;
 }
 
-.img-responsive-mod {
-    max-width: 100%;
-    height: auto;
+.nav-padding {
+    padding-left: 5px;
+}
+
+/* Change color of the active pill */
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    background-color: rgba(240, 173, 78, 1.0);
+    color: rgb(24, 24, 24);
+    border-radius: 0 0 0 0;
+}
+
+.nav-pills > li > a, .nav-pills > li > a:focus, .nav-pills > li > a:hover {
+    border-radius: 0 0 0 0;
 }
 
 .background-box {
@@ -35,12 +45,16 @@ p {
     background-color: rgba(24,24,24,0.8);
     padding: 20px;
     /*margin-left: 9%;*/
-    margin-right: 20%;
+    /*margin-right: 20%;*/
 }
 
 li.list {
     font-size: 15pt;
     line-height: 32pt;
+}
+
+.list-inline > li {
+    padding: 10px;
 }
 
 a.text-link {
@@ -125,18 +139,18 @@ hr.small {
 /* About */
 
 .about {
-    padding: 50px 0;
+    padding: 50px 0 120px 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: rgba(24,24,24, 0.9);
 }
 
 /* skill */
 
 .skill {
-    padding: 50px 0;
+    padding: 50px 0 120px 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     /*background-color: rgba(240, 173, 78, 1.0);*/
     background-color: rgb(232, 232, 232);
 }
@@ -144,8 +158,9 @@ hr.small {
 /* Prototype */
 .prototype {
     position: relative;
+    padding: 50px 0 120px 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background: linear-gradient(rgba(24,24,24, 0.9), rgba(24,24,24, .5)), url(../images/blueprint.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
