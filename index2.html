@@ -11,17 +11,15 @@
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
         <script src="js/menutoggle.js"></script>
+        <script src="js/modal.js"></script>
         <!-- Scrolling Nav JavaScript -->
         <script src="js/jquery.easing.min.js"></script>
         <script src="js/scrolling-nav.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/modernizer.js"></script>
         <!-- CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/theme.css">       
+        <link rel="stylesheet" href="css/themeTest.css">       
         <link rel="stylesheet" href="css/scrolling-nav.css">
-        <link rel="stylesheet" href="css/timeline.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body class="homespacer">
@@ -36,7 +34,7 @@
                 </li>
                 <li><div>&nbsp;</div></li>
                 <li>
-                    <a class="page-scroll icon-links" id="popoverhome" onmouseout="runthis()" href="#top" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-home"></span></a>
+                    <a class="page-scroll icon-links" id="popoverhome" href="#top" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-home"></span></a>
                 </li>
                 <li>
                     <a class="page-scroll icon-links" id="popoverabout" href="#about" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-user"></span></a>
@@ -68,7 +66,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <a href="#about" class="btn btn-dark btn-lg btn-responsive header-buttons page-scroll">Find Out More</a>
-                            <a href="#design" class="btn btn-dark btn-lg btn-responsive header-buttons page-scroll">See My Work</a>
+                            <a href="#desigsn" class="btn btn-dark btn-lg btn-responsive header-buttons page-scroll">See My Work</a>
                         </div>
                     </div>
                 </div>
@@ -81,172 +79,100 @@
         <div class="container-fluid">
             <div class="row slideanim">
                 <div class="col-lg-1"></div>
-                <div class="text-vertical-topleft col-lg-8">
-                    <h2 class="regular-title-orange">Nice to meet you!</h2>
-                    <br>
-                    <section class="cd-horizontal-timeline">
-	<div class="timeline">
-		<div class="events-wrapper">
-			<div class="events">
-				<ol>
-					<li><a href="#0" data-date="16/01/2014" class="selected">16 Jan</a></li>
-					<li><a href="#0" data-date="28/02/2014">28 Feb</a></li>
-					<li><a href="#0" data-date="20/04/2014">20 Mar</a></li>
-					<li><a href="#0" data-date="20/05/2014">20 May</a></li>
-					<li><a href="#0" data-date="09/07/2014">09 Jul</a></li>
-					<li><a href="#0" data-date="30/08/2014">30 Aug</a></li>
-					<li><a href="#0" data-date="15/09/2014">15 Sep</a></li>
-					<li><a href="#0" data-date="01/11/2014">01 Nov</a></li>
-					<li><a href="#0" data-date="10/12/2014">10 Dec</a></li>
-					<li><a href="#0" data-date="19/01/2015">29 Jan</a></li>
-					<li><a href="#0" data-date="03/03/2015">3 Mar</a></li>
-				</ol>
-
-				<span class="filling-line" aria-hidden="true"></span>
-			</div> <!-- .events -->
-		</div> <!-- .events-wrapper -->
-			
-		<ul class="cd-timeline-navigation">
-			<li><a href="#0" class="prev inactive">Prev</a></li>
-			<li><a href="#0" class="next">Next</a></li>
-		</ul> <!-- .cd-timeline-navigation -->
-	</div> <!-- .timeline -->
-
-	<div class="events-content">
-		<ol>
-			<li class="selected" data-date="16/01/2014">
-				<h2>Horizontal Timeline</h2>
-				<em>January 16th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="28/02/2014">
-				<h2>Event title here</h2>
-				<em>February 28th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="20/04/2014">
-				<h2>Event title here</h2>
-				<em>March 20th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="20/05/2014">
-				<h2>Event title here</h2>
-				<em>May 20th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="09/07/2014">
-				<h2>Event title here</h2>
-				<em>July 9th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="30/08/2014">
-				<h2>Event title here</h2>
-				<em>August 30th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="15/09/2014">
-				<h2>Event title here</h2>
-				<em>September 15th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="01/11/2014">
-				<h2>Event title here</h2>
-				<em>November 1st, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="10/12/2014">
-				<h2>Event title here</h2>
-				<em>December 10th, 2014</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="19/01/2015">
-				<h2>Event title here</h2>
-				<em>January 19th, 2015</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-
-			<li data-date="03/03/2015">
-				<h2>Event title here</h2>
-				<em>March 3rd, 2015</em>
-				<p>	
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-			</li>
-		</ol>
-	</div> <!-- .events-content -->
-</section>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a href="#skill" class="btn btn-dark btn-lg btn-responsive header-buttons page-scroll slideanim">Check my skills</a>
+                <div class="background-box">
+                    <div class="text-vertical-topleft col-lg-10">                      
+                        <h2 class="regular-title-orange">Nice to meet you!</h2>
+                        <br>
+                        <p class="regular-text-white">I am a designer from the Toronto that started doing graphic design since September 2005 and computer programming in January 2011. I currently graduated at Seneca College majoring in Bachelor of Software Development.</p>
+                        <p class="regular-text-white">I have designed various promotional materials for many companies to advertise their products. During my time in school, I also have gained experience in both front and back end web development. Recently, I have acquired knowledge on both User Experience designs and human factors. With these I am able to create personas, conduct human computer interaction research and create low and high fidelity sketches.</p>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a id="timelineBtn" class="btn btn-dark btn-lg btn-responsive header-buttons">View Timeline</a>
+                                <a href="#skill" class="btn btn-dark btn-lg btn-responsive header-buttons page-scroll">Check My Skills</a>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- /.background-box -->
             </div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
     
+    <!-- Timeline Modal -->
+    <div class="modal fade" id="timelineModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="regular-title-white">Infographic Timeline of William Wong</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Click image to open in new window</p>
+                    <a href="images/infographic-timeline-horizontal.jpg" target="_blank"><img class="img-responsive" src="images/infographic-timeline-horizontal.jpg" alt="William Timeline"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Skill -->
     <section id="skill" class="skill">
         <div class="container-fluid slideanim">
             <div class="row">
-                <div class="col-lg-1"></div>
-                <div class="text-vertical-topleft col-lg-2">
-                    <h2 class="regular-title-white">Skills</h2>
+                <div class="background-box">
+                    <div class="col-lg-1"></div>
+                    <div class="text-vertical-topleft col-lg-2">
+                        <h2 class="regular-title-orange">Skills</h2>
+                    </div>
+                    <div class="col-lg-8 col-lg-offset-1" style="padding-top: 4%;">
+                        <ul class="regular-title-grey skill-list">
+                            <li class="list">Web Development</li>
+                            <li class="list">Mobile Development</li>
+                            <li class="list">Adobe Suite</li>
+                            <li class="list">Prototyping Tools</li>
+                            <li class="list">Corporate Identity</li>
+                            <li class="list">Brand Strategy</li>
+                            <li class="list">Sketching & Drawing</li>
+                            <li class="list">Microsoft Office</li>
+                            <li class="list">Teamwork</li>
+                            <li class="list">Personal Management</li>
+                            <li class="list">Communication</li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-8">
+                            <br>
+                            <p>Check out my <a class="text-link" target="_blank" href="https://www.linkedin.com/in/williamwong20">Linkedin profile</a> or view my <a class="text-link" target="blank" href=#">resume</a> for additional skills.</p>
+                        </div>
+                    </div>    
                 </div>
-                <div class="col-lg-5" style="padding-top: 4%;">
-                    <ul class="regular-title-grey skill-list">
-                        <li class="list">Web Development</li>
-                        <li class="list">Mobile Development</li>
-                        <li class="list">Adobe Suite</li>
-                        <li class="list">Prototyping Tools</li>
-                        <li class="list">Corporate Identity</li>
-                        <li class="list">Brand Strategy</li>
-
-                        <li class="list">Sketching & Drawing</li>
-                        <li class="list">Microsoft Office</li>
-                        <li class="list">Teamwork</li>
-                        <li class="list">Personal Management</li>
-                        <li class="list">Communication</li>
-                    </ul>
-                </div>
+                <!-- /.background-box -->
             </div>
-            <br>
-            <div class="row">
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+    
+    <!-- Prototype -->
+    <section id="prototype" class="prototype">
+        <div class="container-fluid">
+            <div class="row slideanim">
                 <div class="col-lg-1"></div>
-                <div class="col-lg-8">
-                    <p>Check out my <a class="text-link" target="blank" href="https://www.linkedin.com/in/williamwong20">Linkedin profile</a> or view my <a class="text-link" target="blank" href=#">resume</a> for additional skills.</p>
+                <div class="text-vertical-topleft col-lg-8">
+                    <h2 class="regular-title-orange">Sketches and prototypes</h2>
+                    <br>
+                    <p class="regular-text-white">I am a designer from the Toronto that started doing graphic design since September 2005 and computer programming in January 2011. I currently graduated at Seneca College majoring in Bachelor of Software Development.</p>
+                    <p class="regular-text-white">I have designed various promotional materials for many companies to advertise their products. During my time in school, I also have gained experience in both front and back end web development. Recently, I have acquired knowledge on both User Experience designs and human factors. With these I am able to create personas, conduct human computer interaction research and create low and high fidelity sketches.</p>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a id="timelineBtn" class="btn btn-dark btn-lg btn-responsive header-buttons">View Timeline</a>
+                            <a href="#skill" class="btn btn-dark btn-lg btn-responsive header-buttons page-scroll">Check My Skills</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- /.row -->

@@ -13,6 +13,11 @@ $(window).scroll(function() {
 $(function() {
     $(document).on('click', 'a.page-scroll', function(event) {
         var $anchor = $(this);
+        console.log($anchor);
+        if (!$anchor.length) {
+            return;
+        }
+        
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top
         }, 1500, 'easeInOutExpo');
@@ -26,7 +31,7 @@ $(window).scroll(function() {
 
     var winTop = $(window).scrollTop();
     if (pos < winTop + 600) {
-        console.log("Sliding...");
+
       $(this).addClass("slide");
     }
   });

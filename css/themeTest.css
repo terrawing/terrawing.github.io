@@ -5,6 +5,13 @@ body {
     width: 100%;
     height: 100%;
     padding-right: 0 !important;
+    position: relative;
+    /* background: linear-gradient(rgba(24,24,24, 0.8), rgba(24,24,24, 0.8)), url(../images/blueprint.jpg) no-repeat center center fixed; */
+    background: url(../images/blueprint.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;   
 }
 
 body {
@@ -15,27 +22,18 @@ p {
     font-size: 15pt;
 }
 
-.img-gallery {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
-
-.img-gallery:hover {
-    -webkit-filter: none; /* Safari 6.0 - 9.0 */
-    filter: none;
-}
-
-.img-responsive-mod {
-    max-width: 100%;
-    height: auto;
-}
-
 .background-box {
     display: inline-block;
     background-color: rgba(24,24,24,0.8);
-    padding: 20px;
-    /*margin-left: 9%;*/
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 45px;
+    margin-left: 9%;
     margin-right: 20%;
+}
+
+.background-box-grid {
+    background-color: rgba(24,24,24,0.8);
 }
 
 li.list {
@@ -113,45 +111,31 @@ hr.small {
     display: table;
     position: relative;
     width: 100%;
-    height: 100%;
-    /*background: url(../images/garden.jpg) no-repeat center center scroll;*/
-    background: linear-gradient(rgba(24,24,24, 0.9), rgba(24,24,24, .5)), url(../images/garden.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;   
+    height: 100%;  
 }
 
 /* About */
 
 .about {
-    padding: 50px 0;
+    padding: 100px 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(24,24,24, 0.9);
 }
 
 /* skill */
 
 .skill {
-    padding: 50px 0;
+    padding: 100px 0;
     width: 100%;
     height: 100%;
-    /*background-color: rgba(240, 173, 78, 1.0);*/
-    background-color: rgb(232, 232, 232);
 }
 
-/* Prototype */
+/* Prototype */ 
 .prototype {
     position: relative;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(24,24,24, 0.9), rgba(24,24,24, .5)), url(../images/blueprint.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;   
-}
+    height: 100%;  
+}*
 
 /* Services */
 

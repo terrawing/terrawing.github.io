@@ -11,14 +11,17 @@
         <!-- Bootstrap Core JavaScript -->
         <script src="js/bootstrap.min.js"></script>
         <script src="js/menutoggle.js"></script>
+        <script src="js/modal.js"></script>
         <!-- Scrolling Nav JavaScript -->
         <script src="js/jquery.easing.min.js"></script>
         <script src="js/scrolling-nav.js"></script>
+        
         <!-- CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/theme.css">       
         <link rel="stylesheet" href="css/scrolling-nav.css">
+
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body class="homespacer">
@@ -33,7 +36,7 @@
                 </li>
                 <li><div>&nbsp;</div></li>
                 <li>
-                    <a class="page-scroll icon-links" id="popoverhome" onmouseout="runthis()" href="#top" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-home"></span></a>
+                    <a class="page-scroll icon-links" id="popoverhome" href="#top" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-home"></span></a>
                 </li>
                 <li>
                     <a class="page-scroll icon-links" id="popoverabout" href="#about" onclick=$("#menu-close").click();><span class="glyphicon glyphicon-user"></span></a>
@@ -82,11 +85,11 @@
                     <h2 class="regular-title-orange">Nice to meet you!</h2>
                     <br>
                     <p class="regular-text-white">I am a designer from the Toronto that started doing graphic design since September 2005 and computer programming in January 2011. I currently graduated at Seneca College majoring in Bachelor of Software Development.</p>
-                    <p class="regular-text-white">I have been designing various promotional materials for many companies such as trade shows items, business promotion or for companies to advertise their products. During my time in school, I also have gained experience in doing both front and back end web development. Recently, I have acquired knowledge and understanding on both User Experience designs and human factors. With these I am able to create personas, do human computer interaction resrearch and designing both low and high fidelity sketches.</p>
+                    <p class="regular-text-white">I have designed various promotional materials for many companies to advertise their products. During my time in school, I also have gained experience in both front and back end web development. Recently, I have acquired knowledge on both User Experience designs and human factors. With these I am able to create personas, conduct human computer interaction research and create low and high fidelity sketches.</p>
                     <br>
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="#" class="btn btn-dark btn-lg btn-responsive header-buttons page-scroll">View Timeline</a>
+                            <a id="timelineBtn" class="btn btn-dark btn-lg btn-responsive header-buttons">View Timeline</a>
                             <a href="#skill" class="btn btn-dark btn-lg btn-responsive header-buttons page-scroll">Check My Skills</a>
                         </div>
                     </div>
@@ -97,13 +100,29 @@
         <!-- /.container -->
     </section>
     
+    <!-- Timeline Modal -->
+    <div class="modal fade" id="timelineModal" role="dialog" tabindex='-1'>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="regular-title-white">Infographic Timeline of William Wong</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Click image to open in new window</p>
+                    <a href="images/infographic-timeline-horizontal.jpg" target="_blank"><img class="img-responsive" src="images/infographic-timeline-horizontal.jpg" alt="William Timeline"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Skill -->
     <section id="skill" class="skill">
         <div class="container-fluid slideanim">
             <div class="row">
                 <div class="col-lg-1"></div>
                 <div class="text-vertical-topleft col-lg-2">
-                    <h2 class="regular-title-white">Skills</h2>
+                    <h2 class="regular-title-orange">Skills</h2>
                 </div>
                 <div class="col-lg-5" style="padding-top: 4%;">
                     <ul class="regular-title-grey skill-list">
@@ -126,13 +145,38 @@
             <div class="row">
                 <div class="col-lg-1"></div>
                 <div class="col-lg-8">
-                    <p>Check out my <a class="text-link" target="blank" href="https://www.linkedin.com/in/williamwong20">Linkedin profile</a> or view my <a class="text-link" target="blank" href=#">resume</a> for additional skills.</p>
+                    <p>Check out my <a class="text-link" target="_blank" href="https://www.linkedin.com/in/williamwong20">Linkedin profile</a> or view my <a class="text-link" target="blank" href=#">resume</a> for additional skills.</p>
                 </div>
             </div>
             <!-- /.row -->
         </div>
         <!-- /.container -->
     </section>
+    
+    <!-- Prototype -->
+    <section id="prototype" class="prototype">
+        <div class="container-fluid">
+            <div class="row slideanim">
+                <div class="col-lg-1"></div>
+                <div class="text-vertical-topleft col-lg-8">
+                    <h2 class="regular-title-orange">Sketches and prototypes</h2>
+                    <br>
+                    <p class="regular-text-white">A gallery of my thinking process shown through rough sketches, drawings and low fidelity mockups.</p>
+                    <br>
+                    <div class="background-box">
+                        <div class="row">
+                            <div class="col-md-12">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
     
     <footer>
         <a id="to-top" href="#top" class="btn btn-dark btn-lg page-scroll"><span class="glyphicon glyphicon-menu-up"></span></a>
