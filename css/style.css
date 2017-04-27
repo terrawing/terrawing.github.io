@@ -44,6 +44,7 @@
 @media only screen and (min-width: 1024px) {
     .modal-dialog {
         width: 1024px;
+        height: auto;
     }
 }
 
@@ -60,6 +61,15 @@
     background-color: rgba(240, 173, 78, 1.0);
     text-align: left;
     border-radius: 5px 5px 0 0;
+}
+
+.carousel-inner > .item > .img-responsive {
+    width: 640px; /* This value will depend on what size you want for your loading image, let's say it's 50px */
+    height: 100%;
+    position: relative;
+    left: 10%;
+    margin-top:-25px; /* This needs to be half of the height */
+    margin-left:-25px; /* This needs to be half of the width */
 }
 
 .modal-open, .modal, .modal-open .no-jump {

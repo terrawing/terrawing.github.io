@@ -18,6 +18,8 @@ p {
 .img-gallery {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+    width: 180px;
+    height: auto;
 }
 
 .img-gallery:hover {
@@ -26,18 +28,23 @@ p {
 }
 
 .nav-padding {
-    padding-left: 5px;
+    padding-left: 15px;
 }
 
 /* Change color of the active pill */
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
-    background-color: rgba(240, 173, 78, 1.0);
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+    background-color: rgb(119, 119, 119);
     color: rgb(24, 24, 24);
     border-radius: 0 0 0 0;
 }
 
-.nav-pills > li > a, .nav-pills > li > a:focus, .nav-pills > li > a:hover {
+.nav-pills > li > a, .nav-pills > li > a:focus {
     border-radius: 0 0 0 0;
+}
+
+.nav-pills > li.active > a:hover, .nav-pills > li > a:hover {
+    background-color: rgba(240, 173, 78, 1.0);
+    color: rgb(24, 24, 24);
 }
 
 .background-box {
@@ -53,12 +60,17 @@ li.list {
     line-height: 32pt;
 }
 
+.list-inline-mod {
+    padding: 15px;
+}
+
 .list-inline > li {
     padding: 10px;
 }
 
 a.text-link {
     color: rgb(119, 119, 119);
+    font-weight: 400;
 }
 
 .text-vertical-left {
@@ -138,7 +150,7 @@ hr.small {
 
 /* About */
 
-.about {
+.about, .coding {
     padding: 50px 0 120px 0;
     width: 100%;
     height: auto;
@@ -147,7 +159,7 @@ hr.small {
 
 /* skill */
 
-.skill {
+.skill, .contact {
     padding: 50px 0 120px 0;
     width: 100%;
     height: auto;
@@ -168,47 +180,19 @@ hr.small {
     -o-background-size: cover;   
 }
 
-/* Services */
-
-.services {
-    padding: 50px 0;
-}
-
-.service-item {
-    margin-bottom: 30px;
-}
-
-/* Callout */
-
-.callout {
-    display: table;
+/* Portfolio */
+.design {
+    position: relative;
+    padding: 50px 0 120px 0;
     width: 100%;
-    height: 400px;
-    color: #fff;
-    background: url(../img/callout.jpg) no-repeat center center scroll;
+    height: auto;
+    background: linear-gradient(rgba(24,24,24, 0.9), rgba(24,24,24, .5)), url(../images/topviewdesk.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover;   
 }
 
-/* Portfolio */
-
-.portfolio {
-    padding: 50px 0;
-}
-
-.portfolio-item {
-    margin-bottom: 30px;
-}
-
-.img-portfolio {
-    margin: 0 auto;
-}
-
-.img-portfolio:hover {
-    opacity: 0.8;
-}
 
 /* Call to Action */
 
@@ -220,26 +204,14 @@ hr.small {
     margin: 10px;
 }
 
-/* Map */
-
-.map {
-    height: 500px;
-}
-
-@media(max-width:768px) {
-    .map {
-        height: 75%;
-    }
-}
-
-.map iframe {
-    pointer-events: none;
-}
 
 /* Footer */
 
 footer {
-    padding: 100px 0;
+    width: 100%;
+    height: auto;
+    background-color: rgb(232, 232, 232);
+    padding: 100px 0 100px 0;
 }
 
 #to-top {
