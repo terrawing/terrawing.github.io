@@ -73,6 +73,12 @@ a.text-link {
     font-weight: 400;
 }
 
+.text-vertical-center {
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+}
+
 .text-vertical-left {
     display: table-cell;
     text-align: left;
@@ -150,7 +156,7 @@ hr.small {
 
 /* About */
 
-.about, .coding {
+.about, .contact {
     padding: 50px 0 120px 0;
     width: 100%;
     height: auto;
@@ -159,7 +165,7 @@ hr.small {
 
 /* skill */
 
-.skill, .contact {
+.skill {
     padding: 50px 0 120px 0;
     width: 100%;
     height: auto;
@@ -180,6 +186,19 @@ hr.small {
     -o-background-size: cover;   
 }
 
+/* Coding */
+.coding {
+    position: relative;
+    padding: 50px 0 120px 0;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(24,24,24, 0.9), rgba(24,24,24, .5)), url(../images/codingbackground.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;   
+}
+
 /* Portfolio */
 .design {
     position: relative;
@@ -192,7 +211,6 @@ hr.small {
     background-size: cover;
     -o-background-size: cover;   
 }
-
 
 /* Call to Action */
 
@@ -211,7 +229,12 @@ footer {
     width: 100%;
     height: auto;
     background-color: rgb(232, 232, 232);
-    padding: 100px 0 100px 0;
+    padding: 30px 0 20px 0;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 10pt;
 }
 
 #to-top {
