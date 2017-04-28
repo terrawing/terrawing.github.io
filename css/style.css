@@ -23,7 +23,7 @@
         font-size: 14pt;
         color: rgba(24,24,24, 0.9)
     }
-}
+} 
 
 @media only screen and (min-width: 640px) {
     .skill-list {
@@ -37,9 +37,9 @@
     .carousel-inner > .item {
        padding-left: 120px;
        padding-right: 120px;
-    }
-
+    } 
 }
+
 
 @media only screen and (min-width: 1024px) {
     .modal-dialog {

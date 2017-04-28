@@ -247,7 +247,7 @@
                             </div>
                         </div><!--end carousel-inner-->
                         <!--Begin Previous and Next buttons-->
-                        <a class="left carousel-control" href="#myGallery" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myGallery" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a class="left carousel-control carousel-control.left" href="#myGallery" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control carousel-control.right" href="#myGallery" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
                     <!--end carousel-->
                 </div>
@@ -281,7 +281,7 @@
                             </div>
                         </div><!--end carousel-inner-->
                         <!--Begin Previous and Next buttons-->
-                        <a class="left carousel-control" href="#myGallery2" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myGallery2" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a class="left carousel-control carousel-control.left" href="#myGallery2" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control carousel-control.right" href="#myGallery2" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
                     <!--end carousel-->
                 </div>
@@ -318,7 +318,7 @@
                             </div>
                         </div><!--end carousel-inner-->
                         <!--Begin Previous and Next buttons-->
-                        <a class="left carousel-control" href="#myGallery3" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#myGallery3" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a class="left carousel-control carousel-control.left" href="#myGallery3" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control carousel-control.right" href="#myGallery3" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
                     <!--end carousel-->
                 </div>
@@ -427,7 +427,7 @@
                             </div>
                         </div><!--end carousel-inner-->
                         <!--Begin Previous and Next buttons-->
-                        <a class="left carousel-control" href="#corporateGallery" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#corporateGallery" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a class="left carousel-control carousel-control.left" href="#corporateGallery" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control carousel-control.right" href="#corporateGallery" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
                     <!--end carousel-->
                 </div>
@@ -446,10 +446,8 @@
                     <p class="regular-text-white">Visit my <a class="text-link" href="https://github.com/terrawing" target="_blank">Github account</a> to view my random codes from various programming languages used for sampling and testing. Below is just a random code for thanking you for visting my website.</p>
                     <br>
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="codebox">
-                                <script src="https://gist.github.com/terrawing/7f16aedf3250a36c54dcc5d9fc334aca.js"></script>
-                            </div>
+                        <div class="col-lg-12">
+                            <a id="codeBtn" class="btn btn-dark btn-lg btn-responsive header-buttons">View Code</a>  
                         </div>
                     </div>
                 </div>
@@ -458,6 +456,21 @@
         </div>
         <!-- /.container -->
     </section>
+    
+    <!-- Code Modal -->
+    <div class="modal fade" id="codeModal" role="dialog" tabindex='-1'>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="regular-title-white">Thank you code</h3>
+                </div>
+                <div class="modal-body">
+                    <script src="https://gist.github.com/terrawing/7f16aedf3250a36c54dcc5d9fc334aca.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Contact -->
     <section id="contact" class="contact">
