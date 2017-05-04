@@ -18,7 +18,7 @@ p {
 .img-gallery {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
-    width: 140px;
+    width: 100%;
     height: auto;
 }
 
@@ -28,7 +28,7 @@ p {
 }
 
 .nav-padding {
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 /* Change color of the active pill */
@@ -61,7 +61,11 @@ li.list {
 }
 
 .list-inline-mod {
-    padding: 15px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
 }
 
 .list-inline > li {

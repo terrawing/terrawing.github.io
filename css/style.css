@@ -64,12 +64,12 @@
 }
 
 .carousel-inner > .item > .img-responsive {
-    width: 640px; /* This value will depend on what size you want for your loading image, let's say it's 50px */
+    width: 100%; /* This value will depend on what size you want for your loading image, let's say it's 50px */
     height: 100%;
     position: relative;
-    left: 10%;
-    margin-top:-25px; /* This needs to be half of the height */
-    margin-left:-25px; /* This needs to be half of the width */
+    /*left: 10%;*/
+    /*margin-top:-25px; /* This needs to be half of the height */
+    /*margin-left:-25px; /* This needs to be half of the width */
 }
 
 .modal-open, .modal, .modal-open .no-jump {
