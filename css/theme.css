@@ -77,6 +77,12 @@ a.text-link {
     font-weight: 400;
 }
 
+a.modal-link {
+    color: rgb(119, 119, 119);
+    font-weight: 400;
+    font-size: 12pt;
+}
+
 .text-vertical-center {
     display: table-cell;
     text-align: left;
