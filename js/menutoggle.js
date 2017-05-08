@@ -20,6 +20,16 @@ $( document ).ready(function() {
             $('#popoverabout').popover('hide');
         }, 700);
     });
+    
+    //Tooltip Skill
+    $("#popoverskill").popover({ trigger: "hover", container: ".homespacer", delay: { show: "500", hide: "200" } });
+    $("#popoverskill").attr('data-content', 'Skills').data("bs.popover");
+    
+    $('#popoverskill').on('shown.bs.popover', function() {
+        setTimeout(function() {
+            $('#popoverskill').popover('hide');
+        }, 700);
+    });
       
     //Tooltip Prototype
     $("#popoverprototype").popover({ trigger: "hover", container: ".homespacer", delay: { show: "500", hide: "200" } });
