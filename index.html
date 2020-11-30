@@ -13,8 +13,126 @@
 </head>
 
 <body>
-    <h1>This is a test</h1>
-    <footer></footer>
+    <section id="id_MainWrapper">
+        <header>
+            <h1 class="sr-only" aria-labelledby="id_MainWrapper">William Wong Website - Home</h1>
+        </header>
+        <!-- Top Navigation Starts -->
+        <aside id="id_TopNavigationWrapper">
+            <header>
+                <h2 aria-labelledby="id_WilliamWongLogoImage">
+                    <span class="sr-only">William Wong Top Navigation</span>
+                    <a href="index.html" aria-label="Goes back to the home page of this site">
+                        <img role="link" id="id_WilliamWongLogoImage" src="./images/website/logo.png" alt="William Wong Logo" aria-label="Logo of the website"/>
+                    </a>
+                </h2>
+            </header>
+            <div class="hamburgermenu_area">
+                <a id="id_HamburgerLink" class="hamburgermenu_link" role="button" aria-pressed="false" aria-expanded="false" href="javascript:void(0);" onclick="accessibilityHamburgerMenu(event, true);">
+                    <ul class="hamburgermenu_bars">
+                        <li class="bar"></li>
+                        <li class="bar"></li>
+                        <li class="bar"></li>
+                    </ul>
+                </a>
+            </div>
+        </aside>
+        <!-- Top Navigation Ends -->
+
+        <!-- Navigation Popout Area Starts -->
+        <aside id="id_NavigationPopOutArea">
+            <header>
+                <h2 class="sr-only" aria-labelledby="id_NavigationPopOutArea">Navigation Menu</h2>
+            </header>
+            <nav id="id_NavSection" class="navigation_subsection" aria-label="primary navigation">
+                <ul class="navigation_links">
+                    <li>
+                        <a class="navigation_link" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="navigation_link" href="about.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="navigation_link" href="portfolio.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="navigation_link" href="contact.html">Home</a>
+                    </li>                    
+                </ul>
+            </nav>
+        </aside>
+        <!-- Navigation Popout Area Ends -->
+
+        <!-- Sub Body Sections Starts -->
+        <section id="id_SubSections">
+            <header>
+                <h2 class="sr-only" aria-labelledby="id_SubSections">Sub Sections</h2>
+            </header>
+
+            <!-- Home Sub section Starts -->
+            <section id="id_HomeSubSection">
+                <header>
+                    <h3 class="heading1" aria-labelledby="id_HomeSubSection">Welcome!</h3>
+                </header>
+                
+                <p>Hello, my name is William Wong and I welcome you to my portfolio website.</p>
+                <p>I am currently doing freelance and specializes in user experience, user interface design, graphic design and web development.</p>
+                <img src="/images/website/homeimg.jpg" alt="William Wong Photo" aria-label="Photo of William Wong" />
+                
+                <aside id="id_homeSidebar">
+                    <header>
+                        <h4 class="heading2" aria-labelledby="id_homeSidebar">Home</h4>
+                    </header>
+                    <hr class="fadeLine" />
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </aside>
+            </section>
+            <!-- Home Sub section Ends -->
+
+            <!-- Portfolio Sub section Starts -->
+            <section id="id_PortfolioSubSection">
+                <div>
+                    <header>
+                        <h3 class="heading2" aria-labelledby="id_PortfolioSubSection">Portfolio</h3>
+                    </header>
+                    <hr class="fadeLine" />
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <img src="/images/website/portfolioimg.jpg" alt="Portfolio Image" aria-label="Portfolio splash image" />
+            </section>
+            <!-- Portfolio Sub section Ends -->
+
+            <!-- About Sub section Starts -->
+            <section id="id_AboutSubSection">
+                <div>
+                    <header>
+                        <h3 class="heading2" aria-labelledby="id_AboutSubSection">About</h3>
+                    </header>
+                </div>
+                <img src="/images/website/aboutimg.jpg" alt="About Image" aria-label="About splash image" />
+            </section>
+            <!-- About Sub section Ends -->
+
+            <!-- Contact Sub section Starts -->
+            <section id="id_ContactSubSection">
+                <div>
+                    <header>
+                        <h3 class="heading2" aria-labelledby="id_ContactSubSection">Contact</h3>
+                    </header>
+                </div>
+                <img src="/images/website/contactimg.jpg" alt="Contact Image" aria-label="Contact splash image" />
+            </section>
+            <!-- Contact Sub section Ends -->
+            
+        </section>
+        <!-- Sub Body Sections Ends -->
+
+        <!-- Bottom Footer Starts -->
+        <footer>
+            <p>&#169; 2020 William Wong. All Rights Reserved.</p>
+        </footer>
+         <!-- Bottom Footer Ends -->
+    </section>
     <script src="js/scripts.js"></script>
 </body>
 </html>
