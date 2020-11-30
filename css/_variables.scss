@@ -1,0 +1,52 @@
+//*** Scss Variables ***//
+
+// Font Colors
+$fontColor01: #000;
+$fontColor02: #000;
+
+// Background Colors;
+$bgColor01: #FFF;
+
+// Font Sizes and Line Heights and Letter Spacimg
+$pFontSize: 1rem;
+$pLineHeight: 1.25rem;
+$pLetterSpacing: 0.025rem;
+$heading01FontSize: 2.25rem;
+$heading01LineHeight: 2.75rem;
+$heading01LetterSpacing: 0.025rem;
+
+// Font Weights
+$fontWeightNormal: 300;
+$fontWeightSemiBold: 400;
+$fontWeightBold: 600;
+
+// Font Style
+$fontStyleItalic: italic;
+
+// Margins / Paddings
+$margin: 1.5rem;
+$padding: 1.5rem;
+
+// Function container to hold CSS variables
+@mixin rootCSSVariables {
+    --font-color-1: #{$fontColor01};
+    --font-color-2: #{$fontColor02};
+
+    --background-color-1: #{$bgColor01};
+
+    --font-size-p: #{$pFontSize};
+    --font-lineheight-p: #{$pLineHeight};
+    --font-letterspacing-p: #{$pLetterSpacing};
+    --font-size-h1: #{$heading01FontSize};
+    --font-lineheight-h1: #{$heading01LetterSpacing};
+    --font-letterspacing-h1: #{$heading01LetterSpacing};
+
+    --font-weight-normal: #{$fontWeightNormal};
+    --font-weight-semibold: #{$fontWeightSemiBold};
+    --font-weight-bold: #{$fontWeightBold};
+
+    --font-style-italic: #{$fontStyleItalic};
+
+    --margin: #{$margin};
+    --padding: #{$padding};
+}
