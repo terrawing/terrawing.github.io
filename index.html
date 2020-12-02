@@ -19,31 +19,31 @@
             <h1 class="sr-only" aria-labelledby="id_MainWrapper">William Wong Website - Home</h1>
         </header>
 
-        <!-- Navigation Popout Area Starts -->
-        <aside id="id_NavigationPopOutArea">
-            <header>
-                <h2 class="sr-only" aria-labelledby="id_NavigationPopOutArea">Navigation Menu</h2>
-            </header>
-            <nav id="id_NavSection" class="navigation_subsection" aria-label="primary navigation">
-                <ul class="navigation_links">
-                    <li>
-                        <a class="navigation_link" href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class="navigation_link" href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a class="navigation_link" href="portfolio.html">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="navigation_link" href="contact.html">Contact</a>
-                    </li>                    
-                </ul>
-            </nav>
-        </aside>
-        <!-- Navigation Popout Area Ends -->
-
-        <div class="home_wrapper">  
+        <div class="home_wrapper">
+            <!-- Navigation Popout Area Starts -->
+            <aside id="id_NavigationPopOutArea">
+                <header class="sr-only">
+                    <h2 aria-labelledby="id_NavigationPopOutArea">Navigation Menu</h2>
+                </header>
+                <nav id="id_NavSection" class="navigation_subsection" aria-label="primary navigation">
+                    <ul class="navigation_links">
+                        <li>
+                            <a class="navigation_link maintext" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="navigation_link maintext" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="navigation_link maintext" href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="navigation_link maintext" href="contact.html">Contact</a>
+                        </li>                    
+                    </ul>
+                </nav>
+            </aside>
+            <!-- Navigation Popout Area Ends -->
+            
             <!-- Top Navigation Starts -->
             <aside id="id_TopNavigationWrapper">
                 <header>
@@ -74,66 +74,74 @@
 
                 <!-- Home Sub section Starts -->
                 <article id="id_HomeSubSection">
-                    <div>
-                        <header>
-                            <h3 class="heading2" aria-labelledby="id_HomeSubSection">Home</h3>
-                        </header>
-                        <hr class="fadeLine" />
-                        <p>Showcasing designs and developments from various sources.</p>
-                    </div>
-                    <aside id="id_homeSidebar">
-                        <header>
-                            <h4 class="heading1" aria-labelledby="id_homeSidebar">Welcome!</h4>
-                        </header>
+                    <div class="linkwrapper">
                         <div>
-                            <p>Hello, my name is William Wong and I welcome you to my portfolio website. <br /><br />I am currently doing freelance and specializes in user experience, user interface design, graphic design and web development.</p>
-                            <img src="./images/website/homeimg.jpg" alt="William Wong Photo" aria-label="Photo of William Wong" />
+                            <header>
+                                <h3 class="heading2" aria-labelledby="id_HomeSubSection">Home</h3>
+                            </header>
+                            <hr class="fadeLine" />
+                            <p>Showcasing designs and developments from various sources.</p>
                         </div>
-                    </aside>
+                        <aside id="id_homeSidebar">
+                            <header>
+                                <h4 class="heading1" aria-labelledby="id_homeSidebar">Welcome!</h4>
+                            </header>
+                            <div>
+                                <p class="maintext">Hello, my name is William Wong and I welcome you to my portfolio website. <br /><br />I am currently doing freelance and specializes in user experience, user interface design, graphic design and web development.</p>
+                                <img src="./images/website/homeimg.jpg" alt="William Wong Photo" aria-label="Photo of William Wong" />
+                            </div>
+                        </aside>
+                    </div>
                 </article>
                 <!-- Home Sub section Ends -->
 
                 <!-- Portfolio Sub section Starts -->
                 <article id="id_PortfolioSubSection">
-                    <div>
-                        <header>
-                            <h3 class="heading2" aria-labelledby="id_PortfolioSubSection">Portfolio</h3>
-                        </header>
-                        <hr class="fadeLine" />
-                        <p>All the work I have done are displayed here.</p>
-                    </div>
-                    <a href="portfolio.html" class="link_imagebox" aria-label="Goes to the portfolio page">
-                        <img role="link" src="./images/website/portfolioimg.png" alt="Portfolio Image" aria-label="Portfolio splash image" />
+                    <a href="portfolio.html" class="linkwrapper" aria-label="Goes to the portfolio page">
+                        <div>
+                            <header>
+                                <h3 class="heading2" aria-labelledby="id_PortfolioSubSection">Portfolio</h3>
+                            </header>
+                            <hr class="fadeLine" />
+                            <p>All the work I have done are displayed here.</p>
+                        </div>
+                        <figure class="imagebox">           
+                            <img role="link" src="./images/website/portfolioimg.png" alt="Portfolio Image" aria-label="Portfolio splash image" />
+                        </figure>
                     </a>
                 </article>
                 <!-- Portfolio Sub section Ends -->
 
                 <!-- About Sub section Starts -->
                 <article id="id_AboutSubSection">
-                    <div>
-                        <header>
-                            <h3 class="heading2" aria-labelledby="id_AboutSubSection">About</h3>
-                        </header>
-                        <hr class="fadeLine" />
-                        <p>Detail information about me.</p>
-                    </div>
-                    <a href="about.html" class="link_imagebox" aria-label="Goes to the about page">
-                        <img role="link" src="./images/website/aboutimg.png" alt="About Image" aria-label="About splash image" />
+                    <a href="about.html" class="linkwrapper" aria-label="Goes to the about page">
+                        <div>
+                            <header>
+                                <h3 class="heading2" aria-labelledby="id_AboutSubSection">About</h3>
+                            </header>
+                            <hr class="fadeLine" />
+                            <p>Detail information about me.</p>
+                        </div>
+                        <figure class="imagebox">
+                            <img role="link" src="./images/website/aboutimg.png" alt="About Image" aria-label="About splash image" />
+                        </figure>
                     </a>
                 </article>
                 <!-- About Sub section Ends -->
 
                 <!-- Contact Sub section Starts -->
                 <article id="id_ContactSubSection">
-                    <div>
-                        <header>
-                            <h3 class="heading2" aria-labelledby="id_ContactSubSection">Contact</h3>
-                        </header>
-                        <hr class="fadeLine" />
-                        <p>Contact me here.</p>
-                    </div>
-                    <a href="contact.html" class="link_imagebox" aria-label="Goes to the contact page">
-                        <img role="link" src="./images/website/contactimg.png" alt="Contact Image" aria-label="Contact splash image" />
+                    <a href="contact.html" class="linkwrapper" aria-label="Goes to the contact page">
+                        <div>
+                            <header>
+                                <h3 class="heading2" aria-labelledby="id_ContactSubSection">Contact</h3>
+                            </header>
+                            <hr class="fadeLine" />
+                            <p>Contact me here.</p>
+                        </div>
+                        <figure class="imagebox">
+                            <img role="link" src="./images/website/contactimg.png" alt="Contact Image" aria-label="Contact splash image" />
+                        </figure>
                     </a>
                 </article>
                 <!-- Contact Sub section Ends -->
@@ -148,6 +156,6 @@
             <!-- Bottom Footer Ends -->
         </div>
     </section>
-    <script src="./js/scripts.js"></script>
+    <script src="./js/navigation.js"></script>
 </body>
 </html>
