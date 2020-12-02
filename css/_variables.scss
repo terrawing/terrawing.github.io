@@ -5,15 +5,24 @@ $fontColor01: #000;
 $fontColor02: #000;
 
 // Background Colors;
-$bgColor01: #FFF;
+$bgColor01: #f5f5f5;
+$bgColor02: #fb8500;
+$bgColor03: #ffb703;
+$bgColor04: #023047;
+$bgColor05: #219ebc;
+$bgColor06: #8ecae6;
 
 // Font Sizes and Line Heights and Letter Spacimg
-$pFontSize: 1rem;
+$pFontSize: 0.9rem;
 $pLineHeight: 1.25rem;
 $pLetterSpacing: 0.025rem;
-$heading01FontSize: 2.25rem;
-$heading01LineHeight: 2.75rem;
-$heading01LetterSpacing: 0.025rem;
+$pCopyRightFontSize: 0.75rem;
+$heading01FontSize: 2rem;
+$heading01LineHeight: 2.5rem;
+$heading01LetterSpacing: 0.05rem;
+$heading02FontSize: 1.5rem;
+$heading02LineHeight: 1.75rem;
+$heading02LetterSpacing: 0.1rem;
 
 // Font Weights
 $fontWeightNormal: 300;
@@ -33,13 +42,22 @@ $padding: 1.5rem;
     --font-color-2: #{$fontColor02};
 
     --background-color-1: #{$bgColor01};
+    --background-color-2: #{$bgColor02};
+    --background-color-3: #{$bgColor03};
+    --background-color-4: #{$bgColor04};
+    --background-color-5: #{$bgColor05};
+    --background-color-6: #{$bgColor06};
 
     --font-size-p: #{$pFontSize};
     --font-lineheight-p: #{$pLineHeight};
     --font-letterspacing-p: #{$pLetterSpacing};
+    --font-size-copyright: #{$pCopyRightFontSize};
     --font-size-h1: #{$heading01FontSize};
     --font-lineheight-h1: #{$heading01LetterSpacing};
     --font-letterspacing-h1: #{$heading01LetterSpacing};
+    --font-size-h2: #{$heading02FontSize};
+    --font-lineheight-h2: #{$heading02LetterSpacing};
+    --font-letterspacing-h2: #{$heading02LetterSpacing};
 
     --font-weight-normal: #{$fontWeightNormal};
     --font-weight-semibold: #{$fontWeightSemiBold};

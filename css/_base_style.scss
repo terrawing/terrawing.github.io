@@ -53,7 +53,6 @@
         width: 100vw;
         position: relative;
         overflow-x: hidden;
-        padding: #{$padding * 1.5};
         background: var(--background-color1, $bgColor01);
     }
 
@@ -107,7 +106,8 @@
 
     h1, h2, h3, h4, h5, h6 {
         font-family: fieldwork, sans-serif;
-        @include generateGeneralFontCSS(var(--font-size-h1, $heading01FontSize), var(--font-lineheight-h1, $heading01LineHeight), var(--font-weight-bold, $fontWeightBold), null, var(--font-letterspacing-h1, $heading01LetterSpacing));
+        font-size: 2rem;
+        line-height: 2.25rem;
     }
 
     button, button:hover {
