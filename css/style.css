@@ -224,7 +224,8 @@ li {
         text-transform: uppercase;
         letter-spacing: var(--font-letterspacing-h2, 0.1rem); }
       #id_NavigationPopOutArea > .navigation_subsection > .navigation_links > li > .navigation_link:hover, #id_NavigationPopOutArea > .navigation_subsection > .navigation_links > li > .navigation_link:active {
-        border-bottom: 1px solid transparent;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
         border-image: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 90%);
         border-image: -o-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 90%);
         border-image: -moz-linear-gradient(left, white 0%, rgba(255, 255, 255, 0) 90%);

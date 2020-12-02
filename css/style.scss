@@ -84,7 +84,8 @@
                     }
 
                     & > .navigation_link:hover, & > .navigation_link:active {
-                        border-bottom: 1px solid transparent;
+                        border-bottom-width: 1px;
+                        border-bottom-style: solid;
                         border-image: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 90%);
                         border-image: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 90%);
                         border-image: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 90%);
