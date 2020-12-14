@@ -12,6 +12,7 @@ $bgColor03: #ffb703;
 $bgColor04: #023047;
 $bgColor05: #219ebc;
 $bgColor06: #8ecae6;
+$bgTransparent: rgba(255, 255, 255, 0.2);
 
 // Font Sizes and Line Heights and Letter Spacimg
 $pFontSize: 0.9rem;
@@ -58,6 +59,7 @@ $padding: 1.5rem;
     --background-color-4: #{$bgColor04};
     --background-color-5: #{$bgColor05};
     --background-color-6: #{$bgColor06};
+    --background-transparent: #{$bgTransparent};
 
     --font-size-p: #{$pFontSize};
     --font-lineheight-p: #{$pLineHeight};
