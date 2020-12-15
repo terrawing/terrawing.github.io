@@ -86,7 +86,8 @@ footer {
   display: block;
   width: 100vw;
   height: 50px;
-  text-align: center; }
+  text-align: center;
+  background: white; }
 
 img {
   width: 100%;
@@ -209,7 +210,7 @@ li {
   border-image-slice: 10 fill;
   border-image-repeat: repeat;
   display: inline-table;
-  padding-top: 0.5rem;
+  padding-top: 0.75rem;
   margin-bottom: 1.5rem; }
 
 .fadeLine {
@@ -220,6 +221,12 @@ li {
   background: -webkit-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 70%);
   height: 1px;
   border: 0; }
+
+.footer_fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 #id_NavigationPopOutArea {
   display: grid;
@@ -303,7 +310,12 @@ li {
   display: flex;
   justify-content: space-between;
   padding: 0 var(--padding, 1.5rem);
-  margin: 0; }
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300; }
   #id_TopNavigationWrapper > header {
     display: grid;
     place-items: center; }
@@ -362,7 +374,7 @@ li {
   min-height: 100%;
   max-width: 100vw;
   max-height: 100%;
-  overflow: hidden;
+  overflow: auto;
   margin: 0;
   padding: 0;
   position: fixed;
@@ -388,7 +400,8 @@ li {
     display: grid;
     grid-template-columns: minmax(0, 50%) minmax(0, 20%) 1fr;
     grid-template-rows: 50% 50%;
-    grid-auto-flow: row dense; }
+    grid-auto-flow: row dense;
+    margin-top: 50px; }
     .home_wrapper > #id_SubSections > article > .linkwrapper {
       padding: var(--padding, 1.5rem) 0;
       display: flex;
@@ -470,6 +483,111 @@ li {
       .home_wrapper > #id_SubSections > #id_PortfolioSubSection:hover .heading2, .home_wrapper > #id_SubSections > #id_PortfolioSubSection:hover p, .home_wrapper > #id_SubSections > #id_PortfolioSubSection:active .heading2, .home_wrapper > #id_SubSections > #id_PortfolioSubSection:active p, .home_wrapper > #id_SubSections > #id_AboutSubSection:hover .heading2, .home_wrapper > #id_SubSections > #id_AboutSubSection:hover p, .home_wrapper > #id_SubSections > #id_AboutSubSection:active .heading2, .home_wrapper > #id_SubSections > #id_AboutSubSection:active p, .home_wrapper > #id_SubSections > #id_ContactSubSection:hover .heading2, .home_wrapper > #id_SubSections > #id_ContactSubSection:hover p, .home_wrapper > #id_SubSections > #id_ContactSubSection:active .heading2, .home_wrapper > #id_SubSections > #id_ContactSubSection:active p {
         color: var(--font-color-2, #FFF); }
       .home_wrapper > #id_SubSections > #id_PortfolioSubSection:hover .fancyborder, .home_wrapper > #id_SubSections > #id_PortfolioSubSection:active .fancyborder, .home_wrapper > #id_SubSections > #id_AboutSubSection:hover .fancyborder, .home_wrapper > #id_SubSections > #id_AboutSubSection:active .fancyborder, .home_wrapper > #id_SubSections > #id_ContactSubSection:hover .fancyborder, .home_wrapper > #id_SubSections > #id_ContactSubSection:active .fancyborder {
+        border-image-source: url(../images/website/titleboxwrap2.png); }
+
+.about_wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden; }
+  .about_wrapper > #id_SubSections {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 50%) 1fr;
+    grid-template-rows: auto;
+    margin-top: 50px; }
+    .about_wrapper > #id_SubSections > article > .linkwrapper {
+      margin: 0 auto;
+      padding: 1.5rem; }
+    .about_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 100%;
+      text-decoration: none;
+      color: var(--font-color-1, #000); }
+      .about_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper > div:first-of-type {
+        padding: 0 var(--padding, 1.5rem); }
+      .about_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper .heading2 {
+        margin-top: 0;
+        margin-bottom: 0; }
+      .about_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper > .imagebox {
+        width: 100%;
+        display: flex;
+        place-items: center;
+        flex-grow: 2; }
+    .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection {
+      background: var(--background-color-3, #ffb703);
+      grid-column: 1 / span 2; }
+      .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper {
+        width: 800px;
+        max-width: 800px;
+        min-width: 800px; }
+        .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > div {
+          display: flex;
+          flex-direction: column-reverse; }
+          .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
+            display: none;
+            visibility: hidden; }
+        .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > p:first-of-type {
+          margin-top: 0; }
+        .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > p:nth-of-type(4) {
+          clear: both; }
+        .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > img {
+          float: right;
+          width: 400px;
+          height: auto;
+          border-radius: 3px;
+          box-shadow: 1px 1px 3px 1px #5d5d5d;
+          -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
+          -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
+          margin: 0 0 1.5rem 1.5rem; }
+    .about_wrapper > #id_SubSections > #id_SkillsSubSection {
+      background: var(--background-color-6, #8ecae6);
+      grid-row: 2 / span 2; }
+      .about_wrapper > #id_SubSections > #id_SkillsSubSection > .linkwrapper {
+        width: 100%;
+        min-width: 400px;
+        max-width: 450px; }
+        .about_wrapper > #id_SubSections > #id_SkillsSubSection > .linkwrapper ul {
+          column-count: 2;
+          column-gap: 3rem;
+          padding-left: 1.5rem;
+          list-style-type: circle;
+          margin-bottom: 0; }
+          .about_wrapper > #id_SubSections > #id_SkillsSubSection > .linkwrapper ul > li {
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid; }
+            .about_wrapper > #id_SubSections > #id_SkillsSubSection > .linkwrapper ul > li:first-of-type > p {
+              margin-top: 0; }
+    .about_wrapper > #id_SubSections > #id_AwardsSubSection {
+      background: var(--background-color-2, #fb8500);
+      grid-row: 3 / 4;
+      transition: .5s; }
+      .about_wrapper > #id_SubSections > #id_AwardsSubSection p:first-of-type {
+        margin-bottom: 0; }
+      .about_wrapper > #id_SubSections > #id_AwardsSubSection p:nth-of-type(2) {
+        margin-top: 0; }
+      .about_wrapper > #id_SubSections > #id_AwardsSubSection img {
+        width: 150px;
+        max-width: 150px;
+        min-width: 150px;
+        height: auto;
+        margin: 0 auto; }
+    .about_wrapper > #id_SubSections > #id_ResumeSubSection {
+      background: var(--background-color-5, #219ebc);
+      transition: .5s; }
+    .about_wrapper > #id_SubSections > #id_AwardsSubSection:hover, .about_wrapper > #id_SubSections > #id_AwardsSubSection:active, .about_wrapper > #id_SubSections > #id_ResumeSubSection:hover, .about_wrapper > #id_SubSections > .about_wrapper > #id_SubSections > #id_ResumeSubSection:active {
+      background: var(--background-color-4, #023047);
+      transform: scale(1.025);
+      z-index: 10; }
+      .about_wrapper > #id_SubSections > #id_AwardsSubSection:hover .heading2, .about_wrapper > #id_SubSections > #id_AwardsSubSection:hover p, .about_wrapper > #id_SubSections > #id_AwardsSubSection:active .heading2, .about_wrapper > #id_SubSections > #id_AwardsSubSection:active p, .about_wrapper > #id_SubSections > #id_ResumeSubSection:hover .heading2, .about_wrapper > #id_SubSections > #id_ResumeSubSection:hover p, .about_wrapper > #id_SubSections > .about_wrapper > #id_SubSections > #id_ResumeSubSection:active .heading2, .about_wrapper > #id_SubSections > .about_wrapper > #id_SubSections > #id_ResumeSubSection:active p {
+        color: var(--font-color-2, #FFF); }
+      .about_wrapper > #id_SubSections > #id_AwardsSubSection:hover .fancyborder, .about_wrapper > #id_SubSections > #id_AwardsSubSection:active .fancyborder, .about_wrapper > #id_SubSections > #id_ResumeSubSection:hover .fancyborder, .about_wrapper > #id_SubSections > .about_wrapper > #id_SubSections > #id_ResumeSubSection:active .fancyborder {
         border-image-source: url(../images/website/titleboxwrap2.png); }
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
