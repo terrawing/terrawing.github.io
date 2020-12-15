@@ -73,11 +73,11 @@ $padding: 1.5rem;
     --font-lineheight-homemaintext-1280: #{$pHomeMainTextLineHeight_1280};
 
     --font-size-h1: #{$heading01FontSize};
-    --font-lineheight-h1: #{$heading01LetterSpacing};
+    --font-lineheight-h1: #{$heading01LineHeight};
     --font-letterspacing-h1: #{$heading01LetterSpacing};
     
     --font-size-h2: #{$heading02FontSize};
-    --font-lineheight-h2: #{$heading02LetterSpacing};
+    --font-lineheight-h2: #{$heading02LineHeight};
     --font-letterspacing-h2: #{$heading02LetterSpacing};
 
     --font-weight-normal: #{$fontWeightNormal};

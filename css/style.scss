@@ -42,7 +42,6 @@
         border-image-slice: 10 fill;
         border-image-repeat: repeat;
         display: inline-table;
-        padding-top: #{$padding / 2};
         margin-bottom: $margin;
     }
 
@@ -375,9 +374,9 @@
                             column-gap: var(--margin, $margin);
       
                             & > img {
-                                width: 340px;
-                                max-width: 340px;
-                                min-width: 340px;
+                                width: 320px;
+                                max-width: 320px;
+                                min-width: 320px;
                                 height: auto;
                                 border-radius: 3px;
                                 box-shadow: 1px 1px 3px 1px #5d5d5d;
@@ -566,6 +565,30 @@
                         display: flex;
                         flex-direction: column-reverse;
 
+                        & > .breadcrumb_desktop_wrapper,
+                        & > .breadcrumb_tabletmobile_wrapper {
+                            & > .breadcrumb {
+                                color: var(--font-color1, $fontColor01);
+                                text-decoration: none;
+                                border-bottom-width: 1px;
+                                border-bottom-style: solid;
+                                border-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image-slice: 1;
+                            }
+
+                            & > .disabled {
+                                border-bottom-width: 0;
+                                pointer-events: none;
+                                font-weight: var(--font-weight-bold, $fontWeightBold);
+                                cursor: not-allowed;
+                                display: inline-block;
+                            }
+                        }
+
                         & > .breadcrumb_tabletmobile_wrapper {
                             display: none;
                             visibility: hidden;
@@ -603,6 +626,7 @@
                     width: 100%;
                     min-width: 400px;
                     max-width: 450px;
+                    justify-content: space-evenly;
 
                     & ul {
                         column-count: 2;
@@ -623,6 +647,18 @@
                             }
                         }
                     }
+
+                    & .imagebox {
+                        flex-grow: 0;
+
+                        & > img {
+                            width: 250px;
+                            max-width: 250px;
+                            min-width: 250px;
+                            height: auto;
+                            margin: 0 auto;
+                        }
+                    }  
                 }
             }
 
@@ -653,6 +689,14 @@
             & > #id_ResumeSubSection {
                 background: var(--background-color-5, $bgColor05);
                 transition: .5s;
+
+                & img {
+                    width: 200px;
+                    max-width: 200px;
+                    min-width: 200px;
+                    height: auto;
+                    margin: 0 auto;
+                }
             }
 
             // Resume, Award hover and clicked state
@@ -675,7 +719,30 @@
 }
 
 @mixin aboutStyleCSS_1024 {
+    .about_wrapper {
+        & > #id_SubSections {
+            // about write up area
+            & > #id_AboutWriteUpSubSection {
+                & > .linkwrapper { 
+                    width: 600px;
+                    max-width: 600px;
+                    min-width: 600px;
 
+                    & > div {
+                        & > .breadcrumb_desktop_wrapper {
+                            display: none;
+                            visibility: hidden;
+                        }
+
+                        & > .breadcrumb_tabletmobile_wrapper {
+                            display: block;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // --------------------------------------------------------------
