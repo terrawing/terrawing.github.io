@@ -25,16 +25,20 @@ $pHomeMainTextFontSize: 1.5rem;
 $pHomeMainTextLineHeight: 1.75rem;
 $pHomeMainTextFontSize_1280: 1.25rem;
 $pHomeMainTextLineHeight_1280: 1.5rem;
-$pHomeMainTextFontSize_1024: 1.15rem;
-$pHomeMainTextLineHeight_1024: 1.5rem;
+$pHomeMainTextFontSize_1024: 1rem;
+$pHomeMainTextLineHeight_1024: 1.25rem;
 
 $heading01FontSize: 2rem;
 $heading01LineHeight: 2.5rem;
 $heading01LetterSpacing: 0.15rem;
+$heading01FontSize_1024: 1.5rem;
+$heading01LineHeight_1024: 1.75rem;
 
 $heading02FontSize: 1.5rem;
 $heading02LineHeight: 1.75rem;
 $heading02LetterSpacing: 0.1rem;
+$heading02FontSize_1024: 1.25rem;
+$heading02LineHeight_1024: 1.5rem;
 
 // Font Weights
 $fontWeightNormal: 300;
@@ -75,10 +79,14 @@ $padding: 1.5rem;
     --font-size-h1: #{$heading01FontSize};
     --font-lineheight-h1: #{$heading01LineHeight};
     --font-letterspacing-h1: #{$heading01LetterSpacing};
+    --font-size-h1-1024: #{$heading01FontSize_1024};
+    --font-lineheight-h1-1024: #{$heading01LineHeight_1024};
     
     --font-size-h2: #{$heading02FontSize};
     --font-lineheight-h2: #{$heading02LineHeight};
     --font-letterspacing-h2: #{$heading02LetterSpacing};
+    --font-size-h2-1024: #{$heading02FontSize_1024};
+    --font-lineheight-h2-1024: #{$heading02LineHeight_1024};
 
     --font-weight-normal: #{$fontWeightNormal};
     --font-weight-semibold: #{$fontWeightSemiBold};

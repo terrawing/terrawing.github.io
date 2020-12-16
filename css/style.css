@@ -22,9 +22,13 @@
   --font-size-h1: 2rem;
   --font-lineheight-h1: 2.5rem;
   --font-letterspacing-h1: 0.15rem;
+  --font-size-h1-1024: 1.5rem;
+  --font-lineheight-h1-1024: 1.75rem;
   --font-size-h2: 1.5rem;
   --font-lineheight-h2: 1.75rem;
   --font-letterspacing-h2: 0.1rem;
+  --font-size-h2-1024: 1.25rem;
+  --font-lineheight-h2-1024: 1.5rem;
   --font-weight-normal: 300;
   --font-weight-semibold: 400;
   --font-weight-bold: 600;
@@ -227,6 +231,12 @@ li {
   left: 0;
   right: 0; }
 
+.disabled {
+  border-bottom-width: 0 !important;
+  pointer-events: none;
+  font-weight: var(--font-weight-bold, 600);
+  cursor: not-allowed; }
+
 #id_NavigationPopOutArea {
   display: grid;
   opacity: 0;
@@ -273,7 +283,7 @@ li {
         text-transform: uppercase;
         letter-spacing: var(--font-letterspacing-h2, 0.1rem);
         padding-bottom: 0.25rem; }
-      #id_NavigationPopOutArea > .navigation_subsection > .navigation_links > li > .navigation_link:hover, #id_NavigationPopOutArea > .navigation_subsection > .navigation_links > li > .navigation_link:active, #id_NavigationPopOutArea > .navigation_subsection > .navigation_links > li > .current {
+      #id_NavigationPopOutArea > .navigation_subsection > .navigation_links > li > .navigation_link:hover, #id_NavigationPopOutArea > .navigation_subsection > .navigation_links > li > .navigation_link:active {
         border-bottom-width: 1px;
         border-bottom-style: solid;
         border-image: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 90%);
@@ -424,17 +434,17 @@ li {
     .home_wrapper > #id_SubSections > #id_HomeSubSection {
       background: var(--background-color-2, #fb8500);
       grid-row: 1 / span 2; }
-      .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_homeSidebar {
+      .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_HomeSidebar {
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 0 var(--padding, 1.5rem);
         flex-grow: 2; }
-        .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_homeSidebar > div {
+        .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_HomeSidebar > div {
           display: grid;
           grid-template-columns: minmax(0, 50%) 1fr;
           column-gap: var(--margin, 1.5rem); }
-          .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_homeSidebar > div > img {
+          .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_HomeSidebar > div > img {
             width: 320px;
             max-width: 320px;
             min-width: 320px;
@@ -444,7 +454,7 @@ li {
             -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
             -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
             margin: 0; }
-          .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_homeSidebar > div > p {
+          .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_HomeSidebar > div > p {
             margin-top: 0; }
     .home_wrapper > #id_SubSections > #id_PortfolioSubSection {
       background: var(--background-color-5, #219ebc);
@@ -539,12 +549,6 @@ li {
             border-image: -ms-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
             border-image: -webkit-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
             border-image-slice: 1; }
-          .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > div > .breadcrumb_desktop_wrapper > .disabled, .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper > .disabled {
-            border-bottom-width: 0;
-            pointer-events: none;
-            font-weight: var(--font-weight-bold, 600);
-            cursor: not-allowed;
-            display: inline-block; }
           .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
             display: none;
             visibility: hidden; }
@@ -621,24 +625,47 @@ li {
       .about_wrapper > #id_SubSections > #id_AwardsSubSection:hover .fancyborder, .about_wrapper > #id_SubSections > #id_AwardsSubSection:active .fancyborder, .about_wrapper > #id_SubSections > #id_ResumeSubSection:hover .fancyborder, .about_wrapper > #id_SubSections > .about_wrapper > #id_SubSections > #id_ResumeSubSection:active .fancyborder {
         border-image-source: url(../images/website/titleboxwrap2.png); }
 
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
   .maintext {
     font-size: var(--font-size-homemaintext-1280, 1.25rem);
     line-height: var(--font-lineheight-homemaintext-1280, 1.5rem); }
 
-  .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_homeSidebar > div > img {
+  .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_HomeSidebar > div > img {
     width: 300px;
     max-width: 300px;
     min-width: 300px; } }
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .maintext {
-    font-size: var(--font-size-homemaintext-1024, 1.15rem);
-    line-height: var(--font-lineheight-homemaintext-1024, 1.5rem); }
+@media only screen and (max-width: 1024px) {
+  .heading1 {
+    font-size: var(--font-size-h1-1024, 1.5rem);
+    line-height: var(--font-lineheight-h1-1024, 1.75rem); }
 
-  .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_homeSidebar > div > img {
+  .heading2 {
+    font-size: var(--font-size-h2-1024, 1.25rem);
+    line-height: var(--font-lineheight-h2-1024, 1.5rem); }
+
+  .maintext {
+    font-size: var(--font-size-homemaintext-1024, 1rem);
+    line-height: var(--font-lineheight-homemaintext-1024, 1.25rem); }
+
+  .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_HomeSidebar > div {
+    grid-template-columns: auto; }
+    .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_HomeSidebar > div > img {
+      width: 150px;
+      max-width: 150px;
+      min-width: 150px;
+      justify-self: center; }
+  .home_wrapper > #id_SubSections > #id_PortfolioSubSection img {
     width: 200px;
     max-width: 200px;
     min-width: 200px; }
+  .home_wrapper > #id_SubSections > #id_AboutSubSection img {
+    width: 200px;
+    max-width: 200px;
+    min-width: 200px; }
+  .home_wrapper > #id_SubSections > #id_ContactSubSection img {
+    height: 150px;
+    max-height: 150px;
+    min-height: 150px; }
 
   .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper {
     width: 600px;
@@ -650,3 +677,47 @@ li {
     .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
       display: block;
       visibility: visible; } }
+@media only screen and (max-width: 768px) {
+  .footer_fixed {
+    position: unset; }
+
+  #id_NavigationPopOutArea {
+    width: 100vw;
+    right: -100vw; }
+    #id_NavigationPopOutArea:before {
+      width: 100vw; }
+
+  #id_TopNavigationWrapper > .hamburgermenu_area > .hamburgermenu_link:focus > .hamburgermenu_bars > .bar, #id_TopNavigationWrapper > .hamburgermenu_area > .hamburgermenu_link:focus > .hamburgermenu_bars.animate > .bar {
+    background: var(--font-color-1, #000); }
+
+  .home_wrapper {
+    position: unset;
+    overflow-x: hidden; }
+    .home_wrapper > #id_SubSections {
+      height: auto;
+      max-height: unset;
+      min-height: unset;
+      grid-template-columns: auto;
+      grid-template-rows: auto; }
+      .home_wrapper > #id_SubSections > article > .linkwrapper {
+        overflow-y: hidden; }
+        .home_wrapper > #id_SubSections > article > .linkwrapper > div:first-of-type {
+          text-align: center; }
+      .home_wrapper > #id_SubSections > #id_HomeSubSection {
+        grid-row: 1 / 2; }
+        .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_HomeSidebar > div > img {
+          margin-bottom: 1rem; }
+      .home_wrapper > #id_SubSections > #id_PortfolioSubSection {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3; }
+        .home_wrapper > #id_SubSections > #id_PortfolioSubSection img {
+          margin-bottom: 1rem; }
+      .home_wrapper > #id_SubSections > #id_AboutSubSection {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4; }
+        .home_wrapper > #id_SubSections > #id_AboutSubSection img {
+          margin-bottom: 1rem; }
+      .home_wrapper > #id_SubSections > #id_ContactSubSection {
+        grid-row: 4 / 5; }
+        .home_wrapper > #id_SubSections > #id_ContactSubSection img {
+          margin-bottom: 1rem; } }

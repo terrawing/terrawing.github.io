@@ -61,19 +61,43 @@
         left: 0;
         right: 0;
     }
+
+    .disabled {
+        border-bottom-width: 0 !important;
+        pointer-events: none;
+        font-weight: var(--font-weight-bold, $fontWeightBold);
+        cursor: not-allowed;
+    }
 }
 
+// 1025 - 1280
 @mixin textStyleCSS_1280 {
     .maintext {
         @include generateGeneralFontCSS(var(--font-size-homemaintext-1280, $pHomeMainTextFontSize_1280), var(--font-lineheight-homemaintext-1280, $pHomeMainTextLineHeight_1280));
     }
 }
 
+// 769 - 1024
 @mixin textStyleCSS_1024 {
+    .heading1 {
+        @include generateGeneralFontCSS(var(--font-size-h1-1024, $heading01FontSize_1024), var(--font-lineheight-h1-1024, $heading01LineHeight_1024));
+    }
+
+    .heading2 {
+        @include generateGeneralFontCSS(var(--font-size-h2-1024, $heading02FontSize_1024), var(--font-lineheight-h2-1024, $heading02LineHeight_1024));
+    }
+
     .maintext {
         @include generateGeneralFontCSS(var(--font-size-homemaintext-1024, $pHomeMainTextFontSize_1024), var(--font-lineheight-homemaintext-1024, $pHomeMainTextLineHeight_1024));
     }
 }
+
+ // < 768
+ @mixin textStyleCSS_768 {
+    .footer_fixed {
+        position: unset;
+    }
+ }
 
 //--------------------------------------------------------------
 //# Navigation (Navigation Style CSS)
@@ -133,8 +157,7 @@
                         padding-bottom: #{$padding / 6};
                     }
 
-                    & > .navigation_link:hover, & > .navigation_link:active,
-                    & > .current {
+                    & > .navigation_link:hover, & > .navigation_link:active {
                         border-bottom-width: 1px;
                         border-bottom-style: solid;
                         border-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
@@ -284,6 +307,31 @@
     }
 }
 
+// < 768
+@mixin navigationStyleCSS_768 {
+    #id_NavigationPopOutArea {
+        width: 100vw;
+        right: -100vw;
+
+        &:before {
+            width: 100vw;
+        }
+    }
+
+    #id_TopNavigationWrapper {
+        & > .hamburgermenu_area {
+            // hamburger menu button hover and active
+            & > .hamburgermenu_link:focus {
+                & > .hamburgermenu_bars, & > .hamburgermenu_bars.animate {
+                    & > .bar {
+                        background: var(--font-color-1, $fontColor01);
+                    }
+                }
+            }
+        }
+    }
+}
+
 //--------------------------------------------------------------
 //# Home (Home Style CSS)
 //--------------------------------------------------------------
@@ -361,7 +409,7 @@
                 grid-row: 1 / span 2;
 
                 & > .linkwrapper {
-                    & > #id_homeSidebar {
+                    & > #id_HomeSidebar {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
@@ -460,12 +508,13 @@
     }
 }
 
+// 1025 - 1280
 @mixin homeStyleCSS_1280 {
     .home_wrapper {
         & > #id_SubSections {
             & > #id_HomeSubSection {
                 & > .linkwrapper {
-                    & > #id_homeSidebar {
+                    & > #id_HomeSidebar {
                         & > div {
                             & > img {
                                 width: 300px;
@@ -480,20 +529,122 @@
     }
 }
 
+// 769 - 1024
 @mixin homeStyleCSS_1024 {
     .home_wrapper {
         & > #id_SubSections {
+
+            // Home area
             & > #id_HomeSubSection {
                 & > .linkwrapper {
-                    & > #id_homeSidebar {
+                    & > #id_HomeSidebar {
                         & > div {
+                            grid-template-columns: auto;
+
                             & > img {
-                                width: 200px;
-                                max-width: 200px;
-                                min-width: 200px;
+                                width: 150px;
+                                max-width: 150px;
+                                min-width: 150px;
+                                justify-self: center;
                             }
                         }
                     }
+                }
+            }
+
+            // Portfolio Area
+            & > #id_PortfolioSubSection {
+                & img {
+                    width: 200px;
+                    max-width: 200px;
+                    min-width: 200px;
+                }
+            }
+
+            // About Area
+            & > #id_AboutSubSection {
+                & img {
+                    width: 200px;
+                    max-width: 200px;
+                    min-width: 200px;
+                }
+            }
+
+            // Contact Area
+            & > #id_ContactSubSection {
+                & img {
+                    height: 150px;
+                    max-height: 150px;
+                    min-height: 150px;
+                }
+            }
+        }
+    }
+}
+
+// < 768
+@mixin homeStyleCSS_768 {
+    .home_wrapper {
+        position: unset;
+        overflow-x: hidden;
+
+        & > #id_SubSections {
+            height: auto;
+            max-height: unset;
+            min-height: unset;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+
+            // all sub section areas {
+            & > article > .linkwrapper {
+                overflow-y: hidden;
+
+                & > div:first-of-type {
+                    text-align: center;
+                }
+            }
+
+            // Home area
+            & > #id_HomeSubSection {
+                grid-row: 1 / 2;
+
+                & > .linkwrapper {
+                    & > #id_HomeSidebar {
+                        & > div {
+                            & > img {
+                                margin-bottom: #{$margin - .5rem};
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Portfolio area
+            & > #id_PortfolioSubSection {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+
+                & img {
+                    margin-bottom: #{$margin - .5rem};
+                }
+            }
+
+            // About area
+            & > #id_AboutSubSection {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+
+                & img {
+                    margin-bottom: #{$margin - .5rem};
+                }
+            }
+
+            // Contact area
+            & > #id_ContactSubSection {
+                grid-row: 4 / 5;
+
+                & img {
+                    margin-bottom: #{$margin - .5rem};
                 }
             }
         }
@@ -578,14 +729,6 @@
                                 border-image: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
                                 border-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
                                 border-image-slice: 1;
-                            }
-
-                            & > .disabled {
-                                border-bottom-width: 0;
-                                pointer-events: none;
-                                font-weight: var(--font-weight-bold, $fontWeightBold);
-                                cursor: not-allowed;
-                                display: inline-block;
                             }
                         }
 
@@ -757,7 +900,7 @@
 // --------------------------------------------------------------
 // ## Small Screen Desktop (1025px - 1280px)
 // --------------------------------------------------------------
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
     @include textStyleCSS_1280;
     @include homeStyleCSS_1280;
 }
@@ -765,7 +908,7 @@
 // --------------------------------------------------------------
 // ## Tablets (769px - 1024px)
 // --------------------------------------------------------------
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     @include textStyleCSS_1024;
     @include homeStyleCSS_1024;
     @include aboutStyleCSS_1024;
@@ -775,5 +918,7 @@
 // ## Phones (< 769px)
 // --------------------------------------------------------------
 @media only screen and (max-width: 768px) {
-    
+    @include textStyleCSS_768;
+    @include navigationStyleCSS_768;
+    @include homeStyleCSS_768;
 }
