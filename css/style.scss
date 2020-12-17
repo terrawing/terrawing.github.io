@@ -45,6 +45,11 @@
         margin-bottom: $margin;
     }
 
+    .yellowhighlight {
+        background: var(--background-color-7, $bgColor07);
+        display: inline-table;
+    }
+
     .fadeLine {
         background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
         background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
@@ -675,6 +680,7 @@
                 padding: $padding;
             }
 
+            // all sub sections areas except the first one
             & > article:not(:first-of-type) > .linkwrapper {
                 display: flex;
                 flex-direction: column-reverse;
@@ -742,7 +748,7 @@
                         margin-top: 0;
                     }
 
-                    & > p:nth-of-type(4) {
+                    & > p:nth-of-type(5) {
                         clear: both;
                     }
 
@@ -824,7 +830,7 @@
                     max-width: 150px;
                     min-width: 150px;
                     height: auto;
-                    margin: 0 auto;
+                    margin: 0 auto #{$margin - .5rem} auto;
                 }
             }
 
@@ -838,7 +844,7 @@
                     max-width: 200px;
                     min-width: 200px;
                     height: auto;
-                    margin: 0 auto;
+                    margin: 0 auto #{$margin - .5rem} auto;
                 }
             }
 
@@ -861,6 +867,7 @@
     }
 }
 
+// 769 - 1024
 @mixin aboutStyleCSS_1024 {
     .about_wrapper {
         & > #id_SubSections {
@@ -888,6 +895,243 @@
     }
 }
 
+// < 768
+@mixin aboutStyleCSS_768 {
+    .about_wrapper {
+        & > #id_SubSections {
+            grid-template-columns: auto;
+
+            // all sub section areas
+            & > article > .linkwrapper {
+                width: calc(100% - #{$padding}) !important;
+                max-width: calc(100% - #{$padding}) !important;
+                min-width: calc(100% - #{$padding}) !important;
+                margin: 0;
+            }
+
+            // all sub sections areas except the first one
+            & > article:not(:first-of-type) > .linkwrapper {
+                overflow-y: hidden;
+
+                & > div:first-of-type {
+                    text-align: center;
+                }
+            }
+
+            // about write up area
+            & > #id_AboutWriteUpSubSection {
+                grid-column: 1 / 2;
+
+                & > .linkwrapper { 
+                    & > img {
+                        float: none;
+                        width: 100%;
+                        min-width: 225px;
+                        max-width: 225px;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+            }
+
+            // skills area
+            & > #id_SkillsSubSection {
+                grid-row: 2 / 3;
+
+                & > .linkwrapper {
+                    & ul {
+                        column-count: 1;
+                        text-align: left;
+                    }
+
+                    & .imagebox {
+                        & > img {
+                            margin-bottom: #{$margin - .5rem};
+                        }
+                    }
+                }
+            }
+
+            // awards area
+            & > #id_AwardsSubSection {
+                & img {
+                    margin-bottom: #{$margin - .5rem};
+                }
+            }
+
+            // resume area
+            & > #id_ResumeSubSection {
+                & img {
+                    margin-bottom: #{$margin - .5rem};
+                }
+            }
+        }
+    }
+}
+
+//--------------------------------------------------------------
+//# Contact (Contact Style CSS)
+//--------------------------------------------------------------
+@mixin contactStyleCSS {
+    .contact_wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        overflow-x: hidden;
+
+        & > #id_SubSections {
+            width: 100vw;
+            height: auto;
+            display: grid;
+            grid-template-columns: minmax(0, 27.5%) minmax(0, 32.5%) 1fr;
+            grid-template-rows: minmax(50vh, auto) minmax(auto, calc(50vh - 50px));
+            grid-auto-flow: row dense;
+            margin-top: 50px;
+
+            // all sub section areas
+            & > article > .linkwrapper {
+                margin: 0 auto;
+                padding: $padding;
+            }
+
+            // all sub sections areas except the first one
+            & > article:not(:first-of-type) > .linkwrapper {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: flex-start;
+                overflow-y: auto;
+                overflow-x: hidden;
+                height: 100%;
+                text-decoration: none;
+                color: var(--font-color-1, $fontColor01);
+
+                & > div:first-of-type {
+                    padding: 0 var(--padding, $padding);
+                }
+
+                & .heading2 {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+
+                & > .imagebox {
+                    width: 100%;
+                    display: flex;
+                    place-items: center;
+                    flex-grow: 2;
+                }
+            }
+
+            // contact write up area
+            & > #id_ContactWriteUpSubSection {
+                background: var(--background-color-6, $bgColor06);
+                grid-column: 1 / span 3;
+
+                & > .linkwrapper {
+                    width: 800px;
+                    max-width: 800px;
+                    min-width: 800px;
+
+                    & > div {
+                        display: flex;
+                        flex-direction: column-reverse;
+
+                        & > .breadcrumb_desktop_wrapper,
+                        & > .breadcrumb_tabletmobile_wrapper {
+                            & > .breadcrumb {
+                                color: var(--font-color1, $fontColor01);
+                                text-decoration: none;
+                                border-bottom-width: 1px;
+                                border-bottom-style: solid;
+                                border-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image-slice: 1;
+                            }
+                        }
+
+                        & > .breadcrumb_tabletmobile_wrapper {
+                            display: none;
+                            visibility: hidden;
+                        }
+                    }
+
+                    & > p:first-of-type {
+                        margin-top: 0;
+                    }
+
+                    & img {
+                        width: 375px;
+                        min-width: 375px;
+                        max-width: 375px;
+                        height: auto;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                }
+            }
+
+            // email area
+            & > #id_EmailSubSection {
+                background: var(--background-color-3, $bgColor03);
+                grid-column: 3 / 4;
+                transition: .5s;
+
+                & img {
+                    width: 200px;
+                    max-width: 200px;
+                    min-width: 200px;
+                    height: auto;
+                    margin: 0 auto;
+                }
+            }
+
+            // linkedin area
+            & > #id_LinkedinSubSection {
+                background: var(--background-color-5, $bgColor05);
+                grid-column: 2 / 3;
+                transition: .5s;
+            }
+
+            // typeform area
+            & > #id_TypeformSubSection {
+                background: var(--background-color-2, $bgColor02);
+                grid-column: 1 / 2;
+                transition: .5s;
+            }
+
+            // Email, linkedin, typeform hover and clicked state
+            & > #id_EmailSubSection:hover, & > #id_EmailSubSection:active,
+            & > #id_LinkedinSubSection:hover, & > #id_LinkedinSubSection:active,
+            & > #id_TypeformSubSection:hover, & > #id_TypeformSubSection:active {
+                background: var(--background-color-4, $bgColor04);
+                transform: scale(1.025);
+                z-index: 10;
+
+                & .heading2, & p {
+                    color: var(--font-color-2, $fontColor02);
+                }
+
+                & .fancyborder {
+                    border-image-source: url(../images/website/titleboxwrap2.png);
+                }
+            }
+        }
+    }
+}
+
+// 769 - 1024
+@mixin contactStyleCSS_1024 {
+    
+}
+
+// < 768
+@mixin contactStyleCSS_768 {
+    
+}
+
 // --------------------------------------------------------------
 // ## Wide Screen Desktop (> 1280px)
 // --------------------------------------------------------------
@@ -896,6 +1140,7 @@
 @include navigationStyleCSS;
 @include homeStyleCSS;
 @include aboutStyleCSS;
+@include contactStyleCSS;
 
 // --------------------------------------------------------------
 // ## Small Screen Desktop (1025px - 1280px)
@@ -912,6 +1157,7 @@
     @include textStyleCSS_1024;
     @include homeStyleCSS_1024;
     @include aboutStyleCSS_1024;
+    @include contactStyleCSS_1024;
 }
 
 // --------------------------------------------------------------
@@ -921,4 +1167,6 @@
     @include textStyleCSS_768;
     @include navigationStyleCSS_768;
     @include homeStyleCSS_768;
+    @include aboutStyleCSS_768;
+    @include contactStyleCSS_768;
 }

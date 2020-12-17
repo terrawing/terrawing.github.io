@@ -10,6 +10,7 @@
   --background-color-4: #023047;
   --background-color-5: #219ebc;
   --background-color-6: #8ecae6;
+  --background-color-7: #ffff00;
   --background-transparent: rgba(255, 255, 255, 0.2);
   --font-size-p: 0.9rem;
   --font-lineheight-p: 1.25rem;
@@ -215,6 +216,10 @@ li {
   border-image-repeat: repeat;
   display: inline-table;
   margin-bottom: 1.5rem; }
+
+.yellowhighlight {
+  background: var(--background-color-7, #ffff00);
+  display: inline-table; }
 
 .fadeLine {
   background: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 70%);
@@ -554,7 +559,7 @@ li {
             visibility: hidden; }
         .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > p:first-of-type {
           margin-top: 0; }
-        .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > p:nth-of-type(4) {
+        .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > p:nth-of-type(5) {
           clear: both; }
         .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > img {
           float: right;
@@ -606,7 +611,7 @@ li {
         max-width: 150px;
         min-width: 150px;
         height: auto;
-        margin: 0 auto; }
+        margin: 0 auto 1rem auto; }
     .about_wrapper > #id_SubSections > #id_ResumeSubSection {
       background: var(--background-color-5, #219ebc);
       transition: .5s; }
@@ -615,7 +620,7 @@ li {
         max-width: 200px;
         min-width: 200px;
         height: auto;
-        margin: 0 auto; }
+        margin: 0 auto 1rem auto; }
     .about_wrapper > #id_SubSections > #id_AwardsSubSection:hover, .about_wrapper > #id_SubSections > #id_AwardsSubSection:active, .about_wrapper > #id_SubSections > #id_ResumeSubSection:hover, .about_wrapper > #id_SubSections > .about_wrapper > #id_SubSections > #id_ResumeSubSection:active {
       background: var(--background-color-4, #023047);
       transform: scale(1.025);
@@ -623,6 +628,101 @@ li {
       .about_wrapper > #id_SubSections > #id_AwardsSubSection:hover .heading2, .about_wrapper > #id_SubSections > #id_AwardsSubSection:hover p, .about_wrapper > #id_SubSections > #id_AwardsSubSection:active .heading2, .about_wrapper > #id_SubSections > #id_AwardsSubSection:active p, .about_wrapper > #id_SubSections > #id_ResumeSubSection:hover .heading2, .about_wrapper > #id_SubSections > #id_ResumeSubSection:hover p, .about_wrapper > #id_SubSections > .about_wrapper > #id_SubSections > #id_ResumeSubSection:active .heading2, .about_wrapper > #id_SubSections > .about_wrapper > #id_SubSections > #id_ResumeSubSection:active p {
         color: var(--font-color-2, #FFF); }
       .about_wrapper > #id_SubSections > #id_AwardsSubSection:hover .fancyborder, .about_wrapper > #id_SubSections > #id_AwardsSubSection:active .fancyborder, .about_wrapper > #id_SubSections > #id_ResumeSubSection:hover .fancyborder, .about_wrapper > #id_SubSections > .about_wrapper > #id_SubSections > #id_ResumeSubSection:active .fancyborder {
+        border-image-source: url(../images/website/titleboxwrap2.png); }
+
+.contact_wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden; }
+  .contact_wrapper > #id_SubSections {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 27.5%) minmax(0, 32.5%) 1fr;
+    grid-template-rows: minmax(50vh, auto) minmax(auto, calc(50vh - 50px));
+    grid-auto-flow: row dense;
+    margin-top: 50px; }
+    .contact_wrapper > #id_SubSections > article > .linkwrapper {
+      margin: 0 auto;
+      padding: 1.5rem; }
+    .contact_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      overflow-y: auto;
+      overflow-x: hidden;
+      height: 100%;
+      text-decoration: none;
+      color: var(--font-color-1, #000); }
+      .contact_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper > div:first-of-type {
+        padding: 0 var(--padding, 1.5rem); }
+      .contact_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper .heading2 {
+        margin-top: 0;
+        margin-bottom: 0; }
+      .contact_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper > .imagebox {
+        width: 100%;
+        display: flex;
+        place-items: center;
+        flex-grow: 2; }
+    .contact_wrapper > #id_SubSections > #id_ContactWriteUpSubSection {
+      background: var(--background-color-6, #8ecae6);
+      grid-column: 1 / span 3; }
+      .contact_wrapper > #id_SubSections > #id_ContactWriteUpSubSection > .linkwrapper {
+        width: 800px;
+        max-width: 800px;
+        min-width: 800px; }
+        .contact_wrapper > #id_SubSections > #id_ContactWriteUpSubSection > .linkwrapper > div {
+          display: flex;
+          flex-direction: column-reverse; }
+          .contact_wrapper > #id_SubSections > #id_ContactWriteUpSubSection > .linkwrapper > div > .breadcrumb_desktop_wrapper > .breadcrumb, .contact_wrapper > #id_SubSections > #id_ContactWriteUpSubSection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper > .breadcrumb {
+            color: var(--font-color1, #000);
+            text-decoration: none;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-image: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 90%);
+            border-image: -o-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+            border-image: -moz-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+            border-image: -ms-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+            border-image: -webkit-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+            border-image-slice: 1; }
+          .contact_wrapper > #id_SubSections > #id_ContactWriteUpSubSection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
+            display: none;
+            visibility: hidden; }
+        .contact_wrapper > #id_SubSections > #id_ContactWriteUpSubSection > .linkwrapper > p:first-of-type {
+          margin-top: 0; }
+        .contact_wrapper > #id_SubSections > #id_ContactWriteUpSubSection > .linkwrapper img {
+          width: 375px;
+          min-width: 375px;
+          max-width: 375px;
+          height: auto;
+          margin: 0 auto;
+          display: block; }
+    .contact_wrapper > #id_SubSections > #id_EmailSubSection {
+      background: var(--background-color-3, #ffb703);
+      grid-column: 3 / 4;
+      transition: .5s; }
+      .contact_wrapper > #id_SubSections > #id_EmailSubSection img {
+        width: 200px;
+        max-width: 200px;
+        min-width: 200px;
+        height: auto;
+        margin: 0 auto; }
+    .contact_wrapper > #id_SubSections > #id_LinkedinSubSection {
+      background: var(--background-color-5, #219ebc);
+      grid-column: 2 / 3;
+      transition: .5s; }
+    .contact_wrapper > #id_SubSections > #id_TypeformSubSection {
+      background: var(--background-color-2, #fb8500);
+      grid-column: 1 / 2;
+      transition: .5s; }
+    .contact_wrapper > #id_SubSections > #id_EmailSubSection:hover, .contact_wrapper > #id_SubSections > #id_EmailSubSection:active, .contact_wrapper > #id_SubSections > #id_LinkedinSubSection:hover, .contact_wrapper > #id_SubSections > #id_LinkedinSubSection:active, .contact_wrapper > #id_SubSections > #id_TypeformSubSection:hover, .contact_wrapper > #id_SubSections > #id_TypeformSubSection:active {
+      background: var(--background-color-4, #023047);
+      transform: scale(1.025);
+      z-index: 10; }
+      .contact_wrapper > #id_SubSections > #id_EmailSubSection:hover .heading2, .contact_wrapper > #id_SubSections > #id_EmailSubSection:hover p, .contact_wrapper > #id_SubSections > #id_EmailSubSection:active .heading2, .contact_wrapper > #id_SubSections > #id_EmailSubSection:active p, .contact_wrapper > #id_SubSections > #id_LinkedinSubSection:hover .heading2, .contact_wrapper > #id_SubSections > #id_LinkedinSubSection:hover p, .contact_wrapper > #id_SubSections > #id_LinkedinSubSection:active .heading2, .contact_wrapper > #id_SubSections > #id_LinkedinSubSection:active p, .contact_wrapper > #id_SubSections > #id_TypeformSubSection:hover .heading2, .contact_wrapper > #id_SubSections > #id_TypeformSubSection:hover p, .contact_wrapper > #id_SubSections > #id_TypeformSubSection:active .heading2, .contact_wrapper > #id_SubSections > #id_TypeformSubSection:active p {
+        color: var(--font-color-2, #FFF); }
+      .contact_wrapper > #id_SubSections > #id_EmailSubSection:hover .fancyborder, .contact_wrapper > #id_SubSections > #id_EmailSubSection:active .fancyborder, .contact_wrapper > #id_SubSections > #id_LinkedinSubSection:hover .fancyborder, .contact_wrapper > #id_SubSections > #id_LinkedinSubSection:active .fancyborder, .contact_wrapper > #id_SubSections > #id_TypeformSubSection:hover .fancyborder, .contact_wrapper > #id_SubSections > #id_TypeformSubSection:active .fancyborder {
         border-image-source: url(../images/website/titleboxwrap2.png); }
 
 @media only screen and (max-width: 1280px) {
@@ -720,4 +820,36 @@ li {
       .home_wrapper > #id_SubSections > #id_ContactSubSection {
         grid-row: 4 / 5; }
         .home_wrapper > #id_SubSections > #id_ContactSubSection img {
-          margin-bottom: 1rem; } }
+          margin-bottom: 1rem; }
+
+  .about_wrapper > #id_SubSections {
+    grid-template-columns: auto; }
+    .about_wrapper > #id_SubSections > article > .linkwrapper {
+      width: calc(100% - 1.5rem) !important;
+      max-width: calc(100% - 1.5rem) !important;
+      min-width: calc(100% - 1.5rem) !important;
+      margin: 0; }
+    .about_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper {
+      overflow-y: hidden; }
+      .about_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper > div:first-of-type {
+        text-align: center; }
+    .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection {
+      grid-column: 1 / 2; }
+      .about_wrapper > #id_SubSections > #id_AboutWriteUpSubSection > .linkwrapper > img {
+        float: none;
+        width: 100%;
+        min-width: 225px;
+        max-width: 225px;
+        margin: 0 auto;
+        display: block; }
+    .about_wrapper > #id_SubSections > #id_SkillsSubSection {
+      grid-row: 2 / 3; }
+      .about_wrapper > #id_SubSections > #id_SkillsSubSection > .linkwrapper ul {
+        column-count: 1;
+        text-align: left; }
+      .about_wrapper > #id_SubSections > #id_SkillsSubSection > .linkwrapper .imagebox > img {
+        margin-bottom: 1rem; }
+    .about_wrapper > #id_SubSections > #id_AwardsSubSection img {
+      margin-bottom: 1rem; }
+    .about_wrapper > #id_SubSections > #id_ResumeSubSection img {
+      margin-bottom: 1rem; } }
