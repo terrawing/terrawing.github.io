@@ -32,6 +32,11 @@
         @include generateGeneralFontCSS(var(--font-size-h2, $heading02FontSize), var(--font-lineheight-h2, $heading01LineHeight), var(--font-weight-semibold, $fontWeightSemiBold), null, var(--font-letterspacing-h2, $heading02LetterSpacing));
     }
 
+    .heading3 {
+        text-transform: uppercase;
+        @include generateGeneralFontCSS(var(--font-size-h3, $heading03FontSize), var(--font-lineheight-h3, $heading01LineHeight), var(--font-weight-semibold, $fontWeightSemiBold), null, var(--font-letterspacing-h3, $heading03LetterSpacing));
+    }
+
     .maintext {
         @include generateGeneralFontCSS(var(--font-size-homemaintext, $pHomeMainTextFontSize), var(--font-lineheight-homemaintext, $pHomeMainTextLineHeight));
     }
@@ -42,29 +47,12 @@
         border-image-slice: 10 fill;
         border-image-repeat: repeat;
         display: inline-table;
-        margin-bottom: $margin;
+        margin-bottom: var(--margin, $margin);
     }
 
     .yellowhighlight {
         background: var(--background-color-7, $bgColor07);
         display: inline-table;
-    }
-
-    .fadeLine {
-        background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
-        background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
-        background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
-        background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
-        background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
-        height: 1px;
-        border: 0;
-    }
-
-    .footer_fixed {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
     }
 
     .disabled {
@@ -97,8 +85,34 @@
     }
 }
 
+//--------------------------------------------------------------
+//# Applies to every page structure (Pages General Style CSS)
+//--------------------------------------------------------------
+@mixin pagesGeneralStyleCSS {
+    #id_MainWrapper {
+        & > div {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow-x: hidden;
+
+            & > #id_SubSections {
+                width: 100vw;
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .footer_fixed {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
  // < 768
- @mixin textStyleCSS_768 {
+ @mixin pagesGeneralStyleCSS_768 {
     .footer_fixed {
         position: unset;
     }
@@ -364,12 +378,8 @@
         top: 0;
         left: 0;
         right: 0;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
 
         & > #id_SubSections {
-            width: 100vw;
             height: calc(100% - 100px);
             max-height: calc(100% - 100px);
             min-height: calc(100% - 100px);
@@ -377,7 +387,6 @@
             grid-template-columns: minmax(0, 50%) minmax(0, 20%) 1fr;
             grid-template-rows: 50% 50%;
             grid-auto-flow: row dense;
-            margin-top: 50px;
 
             // all sub section areas
             & > article > .linkwrapper {
@@ -615,7 +624,7 @@
                 }
 
                 & > .imagebox {
-                    padding: 0 $padding;
+                    padding: 0 var(--padding, $padding);
                 }
             }
 
@@ -671,23 +680,16 @@
 //--------------------------------------------------------------
 @mixin aboutStyleCSS {
     .about_wrapper {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        overflow-x: hidden;
-
         & > #id_SubSections {
-            width: 100vw;
             height: auto;
             display: grid;
             grid-template-columns: minmax(0, 50%) 1fr;
             grid-template-rows: auto;
-            margin-top: 50px;
 
             // all sub section areas
             & > article > .linkwrapper {
                 margin: 0 auto;
-                padding: $padding;
+                padding: var(--padding, $padding);
             }
 
             // all sub sections areas except the first one
@@ -770,7 +772,7 @@
                         box-shadow: 1px 1px 3px 1px #5d5d5d;
                         -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
                         -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
-                        margin: 0 0 $margin $margin;
+                        margin: 0 0 var(--margin, $margin) var(--margin, $margin);
                         
                     }
                 }
@@ -790,7 +792,7 @@
                     & ul {
                         column-count: 2;
                         column-gap: #{$margin * 2};
-                        padding-left: $padding;
+                        padding-left: var(--padding, $padding);
                         list-style-type: circle;
                         margin-bottom: 0;
 
@@ -983,24 +985,17 @@
 //--------------------------------------------------------------
 @mixin contactStyleCSS {
     .contact_wrapper {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        overflow-x: hidden;
-
         & > #id_SubSections {
-            width: 100vw;
             height: auto;
             display: grid;
             grid-template-columns: minmax(0, 27.5%) minmax(0, 32.5%) 1fr;
             grid-template-rows: minmax(50vh, auto) minmax(auto, calc(50vh - 50px));
             grid-auto-flow: row dense;
-            margin-top: 50px;
 
             // all sub section areas
             & > article > .linkwrapper {
                 margin: 0 auto;
-                padding: $padding;
+                padding: var(--padding, $padding);
             }
 
             // all sub sections areas except the first one
@@ -1250,24 +1245,17 @@
 //--------------------------------------------------------------
 @mixin portfolioStyleCSS {
     .portfolio_wrapper {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        overflow-x: hidden;
-
         & > #id_SubSections {
-            width: 100vw;
             height: auto;
             display: grid;
             grid-template-columns: minmax(0, 33.33%) minmax(0, 16.665%) minmax(0, 16.665%) minmax(0, 33.33%);
             grid-template-rows: minmax(calc(50vh - 50px), auto) minmax(auto, calc(50vh - 50px));
             grid-auto-flow: row dense;
-            margin-top: 50px;
 
             // all sub section areas
             & > article > .linkwrapper {
                 margin: 0 auto;
-                padding: $padding;
+                padding: var(--padding, $padding);
             }
 
             // all sub sections areas except the first one
@@ -1536,16 +1524,241 @@
     }
 }
 
+//--------------------------------------------------------------
+//# Case Study (Portfolio) (Case Study Style CSS)
+//--------------------------------------------------------------
+@mixin portfolioCategoryStyleCSS {
+    .portfoliocategory_wrapper {
+        & > #id_SubSections {
+            height: auto;
+            padding: var(--padding, $padding);
+
+            // applies to all write ups and sub sections areas
+            & > article, & > div {
+                width: 800px;
+                max-width: 800px;
+                min-width: 800px;
+                margin: 0 auto;
+            }
+
+            // applies to all write up area
+            & > article {
+                & > .linkwrapper {
+                    & > div {
+                        display: flex;
+                        flex-direction: column-reverse;
+
+                        & > .breadcrumb_desktop_wrapper,
+                        & > .breadcrumb_tabletmobile_wrapper {
+                            & > .breadcrumb {
+                                color: var(--font-color1, $fontColor01);
+                                text-decoration: none;
+                                border-bottom-width: 1px;
+                                border-bottom-style: solid;
+                                border-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image-slice: 1;
+                            }
+                        }
+
+                        & > .breadcrumb_tabletmobile_wrapper {
+                            display: none;
+                            visibility: hidden;
+                        }
+                    }
+
+                    & > p:first-of-type {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            // case studies collection area
+            & > div[role="list"] {
+                // all cards sections
+                & > div[role="listitem"] {
+                    background: var(--background-color-1, $bgColor01);
+                    margin-bottom: var(--margin, $margin);
+                    transition: .5s;
+
+                    & > .linkwrapper {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        text-decoration: none;
+                        color: var(--font-color-1, $fontColor01);
+
+                        & > div {
+                            padding: var(--padding, $padding) var(--padding, $padding) 0 var(--padding, $padding);
+
+                            & .heading3 {
+                                margin-top: 0;
+                                margin-bottom: 0;
+                            }
+                        }
+
+                        & .imagebox {
+                            width: 100%;
+                            height: 300px;
+                            max-height: 300px;
+                            min-height: 300px;
+                        }
+                    }
+
+                    &:first-of-type {
+                        margin-top: var(--margin, $margin);
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: #{$margin / 2};
+                    }
+                }
+
+                // all cards hover and clicked state
+                & > div:hover, & > div:active {
+                    background: var(--background-color-4, $bgColor04);
+                    transform: scale(1.025);
+                    z-index: 10;
+
+                    & > .linkwrapper {
+                        & > div {
+                            & .heading3, & p {
+                                color: var(--font-color-2, $fontColor02);
+                            }
+
+                            & .fancyborder {
+                                border-image-source: url(../images/website/titleboxwrap2.png);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .casestudy_wrapper {
+        & > #id_SubSections {
+            background: var(--background-color-6, $bgColor06);
+        }
+    }
+
+    .design_wrapper {
+        & > #id_SubSections {
+            background: var(--background-color-2, $bgColor02);
+        }
+    }
+
+    .code_wrapper {
+        & > #id_SubSections {
+            background: var(--background-color-3, $bgColor03);
+        }
+    }
+}
+
+// 769 - 1024
+@mixin portfolioCategoryStyleCSS_1024 {
+    .portfoliocategory_wrapper {
+        & > #id_SubSections {
+
+            // applies to all write ups and sub sections areas
+            & > article, & > div {
+                width: 600px;
+                max-width: 600px;
+                min-width: 600px;
+            }
+
+            // applies to all write up area
+            & > article {
+                & > .linkwrapper {
+                    & > div {
+                        & > .breadcrumb_desktop_wrapper {
+                            display: none;
+                            visibility: hidden;
+                        }
+
+                        & > .breadcrumb_tabletmobile_wrapper {
+                            display: block;
+                            visibility: visible;
+                        }
+                    }
+                }
+
+            }
+
+            // case studies collection area
+            & > div[role="list"] {
+                // all cards sections
+                & > div[role="listitem"] {
+                    text-align: center;
+
+                    & > .linkwrapper {
+                        & .imagebox {
+                            & > img {
+                                object-fit: cover;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// < 768
+@mixin portfolioCategoryStyleCSS_768 {
+    .portfoliocategory_wrapper {
+        & > #id_SubSections {
+            padding: var(--padding, $padding) 0 0 0;
+            
+            // applies to all write ups areas
+            & > article {
+                padding: 0 var(--padding, $padding);
+                width: calc(100% - #{$padding}) !important;
+                max-width: calc(100% - #{$padding}) !important;
+                min-width: calc(100% - #{$padding}) !important;
+            }
+
+            // applies to all sub section areas
+            & > div[role="list"] {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 100% !important;
+
+                & > div[role="listitem"] {
+                    margin-bottom: 0;
+
+                    & > .linkwrapper {
+                        & > div {
+                            padding: var(--padding, 1.5rem) #{$padding + ($padding / 2)} 0 #{$padding + ($padding / 2)};
+                        }
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 // --------------------------------------------------------------
 // ## Wide Screen Desktop (> 1280px)
 // --------------------------------------------------------------
 @include animationStyleCSS;
 @include textStyleCSS;
+@include pagesGeneralStyleCSS;
 @include navigationStyleCSS;
 @include homeStyleCSS;
 @include aboutStyleCSS;
 @include contactStyleCSS;
 @include portfolioStyleCSS;
+@include portfolioCategoryStyleCSS;
+
 
 // --------------------------------------------------------------
 // ## Small Screen Desktop (1025px - 1280px)
@@ -1564,16 +1777,18 @@
     @include aboutStyleCSS_1024;
     @include contactStyleCSS_1024;
     @include portfolioStyleCSS_1024;
+    @include portfolioCategoryStyleCSS_1024;
 }
 
 // --------------------------------------------------------------
 // ## Phones (< 769px)
 // --------------------------------------------------------------
 @media only screen and (max-width: 768px) {
-    @include textStyleCSS_768;
+    @include pagesGeneralStyleCSS_768;
     @include navigationStyleCSS_768;
     @include homeStyleCSS_768;
     @include aboutStyleCSS_768;
     @include contactStyleCSS_768;
     @include portfolioStyleCSS_768;
+    @include portfolioCategoryStyleCSS_768;
 }

@@ -41,6 +41,10 @@ $heading02LetterSpacing: 0.1rem;
 $heading02FontSize_1024: 1.25rem;
 $heading02LineHeight_1024: 1.5rem;
 
+$heading03FontSize: 1.25rem;
+$heading03LineHeight: 1.5rem;
+$heading03LetterSpacing: 0.1rem;
+
 // Font Weights
 $fontWeightNormal: 300;
 $fontWeightSemiBold: 400;
@@ -89,6 +93,10 @@ $padding: 1.5rem;
     --font-letterspacing-h2: #{$heading02LetterSpacing};
     --font-size-h2-1024: #{$heading02FontSize_1024};
     --font-lineheight-h2-1024: #{$heading02LineHeight_1024};
+
+    --font-size-h3: #{$heading03FontSize};
+    --font-lineheight-h3: #{$heading03LineHeight};
+    --font-letterspacing-h3: #{$heading03LetterSpacing};
 
     --font-weight-normal: #{$fontWeightNormal};
     --font-weight-semibold: #{$fontWeightSemiBold};
