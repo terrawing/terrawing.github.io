@@ -4,6 +4,8 @@
 $fontColor01: #000;
 $fontColor02: #FFF;
 $fontColor03: #AFAFAF;
+$fontColor04: #959595;
+$fontColor05: #6E6E6E;
 
 // Background Colors;
 $bgColor01: #f5f5f5;
@@ -45,6 +47,10 @@ $heading03FontSize: 1.25rem;
 $heading03LineHeight: 1.5rem;
 $heading03LetterSpacing: 0.1rem;
 
+$heading04FontSize: 2.5rem;
+$heading04LineHeight: 2.75rem;
+$heading04LetterSpacing: -0.005rem;
+
 // Font Weights
 $fontWeightNormal: 300;
 $fontWeightSemiBold: 400;
@@ -61,6 +67,9 @@ $padding: 1.5rem;
 @mixin rootCSSVariables {
     --font-color-1: #{$fontColor01};
     --font-color-2: #{$fontColor02};
+    --font-color-3: #{$fontColor03};
+    --font-color-4: #{$fontColor04};
+    --font-color-5: #{$fontColor05};
 
     --background-color-1: #{$bgColor01};
     --background-color-2: #{$bgColor02};
@@ -97,6 +106,10 @@ $padding: 1.5rem;
     --font-size-h3: #{$heading03FontSize};
     --font-lineheight-h3: #{$heading03LineHeight};
     --font-letterspacing-h3: #{$heading03LetterSpacing};
+
+    --font-size-h4: #{$heading04FontSize};
+    --font-lineheight-h4: #{$heading04LineHeight};
+    --font-letterspacing-h4: #{$heading04LetterSpacing};
 
     --font-weight-normal: #{$fontWeightNormal};
     --font-weight-semibold: #{$fontWeightSemiBold};

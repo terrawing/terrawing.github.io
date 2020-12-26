@@ -1,0 +1,268 @@
+@import '_website_style';
+
+//--------------------------------------------------------------
+//# Drop Down Menu (Drop down menu Style CSS)
+//--------------------------------------------------------------
+@mixin dropDownMenuStyleCSS {
+    .dropdown {
+        list-style: none;
+        position: relative;
+        background: var(--font-color-2, $fontColor02);
+        border-radius: 3px;
+        width: 300px;
+        max-width: 100%;
+        min-width: 100%;
+        height: 40px;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        border: 1px solid var(--font-color-1, $fontColor01);
+
+        & > #id_DropDownMenuSelectButton {
+            color: #444444;
+            padding: 10px 0px;
+            padding-left: 15px;
+            list-style-position: inside;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 22px;
+
+            &:hover, &:focus, &:active {
+                background: var(--background-color-4, $bgColor04);
+                color: var(--font-color-2, $fontColor02);
+            }
+        }
+        
+        & > #id_DropDownMenuSelectButton:hover + .dropdownmenu_arrow, 
+        & > #id_DropDownMenuSelectButton:focus + .dropdownmenu_arrow,
+        & > #id_DropDownMenuSelectButton:active + .dropdownmenu_arrow {
+            fill: var(--font-color-2, $fontColor02);
+        }
+      
+        & > .dropdownmenu_arrow {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transition: transform .2s linear;
+        }
+
+        & > .dropdownmenu_arrow.expanded {
+            transform: rotate(-180deg);
+        }
+
+        & > .dropdownmenu_listcontainer {
+            position: relative;
+
+            & > .dropdownmenu_list {
+                width: 100%;
+                position: absolute;
+                left: 0;
+                border-bottom-left-radius: 2px;
+                border-bottom-right-radius: 2px;
+                //box-shadow: 0px 3px 2px 0 #a2a4b2;
+                transition: opacity 0.1s cubic-bezier(0, 0, 0.38, 0.9), max-height 0.5s cubic-bezier(0, 0, 0.38, 0.9);
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                background: var(--font-color-2, $fontColor02);
+
+                & > .dropdownmenu_listitem {
+                    color: #444444;
+                    padding: 10px 0px;
+                    padding-left: 15px;
+                    transition: background-color .1s linear, color .1s linear;
+                    color: #444444;
+                    list-style-position: inside;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+
+                    &:hover, &:focus, &:active {
+                        background-color: var(--background-color-5, $bgColor05);
+                        color: var(--font-color-1, $fontColor01);
+                    }
+                }
+            }
+        }
+    }
+
+    .dropdownmenuwrapper {
+        margin-bottom: #{$margin + .5rem};
+    }
+      
+    .open {
+        opacity: 1 !important;
+        overflow: auto !important;
+        max-height: 15rem !important;
+    }
+}
+
+//--------------------------------------------------------------
+//# All Case Studies (All Case studies Style CSS)
+//--------------------------------------------------------------
+@mixin portfolioCaseStudyStyleCSS {
+    .portfoliocasestudy_wrapper {
+        & > #id_SubSections {
+            height: auto;
+            margin: 0 auto;
+            padding: 0;
+
+            // Applies to all articles except the first
+            & > article:not(:first-of-type) > .linkwrapper {
+                width: 800px;
+                max-width: 800px;
+                min-width: 800px;
+                margin: 0 auto;
+                padding: 0 var(--padding, $padding);
+            }
+
+            // Title Area
+            & > #id_DLTitleAreaSubSection {
+                & > .linkwrapper {
+                    display: flex;
+                    flex-direction: column-reverse;
+
+                    & > div {
+                        width: 800px;
+                        max-width: 800px;
+                        min-width: 800px;
+                        margin: 0 auto;
+                        padding: var(--padding, $padding) var(--padding, $padding) 0 var(--padding, $padding);
+                        display: flex;
+                        flex-direction: column-reverse;
+
+                        & > .breadcrumb_desktop_wrapper,
+                        & > .breadcrumb_tabletmobile_wrapper {
+                            & > .breadcrumb {
+                                color: var(--font-color1, $fontColor01);
+                                text-decoration: none;
+                                border-bottom-width: 1px;
+                                border-bottom-style: solid;
+                                border-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image-slice: 1;
+                            }
+                        }
+
+                        & > .breadcrumb_tabletmobile_wrapper {
+                            display: none;
+                            visibility: hidden;
+                        }
+                    }
+
+                    & > img {
+                        width: 100vw;
+                        max-width: 100vw;
+                        min-width: 100vw;
+                        //height: auto;
+
+                        height: 325px; // don't need this later
+                        background: rgb(0, 174, 255); // don't need this later
+                    }
+                }
+            }
+
+            // Basic Info Area
+            & > #id_DLBasicSubSection {
+                & .basicinfo {
+                    & > div {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+                        align-content: flex-start;
+                        border-bottom: 1px solid var(--font-color-4, $fontColor04);
+
+                        & > p:first-of-type {
+                            width: 30%;
+                            min-width: 30%;
+                            max-width: 30%;
+                            padding-right: var(--padding, $padding);
+                        }
+
+                        & > p:nth-of-type(2) {
+                            flex-grow: 2;
+                        }
+                    }
+                }
+            }
+
+            // Main Sub Section Area
+            & > #id_DLMainSubSection {
+                background: var(--font-color2, $fontColor02);
+
+                & > .linkwrapper {
+                    & > section {
+                        & ol {
+                            padding-left: 22px;
+                        }
+                    }
+
+                    & > section:last-of-type {
+                        padding-bottom: #{$padding + .25rem};
+                    }
+                }
+            }
+
+            // Different Components of the Case study Area
+            & > .componentsection {
+                & > .linkwrapper {
+
+                    // Applies to All sections within component section
+                    & > section {
+                        & > div {
+                            & p:first-of-type {
+                                margin-top: #{$margin / 6};
+                            }
+                        }
+
+                        & > figure {
+                            width: 100%;
+                            max-width: 100%;
+                            min-width: 100%;
+                            margin: var(--margin, $margin) 0;
+                            height: auto;
+                                          
+                            & > img {
+                                display: block;
+                                border-radius: 3px;
+                                box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
+
+                                height: 400px; // don't need this later
+                                background: rgb(0, 174, 255); // don't need this later
+                            }
+                        }
+                    }
+
+                    // Sections that are split into 2 columns
+                    & .splitcolumnsection {
+                        display: flex;
+                        justify-content: space-between;
+                        align-content: flex-start;
+
+                        & > header {
+                            width: 30%;
+                            min-width: 30%;
+                            max-width: 30%;
+                            padding-right: var(--padding, $padding);
+                        }
+
+                        & > div {
+                            flex-grow: 2;
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
