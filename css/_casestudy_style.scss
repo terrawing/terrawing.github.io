@@ -69,10 +69,11 @@
                 margin: 0;
                 padding: 0;
                 background: var(--font-color-2, $fontColor02);
+                border: 1px solid var(--font-color-2, $fontColor02);
 
                 & > .dropdownmenu_listitem {
                     color: var(--font-color-1, $fontColor01);
-                    padding: 10px 0px;
+                    padding: 15px 0px;
                     padding-left: 15px;
                     transition: background-color .1s linear, color .1s linear;
                     list-style-position: inside;
@@ -100,6 +101,13 @@
     }
 }
 
+// 769 - 1024
+@mixin dropDownMenuStyleCSS_1024 {
+    .open {
+        max-height: 12rem !important;
+    }
+}
+
 //--------------------------------------------------------------
 //# All Case Studies (All Case studies Style CSS)
 //--------------------------------------------------------------
@@ -119,6 +127,7 @@
                 padding: 0 var(--padding, $padding);
             }
 
+            // Applies to all odd articles except the first one, basically starting on second but is considered as first
             & > article:not(:first-of-type):nth-of-type(odd) {
                 background: var(--font-color2, $fontColor02);
             }
@@ -320,6 +329,41 @@
                 }
             }
 
+        }
+    }
+}
+
+// 769 - 1024
+@mixin portfolioCaseStudyStyleCSS_1024 {
+    .portfoliocasestudy_wrapper {
+        & > #id_SubSections {
+            // Applies to all articles except the first
+            & > article:not(:first-of-type) > .linkwrapper {
+                width: 600px;
+                max-width: 600px;
+                min-width: 600px;
+            }
+
+            // Title Area
+            & > #id_DLTitleAreaSubSection {
+                & > .linkwrapper {
+                    & > div {
+                        width: 600px;
+                        max-width: 600px;
+                        min-width: 600px;
+
+                        & > .breadcrumb_desktop_wrapper {
+                            display: none;
+                            visibility: hidden;
+                        }
+
+                        & > .breadcrumb_tabletmobile_wrapper {
+                            display: block;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
         }
     }
 }

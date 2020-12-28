@@ -50,6 +50,8 @@ $heading03LetterSpacing: 0.1rem;
 $heading04FontSize: 2.5rem;
 $heading04LineHeight: 2.75rem;
 $heading04LetterSpacing: -0.005rem;
+$heading04FontSize_1024: 1.75rem;
+$heading04LineHeight_1024: 2rem;
 
 // Font Weights
 $fontWeightNormal: 300;
@@ -110,6 +112,8 @@ $padding: 1.5rem;
     --font-size-h4: #{$heading04FontSize};
     --font-lineheight-h4: #{$heading04LineHeight};
     --font-letterspacing-h4: #{$heading04LetterSpacing};
+    --font-size-h4-1024: #{$heading04FontSize_1024};
+    --font-lineheight-h4-1024: #{$heading04LineHeight_1024};
 
     --font-weight-normal: #{$fontWeightNormal};
     --font-weight-semibold: #{$fontWeightSemiBold};

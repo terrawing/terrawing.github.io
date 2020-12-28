@@ -1,10 +1,3 @@
-function gotoSection(e) {
-    console.clear();
-    console.log(e);
-    console.log((e.target.innerHTML).trim());
-}
-
-
 const SPACEBAR_KEY_CODE = [0, 32];
 const ENTER_KEY_CODE = 13;
 const DOWN_ARROW_KEY_CODE = 40;

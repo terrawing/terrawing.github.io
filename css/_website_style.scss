@@ -103,6 +103,10 @@
         @include generateGeneralFontCSS(var(--font-size-h2-1024, $heading02FontSize_1024), var(--font-lineheight-h2-1024, $heading02LineHeight_1024));
     }
 
+    .heading4 {
+        @include generateGeneralFontCSS(var(--font-size-h4-1024, $heading01FontSize_1024), var(--font-lineheight-h4-1024, $heading01LineHeight_1024));
+    }
+
     .maintext {
         @include generateGeneralFontCSS(var(--font-size-homemaintext-1024, $pHomeMainTextFontSize_1024), var(--font-lineheight-homemaintext-1024, $pHomeMainTextLineHeight_1024));
     }
@@ -131,6 +135,28 @@
         bottom: 0;
         left: 0;
         right: 0;
+    }
+
+    #id_GoBackToTopButton {
+        display: none; 
+        position: fixed; 
+        bottom: 60px; 
+        right: 25px; 
+        z-index: 99; 
+        border: 1px solid var(--font-color1, $fontColor01); 
+        outline: none; 
+        background-color: var(--font-color-2, $fontColor02); 
+        color: var(--font-color-1, $fontColor01);  
+        cursor: pointer;
+        padding: #{$padding / 2};
+        border-radius: 3px; 
+        font-family: fieldwork, sans-serif;
+        @include generateGeneralFontCSS(var(--font-size-p, $pFontSize), var(--font-lineheight-p, $pLineHeight), var(--font-weight-normal, $fontWeightNormal), var(--font-color-1, $fontColor01), var(--font-letterspacing-p, $pLetterSpacing));
+
+        &:hover {
+            background-color: var(--background-color-4, $bgColor04); 
+            color: var(--font-color-2, $fontColor02);  
+        }
     }
 
     .mt-0 {
@@ -271,7 +297,7 @@
 
     #id_TopNavigationWrapper {
         //width: 100vw;
-        width: calc(100vw - #{$padding});
+        width: calc(100vw - (12px + #{$padding}));
         height: 50px;
         display: flex;
         justify-content: space-between;
@@ -406,7 +432,8 @@
         overflow: auto;
         margin: 0;
         padding: 0;
-        position: fixed;
+        //position: fixed;
+        position: relative;
         top: 0;
         left: 0;
         right: 0;

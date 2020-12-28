@@ -28,11 +28,13 @@
 // --------------------------------------------------------------
 @media only screen and (max-width: 1024px) {
     @include textStyleCSS_1024;
+    @include dropDownMenuStyleCSS_1024;
     @include homeStyleCSS_1024;
     @include aboutStyleCSS_1024;
     @include contactStyleCSS_1024;
     @include portfolioStyleCSS_1024;
     @include portfolioCategoryStyleCSS_1024;
+    @include portfolioCaseStudyStyleCSS_1024;
 }
 
 // --------------------------------------------------------------
