@@ -71,11 +71,10 @@
                 background: var(--font-color-2, $fontColor02);
 
                 & > .dropdownmenu_listitem {
-                    color: #444444;
+                    color: var(--font-color-1, $fontColor01);
                     padding: 10px 0px;
                     padding-left: 15px;
                     transition: background-color .1s linear, color .1s linear;
-                    color: #444444;
                     list-style-position: inside;
                     white-space: nowrap;
                     overflow: hidden;
@@ -118,6 +117,10 @@
                 min-width: 800px;
                 margin: 0 auto;
                 padding: 0 var(--padding, $padding);
+            }
+
+            & > article:not(:first-of-type):nth-of-type(odd) {
+                background: var(--font-color2, $fontColor02);
             }
 
             // Title Area
@@ -195,8 +198,6 @@
 
             // Main Sub Section Area
             & > #id_DLMainSubSection {
-                background: var(--font-color2, $fontColor02);
-
                 & > .linkwrapper {
                     & > section {
                         & ol {
@@ -229,7 +230,7 @@
                             margin: var(--margin, $margin) 0;
                             height: auto;
                                           
-                            & > img {
+                            & img {
                                 display: block;
                                 border-radius: 3px;
                                 box-shadow: 1px 1px 3px 1px #5d5d5d;
@@ -238,6 +239,25 @@
 
                                 height: 400px; // don't need this later
                                 background: rgb(0, 174, 255); // don't need this later
+                            }                
+                        }
+
+                        & .imagesplitcolumn {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            align-content: space-between;
+                            
+                            & > figure {
+                                width: 100%;
+                                max-width: 100%;
+                                min-width: 100%;
+                            }
+
+                            & > .splitimage {
+                                width: calc(50% - #{$margin});
+                                max-width: calc(50% - #{$margin});
+                                min-width: calc(50% - #{$margin});               
                             }
                         }
                     }
@@ -259,6 +279,43 @@
                             flex-grow: 2;
                             width: 70%;
                         }
+                    }
+                }
+            }
+
+            // Bottom view more cases section area
+            & > .viewmorecases {
+                border-top-width: 1px;
+                border-top-style: solid;
+                border-top-color: var(--font-color-1, $fontColor01);
+                text-align: center;
+                padding: #{$padding * 3} var(--padding, $padding);
+
+                & > .linkwrapper {
+                    & > div:last-of-type {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+                        width: 500px;
+                        margin: 0 auto;
+
+                        & > .casestudybutton {
+                            text-decoration: none;
+                            color: var(--font-color-1, $fontColor01);
+                            padding: #{$padding / 3} #{$padding / 3} #{$padding / 2.5} #{$padding / 3};
+                            border: 1px solid var(--font-color1, $fontColor01);
+                            width: 225px;
+                            max-width: 225px;
+                            min-width: 225px;
+                            border-radius: 3px;
+                            background: var(--font-color-2, $fontColor02);
+
+                            &:hover, &:focus, &:active {
+                                background: var(--background-color-4, $bgColor04);
+                                color: var(--font-color-2, $fontColor02);
+                            }
+                        }
+
                     }
                 }
             }

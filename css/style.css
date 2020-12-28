@@ -369,11 +369,11 @@ li {
   right: 0; }
 
 #id_TopNavigationWrapper {
-  width: 100vw;
+  width: calc(100vw - 1.5rem);
   height: 50px;
   display: flex;
   justify-content: space-between;
-  padding: 0 var(--padding, 1.5rem);
+  padding: 0 0 0 var(--padding, 1.5rem);
   margin: 0;
   position: fixed;
   top: 0;
@@ -482,11 +482,10 @@ li {
       padding: 0;
       background: var(--font-color-2, #FFF); }
       .dropdown > .dropdownmenu_listcontainer > .dropdownmenu_list > .dropdownmenu_listitem {
-        color: #444444;
+        color: var(--font-color-1, #000);
         padding: 10px 0px;
         padding-left: 15px;
         transition: background-color .1s linear, color .1s linear;
-        color: #444444;
         list-style-position: inside;
         white-space: nowrap;
         overflow: hidden;
@@ -996,6 +995,8 @@ li {
     min-width: 800px;
     margin: 0 auto;
     padding: 0 var(--padding, 1.5rem); }
+  .portfoliocasestudy_wrapper > #id_SubSections > article:not(:first-of-type):nth-of-type(odd) {
+    background: var(--font-color2, #FFF); }
   .portfoliocasestudy_wrapper > #id_SubSections > #id_DLTitleAreaSubSection > .linkwrapper {
     display: flex;
     flex-direction: column-reverse; }
@@ -1040,12 +1041,10 @@ li {
       padding-right: var(--padding, 1.5rem); }
     .portfoliocasestudy_wrapper > #id_SubSections > #id_DLBasicSubSection .basicinfo > div > p:nth-of-type(2) {
       flex-grow: 2; }
-  .portfoliocasestudy_wrapper > #id_SubSections > #id_DLMainSubSection {
-    background: var(--font-color2, #FFF); }
-    .portfoliocasestudy_wrapper > #id_SubSections > #id_DLMainSubSection > .linkwrapper > section ol {
-      padding-left: 22px; }
-    .portfoliocasestudy_wrapper > #id_SubSections > #id_DLMainSubSection > .linkwrapper > section:last-of-type {
-      padding-bottom: 1.75rem; }
+  .portfoliocasestudy_wrapper > #id_SubSections > #id_DLMainSubSection > .linkwrapper > section ol {
+    padding-left: 22px; }
+  .portfoliocasestudy_wrapper > #id_SubSections > #id_DLMainSubSection > .linkwrapper > section:last-of-type {
+    padding-bottom: 1.75rem; }
   .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section > div p:first-of-type {
     margin-top: 0.25rem; }
   .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section > figure {
@@ -1054,7 +1053,7 @@ li {
     min-width: 100%;
     margin: var(--margin, 1.5rem) 0;
     height: auto; }
-    .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section > figure > img {
+    .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section > figure img {
       display: block;
       border-radius: 3px;
       box-shadow: 1px 1px 3px 1px #5d5d5d;
@@ -1062,6 +1061,19 @@ li {
       -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
       height: 400px;
       background: #00aeff; }
+  .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section .imagesplitcolumn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between; }
+    .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section .imagesplitcolumn > figure {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%; }
+    .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section .imagesplitcolumn > .splitimage {
+      width: calc(50% - 1.5rem);
+      max-width: calc(50% - 1.5rem);
+      min-width: calc(50% - 1.5rem); }
   .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper .splitcolumnsection {
     display: flex;
     justify-content: space-between;
@@ -1074,6 +1086,31 @@ li {
     .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper .splitcolumnsection > div {
       flex-grow: 2;
       width: 70%; }
+  .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: var(--font-color-1, #000);
+    text-align: center;
+    padding: 4.5rem var(--padding, 1.5rem); }
+    .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      width: 500px;
+      margin: 0 auto; }
+      .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .casestudybutton {
+        text-decoration: none;
+        color: var(--font-color-1, #000);
+        padding: 0.5rem 0.5rem 0.6rem 0.5rem;
+        border: 1px solid var(--font-color1, #000);
+        width: 225px;
+        max-width: 225px;
+        min-width: 225px;
+        border-radius: 3px;
+        background: var(--font-color-2, #FFF); }
+        .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .casestudybutton:hover, .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .casestudybutton:focus, .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .casestudybutton:active {
+          background: var(--background-color-4, #023047);
+          color: var(--font-color-2, #FFF); }
 
 @media only screen and (max-width: 1280px) {
   .maintext {

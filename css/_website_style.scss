@@ -151,11 +151,11 @@
 }
 
  // < 768
- @mixin pagesGeneralStyleCSS_768 {
+@mixin pagesGeneralStyleCSS_768 {
     .footer_fixed {
         position: unset;
     }
- }
+}
 
 //--------------------------------------------------------------
 //# Navigation (Navigation Style CSS)
@@ -270,11 +270,13 @@
     }
 
     #id_TopNavigationWrapper {
-        width: 100vw;
+        //width: 100vw;
+        width: calc(100vw - #{$padding});
         height: 50px;
         display: flex;
         justify-content: space-between;
-        padding: 0 var(--padding, $padding);
+        //padding: 0 var(--padding, $padding);
+        padding: 0 0 0 var(--padding, $padding);
         margin: 0;
         position: fixed;
         top: 0;
