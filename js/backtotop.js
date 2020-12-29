@@ -8,7 +8,7 @@ window.addEventListener("scroll", function() {
 
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     goBackToTopButton.style.display = "block";
   } else {
     goBackToTopButton.style.display = "none";

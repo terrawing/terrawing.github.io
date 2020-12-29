@@ -301,7 +301,7 @@ li {
   font-weight: var(--font-weight-normal, 300);
   color: var(--font-color-1, #000);
   letter-spacing: var(--font-letterspacing-p, 0.025rem); }
-  #id_GoBackToTopButton:hover {
+  #id_GoBackToTopButton:hover, #id_GoBackToTopButton:active, #id_GoBackToTopButton:focus {
     background-color: var(--background-color-4, #023047);
     color: var(--font-color-2, #FFF); }
 
@@ -470,7 +470,7 @@ li {
   padding: 0;
   border: 1px solid var(--font-color-1, #000); }
   .dropdown > #id_DropDownMenuSelectButton {
-    color: #444444;
+    color: var(--font-color-1, #000);
     padding: 10px 0px;
     padding-left: 15px;
     list-style-position: inside;
@@ -983,12 +983,12 @@ li {
       text-decoration: none;
       color: var(--font-color-1, #000); }
       .portfoliocategory_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"] > .linkwrapper > div {
-        padding: 0 var(--padding, 1.5rem); }
+        padding: 0.75rem var(--padding, 1.5rem) 0 var(--padding, 1.5rem); }
       .portfoliocategory_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"] > .linkwrapper .imagebox {
         width: 100%;
-        height: 300px;
-        max-height: 300px;
-        min-height: 300px; }
+        height: auto;
+        max-width: 100%;
+        min-width: 100%; }
     .portfoliocategory_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"]:first-of-type {
       margin-top: var(--margin, 1.5rem); }
     .portfoliocategory_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"]:last-of-type {
@@ -1023,10 +1023,10 @@ li {
     padding: 0 var(--padding, 1.5rem); }
   .portfoliocasestudy_wrapper > #id_SubSections > article:not(:first-of-type):nth-of-type(odd) {
     background: var(--font-color2, #FFF); }
-  .portfoliocasestudy_wrapper > #id_SubSections > #id_DLTitleAreaSubSection > .linkwrapper {
+  .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper {
     display: flex;
     flex-direction: column-reverse; }
-    .portfoliocasestudy_wrapper > #id_SubSections > #id_DLTitleAreaSubSection > .linkwrapper > div {
+    .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div {
       width: 800px;
       max-width: 800px;
       min-width: 800px;
@@ -1034,7 +1034,7 @@ li {
       padding: var(--padding, 1.5rem) var(--padding, 1.5rem) 0 var(--padding, 1.5rem);
       display: flex;
       flex-direction: column-reverse; }
-      .portfoliocasestudy_wrapper > #id_SubSections > #id_DLTitleAreaSubSection > .linkwrapper > div > .breadcrumb_desktop_wrapper > .breadcrumb, .portfoliocasestudy_wrapper > #id_SubSections > #id_DLTitleAreaSubSection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper > .breadcrumb {
+      .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_desktop_wrapper > .breadcrumb, .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper > .breadcrumb {
         color: var(--font-color1, #000);
         text-decoration: none;
         border-bottom-width: 1px;
@@ -1045,31 +1045,32 @@ li {
         border-image: -ms-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
         border-image: -webkit-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
         border-image-slice: 1; }
-      .portfoliocasestudy_wrapper > #id_SubSections > #id_DLTitleAreaSubSection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
+      .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
         display: none;
         visibility: hidden; }
-    .portfoliocasestudy_wrapper > #id_SubSections > #id_DLTitleAreaSubSection > .linkwrapper > img {
+    .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > img {
       width: 100vw;
       max-width: 100vw;
       min-width: 100vw;
+      object-fit: cover;
       height: 325px;
       background: #00aeff; }
-  .portfoliocasestudy_wrapper > #id_SubSections > #id_DLBasicSubSection .basicinfo > div {
+  .portfoliocasestudy_wrapper > #id_SubSections > .basicsubsection .basicinfo > div {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-content: flex-start;
     border-bottom: 1px solid var(--font-color-4, #959595); }
-    .portfoliocasestudy_wrapper > #id_SubSections > #id_DLBasicSubSection .basicinfo > div > p:first-of-type {
+    .portfoliocasestudy_wrapper > #id_SubSections > .basicsubsection .basicinfo > div > p:first-of-type {
       width: 30%;
       min-width: 30%;
       max-width: 30%;
       padding-right: var(--padding, 1.5rem); }
-    .portfoliocasestudy_wrapper > #id_SubSections > #id_DLBasicSubSection .basicinfo > div > p:nth-of-type(2) {
+    .portfoliocasestudy_wrapper > #id_SubSections > .basicsubsection .basicinfo > div > p:nth-of-type(2) {
       flex-grow: 2; }
-  .portfoliocasestudy_wrapper > #id_SubSections > #id_DLMainSubSection > .linkwrapper > section ol {
+  .portfoliocasestudy_wrapper > #id_SubSections > .mainsubsection > .linkwrapper > section ol {
     padding-left: 22px; }
-  .portfoliocasestudy_wrapper > #id_SubSections > #id_DLMainSubSection > .linkwrapper > section:last-of-type {
+  .portfoliocasestudy_wrapper > #id_SubSections > .mainsubsection > .linkwrapper > section:last-of-type {
     padding-bottom: 1.75rem; }
   .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section > div p:first-of-type {
     margin-top: 0.25rem; }
@@ -1087,19 +1088,6 @@ li {
       -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
       height: 400px;
       background: #00aeff; }
-  .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section .imagesplitcolumn {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-content: space-between; }
-    .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section .imagesplitcolumn > figure {
-      width: 100%;
-      max-width: 100%;
-      min-width: 100%; }
-    .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section .imagesplitcolumn > .splitimage {
-      width: calc(50% - 1.5rem);
-      max-width: calc(50% - 1.5rem);
-      min-width: calc(50% - 1.5rem); }
   .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper .splitcolumnsection {
     display: flex;
     justify-content: space-between;
@@ -1111,7 +1099,9 @@ li {
       padding-right: var(--padding, 1.5rem); }
     .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper .splitcolumnsection > div {
       flex-grow: 2;
-      width: 70%; }
+      width: 70%;
+      min-width: 70%;
+      max-width: 70%; }
   .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases {
     border-top-width: 1px;
     border-top-style: solid;
@@ -1232,22 +1222,27 @@ li {
     visibility: visible; }
   .portfoliocategory_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"] {
     text-align: center; }
-    .portfoliocategory_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"] > .linkwrapper .imagebox > img {
-      object-fit: cover;
-      height: 100%; }
+    .portfoliocategory_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"] > .linkwrapper .imagebox {
+      height: 280px;
+      width: auto;
+      max-height: 280px;
+      min-height: 280px; }
+      .portfoliocategory_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"] > .linkwrapper .imagebox > img {
+        object-fit: cover;
+        height: 100%; }
 
   .portfoliocasestudy_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper {
     width: 600px;
     max-width: 600px;
     min-width: 600px; }
-  .portfoliocasestudy_wrapper > #id_SubSections > #id_DLTitleAreaSubSection > .linkwrapper > div {
+  .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div {
     width: 600px;
     max-width: 600px;
     min-width: 600px; }
-    .portfoliocasestudy_wrapper > #id_SubSections > #id_DLTitleAreaSubSection > .linkwrapper > div > .breadcrumb_desktop_wrapper {
+    .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_desktop_wrapper {
       display: none;
       visibility: hidden; }
-    .portfoliocasestudy_wrapper > #id_SubSections > #id_DLTitleAreaSubSection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
+    .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
       display: block;
       visibility: visible; } }
 @media only screen and (max-width: 768px) {
@@ -1419,6 +1414,51 @@ li {
       .portfoliocategory_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"] {
         margin-bottom: 0; }
         .portfoliocategory_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"] > .linkwrapper > div {
-          padding: var(--padding, 1.5rem) 2.25rem 0 2.25rem; }
+          padding: var(--padding, 1.5rem) 2.25rem 0.75rem 2.25rem; }
         .portfoliocategory_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"]:last-of-type {
-          margin-bottom: 0; } }
+          margin-bottom: 0; }
+
+  .portfoliocasestudy_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper {
+    width: calc(100% - 1.5rem) !important;
+    max-width: calc(100% - 1.5rem) !important;
+    min-width: calc(100% - 1.5rem) !important; }
+  .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div {
+    width: calc(100% - 1.5rem) !important;
+    max-width: calc(100% - 1.5rem) !important;
+    min-width: calc(100% - 1.5rem) !important; }
+    .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
+      display: flex;
+      flex-wrap: nowrap; }
+      .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper > .breadcrumb {
+        margin: 0 6px;
+        padding-bottom: 0.5rem; }
+      .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper > .breadcrumb:nth-of-type(2) {
+        flex-shrink: 2; }
+  .portfoliocasestudy_wrapper > #id_SubSections > .basicsubsection .basicinfo > div {
+    flex-wrap: wrap; }
+    .portfoliocasestudy_wrapper > #id_SubSections > .basicsubsection .basicinfo > div > p:first-of-type {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%; }
+    .portfoliocasestudy_wrapper > #id_SubSections > .basicsubsection .basicinfo > div > p:nth-of-type(2) {
+      margin-top: 0; }
+  .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section > div .heading4 {
+    margin-bottom: var(--margin, 1.5rem); }
+  .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section > div p:first-of-type {
+    margin-top: 0; }
+  .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section .imagesplitcolumn > .splitimage {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%; }
+  .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper .splitcolumnsection {
+    display: block; }
+    .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper .splitcolumnsection > header, .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper .splitcolumnsection > div {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%; }
+  .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type {
+    flex-direction: column;
+    width: 100%;
+    align-items: center; }
+    .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .casestudybutton:last-of-type {
+      margin: var(--margin, 1.5rem) 0; } }

@@ -1,7 +1,6 @@
 function gotoSection(e) {
     console.clear();
-    console.log((e.target.innerHTML).trim());
-
+    
     let dropDownItem = e.target.innerHTML.trim();
     switch(dropDownItem) {
         case "Background":
