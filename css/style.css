@@ -1070,6 +1070,20 @@ li {
       flex-grow: 2; }
   .portfoliocasestudy_wrapper > #id_SubSections > .mainsubsection > .linkwrapper > section ol {
     padding-left: 22px; }
+  .portfoliocasestudy_wrapper > #id_SubSections > .mainsubsection > .linkwrapper > section figure {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin: var(--margin, 1.5rem) 0;
+    height: auto; }
+    .portfoliocasestudy_wrapper > #id_SubSections > .mainsubsection > .linkwrapper > section figure img {
+      display: block;
+      border-radius: 3px;
+      box-shadow: 1px 1px 3px 1px #5d5d5d;
+      -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
+      -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
+      height: 400px;
+      background: #00aeff; }
   .portfoliocasestudy_wrapper > #id_SubSections > .mainsubsection > .linkwrapper > section:last-of-type {
     padding-bottom: 1.75rem; }
   .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section > div p:first-of-type {
@@ -1127,6 +1141,9 @@ li {
         .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .casestudybutton:hover, .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .casestudybutton:focus, .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .casestudybutton:active {
           background: var(--background-color-4, #023047);
           color: var(--font-color-2, #FFF); }
+
+.mathology_wrapper > #id_SubSections > .viewmorecases {
+  background: var(--background-color-1, #f5f5f5) !important; }
 
 @media only screen and (max-width: 1280px) {
   .maintext {

@@ -213,6 +213,26 @@
                         & ol {
                             padding-left: 22px;
                         }
+
+                        & figure {
+                            width: 100%;
+                            max-width: 100%;
+                            min-width: 100%;
+                            margin: var(--margin, $margin) 0;
+                            height: auto;
+                                          
+                            & img {
+                                display: block;
+                                border-radius: 3px;
+                                box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                //object-fit: cover;
+
+                                height: 400px; // don't need this later
+                                background: rgb(0, 174, 255); // don't need this later
+                            }                
+                        }
                     }
 
                     & > section:last-of-type {
@@ -314,6 +334,14 @@
                 }
             }
 
+        }
+    }
+
+    .mathology_wrapper {
+        & > #id_SubSections {
+            & > .viewmorecases {
+                background: var(--background-color-1, $bgColor01) !important;
+            }
         }
     }
 }
