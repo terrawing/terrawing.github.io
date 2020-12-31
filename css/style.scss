@@ -1,4 +1,5 @@
 @import '_casestudy_style';
+@import '_design_style';
 
 // --------------------------------------------------------------
 // ## Wide Screen Desktop (> 1280px)
@@ -14,6 +15,7 @@
 @include portfolioStyleCSS;
 @include portfolioCategoryStyleCSS;
 @include portfolioCaseStudyStyleCSS;
+@include portfolioDesignStyleCSS;
 
 // --------------------------------------------------------------
 // ## Small Screen Desktop (1025px - 1280px)
