@@ -1389,6 +1389,17 @@ li {
         flex-grow: 2; }
   .portfoliodesign_wrapper > #id_SubSections > .mainsubsection > .linkwrapper {
     padding-top: 0.5rem; }
+    .portfoliodesign_wrapper > #id_SubSections > .mainsubsection > .linkwrapper .breadcrumb {
+      color: var(--font-color1, #000);
+      text-decoration: none;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-image: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 100%);
+      border-image: -o-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 100%);
+      border-image: -moz-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 100%);
+      border-image: -ms-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 100%);
+      border-image: -webkit-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 100%);
+      border-image-slice: 1; }
     .portfoliodesign_wrapper > #id_SubSections > .mainsubsection > .linkwrapper figure {
       width: 100%;
       max-width: 100%;

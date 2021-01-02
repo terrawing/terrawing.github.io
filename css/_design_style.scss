@@ -90,6 +90,19 @@
                 & > .linkwrapper {
                     padding-top: #{$padding / 3};
 
+                    & .breadcrumb {
+                        color: var(--font-color1, $fontColor01);
+                        text-decoration: none;
+                        border-bottom-width: 1px;
+                        border-bottom-style: solid;
+                        border-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+                        border-image: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+                        border-image: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+                        border-image: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+                        border-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+                        border-image-slice: 1;
+                    }
+
                     & figure {
                         width: 100%;
                         max-width: 100%;
