@@ -1558,7 +1558,18 @@ li {
       visibility: hidden; }
     .portfoliocasestudy_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
       display: block;
-      visibility: visible; } }
+      visibility: visible; }
+
+  .portfoliodesign_wrapper > #id_SubSections > article > .linkwrapper {
+    width: 600px;
+    max-width: 600px;
+    min-width: 600px; }
+  .portfoliodesign_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_desktop_wrapper {
+    display: none;
+    visibility: hidden; }
+  .portfoliodesign_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
+    display: block;
+    visibility: visible; } }
 @media only screen and (max-width: 768px) {
   .footer_fixed {
     position: unset; }
@@ -1775,4 +1786,32 @@ li {
     width: 100%;
     align-items: center; }
     .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .casestudybutton:last-of-type {
+      margin: var(--margin, 1.5rem) 0; }
+
+  .portfoliodesign_wrapper > #id_SubSections > article > .linkwrapper {
+    width: calc(100% - 1.5rem) !important;
+    max-width: calc(100% - 1.5rem) !important;
+    min-width: calc(100% - 1.5rem) !important; }
+  .portfoliodesign_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
+    display: flex;
+    flex-wrap: nowrap; }
+    .portfoliodesign_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper > .breadcrumb {
+      margin: 0 6px;
+      padding-bottom: 0.5rem; }
+    .portfoliodesign_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper > .breadcrumb:nth-of-type(2) {
+      flex-shrink: 2;
+      height: 1.7rem; }
+  .portfoliodesign_wrapper > #id_SubSections > .basicsubsection > .linkwrapper > .basicinfo > div {
+    flex-wrap: wrap; }
+    .portfoliodesign_wrapper > #id_SubSections > .basicsubsection > .linkwrapper > .basicinfo > div > p:first-of-type {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%; }
+    .portfoliodesign_wrapper > #id_SubSections > .basicsubsection > .linkwrapper > .basicinfo > div > p:nth-of-type(2) {
+      margin-top: 0; }
+  .portfoliodesign_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type {
+    flex-direction: column;
+    width: 100%;
+    align-items: center; }
+    .portfoliodesign_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .designbutton:last-of-type {
       margin: var(--margin, 1.5rem) 0; } }

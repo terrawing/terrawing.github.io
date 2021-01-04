@@ -168,3 +168,106 @@
         }
     }
 }
+
+// 769 - 1024
+@mixin portfolioDesignStyleCSS_1024 {
+    .portfoliodesign_wrapper {
+        & > #id_SubSections {
+            // Applies to all articles
+            & > article > .linkwrapper {
+                width: 600px;
+                max-width: 600px;
+                min-width: 600px;
+            }
+
+            // Title Area
+            & > .titleareasubsection {
+                & > .linkwrapper {
+                    & > div {
+                        & > .breadcrumb_desktop_wrapper {
+                            display: none;
+                            visibility: hidden;
+                        }
+
+                        & > .breadcrumb_tabletmobile_wrapper {
+                            display: block;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// < 768
+@mixin portfolioDesignStyleCSS_768 {
+    .portfoliodesign_wrapper {
+        & > #id_SubSections {
+            // Applies to all articles
+            & > article > .linkwrapper {
+                width: calc(100% - #{$padding}) !important;
+                max-width: calc(100% - #{$padding}) !important;
+                min-width: calc(100% - #{$padding}) !important;
+            }
+
+            // Title Area
+            & > .titleareasubsection {
+                & > .linkwrapper {
+                    & > div {
+                        & > .breadcrumb_tabletmobile_wrapper {
+                            display: flex;
+                            flex-wrap: nowrap;
+
+                            & > .breadcrumb {
+                                margin: 0 6px;
+                                padding-bottom: #{$padding / 3};
+                            }
+
+                            & > .breadcrumb:nth-of-type(2) {
+                                flex-shrink: 2;
+                                height: 1.7rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Basic Info Area
+            & > .basicsubsection {
+                & > .linkwrapper {
+                    & > .basicinfo {
+                        & > div {
+                            flex-wrap: wrap;
+    
+                            & > p:first-of-type {
+                                width: 100%;
+                                min-width: 100%;
+                                max-width: 100%;
+                            }
+    
+                            & > p:nth-of-type(2) {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Bottom view more cases section area
+            & > .viewmorecases {
+                & > .linkwrapper {
+                    & > div:last-of-type {
+                        flex-direction: column;
+                        width: 100%;
+                        align-items: center;
+
+                        & > .designbutton:last-of-type {
+                            margin: var(--margin, $margin) 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

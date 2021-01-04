@@ -37,6 +37,7 @@
     @include portfolioStyleCSS_1024;
     @include portfolioCategoryStyleCSS_1024;
     @include portfolioCaseStudyStyleCSS_1024;
+    @include portfolioDesignStyleCSS_1024;
 }
 
 // --------------------------------------------------------------
@@ -51,4 +52,5 @@
     @include portfolioStyleCSS_768;
     @include portfolioCategoryStyleCSS_768;
     @include portfolioCaseStudyStyleCSS_768;
+    @include portfolioDesignStyleCSS_768;
 }

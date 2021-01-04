@@ -409,7 +409,7 @@
                                 padding-bottom: #{$padding / 3};
                             }
 
-                            & >.breadcrumb:nth-of-type(2) {
+                            & > .breadcrumb:nth-of-type(2) {
                                 flex-shrink: 2;
                             }
                         }
