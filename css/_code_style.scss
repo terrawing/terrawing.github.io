@@ -1,10 +1,10 @@
 @import '_website_style';
 
 //--------------------------------------------------------------
-//# All Design (All Design Portfolio Style CSS)
+//# All Code (All Code Portfolio Style CSS)
 //--------------------------------------------------------------
-@mixin portfolioDesignStyleCSS {
-    .portfoliodesign_wrapper {
+@mixin portfolioCodeStyleCSS {
+    .portfoliocode_wrapper {
         & > #id_SubSections {
             height: auto;
             margin: 0 auto;
@@ -70,6 +70,10 @@
                             align-content: flex-start;
                             border-bottom: 1px solid var(--font-color-4, $fontColor04);
     
+                            &:last-of-type {
+                                justify-content: flex-start;
+                            }
+
                             & > p:first-of-type {
                                 width: 30%;
                                 min-width: 30%;
@@ -80,6 +84,24 @@
                             & > p:nth-of-type(2) {
                                 flex-grow: 2;
                             }
+
+                            & > a {
+                                margin: #{$margin - .5rem} 0;
+                                color: var(--font-color1, $fontColor01);
+                                text-decoration: none;
+                                border-bottom-width: 1px;
+                                border-bottom-style: solid;
+                                border-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
+                                border-image-slice: 1;
+
+                                &:visited, &:hover, &:active {
+                                    color: var(--font-color1, $fontColor01);
+                                }
+                            }
                         }
                     }
                 }
@@ -88,8 +110,6 @@
             // Main Sub Section Area
             & > .mainsubsection {
                 & > .linkwrapper {
-                    padding-top: #{$padding / 3};
-
                     & figure {
                         width: 100%;
                         max-width: 100%;
@@ -106,12 +126,20 @@
                             //object-fit: cover;
 
                             height: 400px; // don't need this later
-                            background: rgb(255, 217, 4); // don't need this later
+                            background: rgb(255, 203, 90); // don't need this later
                         }
                         
                         & figcaption {
                             line-height: 0.5rem;
                         }
+                    }
+
+                    & .examplesubsection {
+                        & h4 {
+                            font-family: fieldwork, sans-serif;
+                            @include generateGeneralFontCSS(var(--font-size-p, $pFontSize), var(--font-lineheight-p, $pLineHeight), var(--font-weight-bold, $fontWeightBold), var(--font-color-1, $fontColor01), var(--font-letterspacing-p, $pLetterSpacing));
+                        }
+
                     }
                 }
             }
@@ -132,7 +160,7 @@
                         width: 500px;
                         margin: 0 auto;
 
-                        & > .designbutton {
+                        & > .codebutton {
                             text-decoration: none;
                             color: var(--font-color-1, $fontColor01);
                             padding: #{$padding / 3} #{$padding / 3} #{$padding / 2.5} #{$padding / 3};
@@ -157,8 +185,8 @@
 }
 
 // 769 - 1024
-@mixin portfolioDesignStyleCSS_1024 {
-    .portfoliodesign_wrapper {
+@mixin portfolioCodeStyleCSS_1024 {
+    .portfoliocode_wrapper {
         & > #id_SubSections {
             // Applies to all articles
             & > article > .linkwrapper {
@@ -188,8 +216,8 @@
 }
 
 // < 768
-@mixin portfolioDesignStyleCSS_768 {
-    .portfoliodesign_wrapper {
+@mixin portfolioCodeStyleCSS_768 {
+    .portfoliocode_wrapper {
         & > #id_SubSections {
             // Applies to all articles
             & > article > .linkwrapper {
@@ -233,7 +261,7 @@
                                 max-width: 100%;
                             }
     
-                            & > p:nth-of-type(2) {
+                            & > p:nth-of-type(2), & > a {
                                 margin-top: 0;
                             }
                         }
@@ -249,7 +277,7 @@
                         width: 100%;
                         align-items: center;
 
-                        & > .designbutton:last-of-type {
+                        & > .codebutton:last-of-type {
                             margin: var(--margin, $margin) 0;
                         }
                     }

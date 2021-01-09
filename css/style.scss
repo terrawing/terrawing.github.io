@@ -1,5 +1,6 @@
 @import '_casestudy_style';
 @import '_design_style';
+@import '_code_style';
 
 // --------------------------------------------------------------
 // ## Wide Screen Desktop (> 1280px)
@@ -16,6 +17,7 @@
 @include portfolioCategoryStyleCSS;
 @include portfolioCaseStudyStyleCSS;
 @include portfolioDesignStyleCSS;
+@include portfolioCodeStyleCSS;
 
 // --------------------------------------------------------------
 // ## Small Screen Desktop (1025px - 1280px)
@@ -38,6 +40,7 @@
     @include portfolioCategoryStyleCSS_1024;
     @include portfolioCaseStudyStyleCSS_1024;
     @include portfolioDesignStyleCSS_1024;
+    @include portfolioCodeStyleCSS_1024;
 }
 
 // --------------------------------------------------------------
@@ -53,4 +56,5 @@
     @include portfolioCategoryStyleCSS_768;
     @include portfolioCaseStudyStyleCSS_768;
     @include portfolioDesignStyleCSS_768;
+    @include portfolioCodeStyleCSS_768;
 }
