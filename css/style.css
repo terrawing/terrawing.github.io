@@ -1708,13 +1708,15 @@ li {
       background: #ffcb5a; }
     .portfoliocode_wrapper > #id_SubSections > .mainsubsection > .linkwrapper figure figcaption {
       line-height: 0.5rem; }
-  .portfoliocode_wrapper > #id_SubSections > .mainsubsection > .linkwrapper .examplesubsection h4 {
-    font-family: fieldwork, sans-serif;
-    font-size: var(--font-size-p, 0.9rem);
-    line-height: var(--font-lineheight-p, 1.25rem);
-    font-weight: var(--font-weight-bold, 600);
-    color: var(--font-color-1, #000);
-    letter-spacing: var(--font-letterspacing-p, 0.025rem); }
+  .portfoliocode_wrapper > #id_SubSections > .mainsubsection > .linkwrapper .examplesubsection {
+    margin-bottom: 1.75rem; }
+    .portfoliocode_wrapper > #id_SubSections > .mainsubsection > .linkwrapper .examplesubsection h4 {
+      font-family: fieldwork, sans-serif;
+      font-size: var(--font-size-p, 0.9rem);
+      line-height: var(--font-lineheight-p, 1.25rem);
+      font-weight: var(--font-weight-bold, 600);
+      color: var(--font-color-1, #000);
+      letter-spacing: var(--font-letterspacing-p, 0.025rem); }
   .portfoliocode_wrapper > #id_SubSections > .viewmorecases {
     border-top-width: 1px;
     border-top-style: solid;

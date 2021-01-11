@@ -135,11 +135,12 @@
                     }
 
                     & .examplesubsection {
+                        margin-bottom: #{$margin + .25rem};
+
                         & h4 {
                             font-family: fieldwork, sans-serif;
                             @include generateGeneralFontCSS(var(--font-size-p, $pFontSize), var(--font-lineheight-p, $pLineHeight), var(--font-weight-bold, $fontWeightBold), var(--font-color-1, $fontColor01), var(--font-letterspacing-p, $pLetterSpacing));
                         }
-
                     }
                 }
             }
