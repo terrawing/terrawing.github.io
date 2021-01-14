@@ -224,13 +224,14 @@
                             & img {
                                 display: block;
                                 border-radius: 3px;
-                                box-shadow: 1px 1px 3px 1px #5d5d5d;
-                                -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
-                                -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                border: 1px solid var(--font-color-1, $fontColor01);
+                                //box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                //-moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                //-webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
                                 //object-fit: cover;
 
                                 height: 400px; // don't need this later
-                                background: rgb(0, 174, 255); // don't need this later
+                                //background: rgb(0, 174, 255); // don't need this later
                             }                
                         }
                     }
@@ -263,13 +264,14 @@
                             & img {
                                 display: block;
                                 border-radius: 3px;
-                                box-shadow: 1px 1px 3px 1px #5d5d5d;
-                                -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
-                                -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                border: 1px solid var(--font-color-1, $fontColor01);
+                                //box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                //-moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                //-webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
                                 //object-fit: cover;
 
                                 height: 400px; // don't need this later
-                                background: rgb(0, 174, 255); // don't need this later
+                                //background: rgb(0, 174, 255); // don't need this later
                             }                
                         }
                     }
@@ -436,6 +438,20 @@
                 }
             }
 
+            // Main Sub Section Area
+            & > .mainsubsection {
+                & > .linkwrapper {
+                    & > section {
+                        & figure {                          
+                            & img {
+                                object-fit: contain;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+
             // Different Components of the Case study Area
             & > .componentsection {
                 & > .linkwrapper {
@@ -449,6 +465,14 @@
                             & p:first-of-type {
                                 margin-top: 0;
                             }
+                            
+                        }
+
+                        & figure {
+                            & img {
+                                object-fit: contain;
+                                height: auto;
+                            }                
                         }
 
                         & .imagesplitcolumn {

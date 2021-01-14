@@ -120,13 +120,14 @@
                         & img {
                             display: block;
                             border-radius: 3px;
-                            box-shadow: 1px 1px 3px 1px #5d5d5d;
-                            -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
-                            -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
-                            //object-fit: cover;
+                            border: 1px solid var(--font-color-1, $fontColor01);
+                            //box-shadow: 1px 1px 3px 1px #5d5d5d;
+                            //-moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                            //-webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                            object-fit: cover;
 
                             height: 400px; // don't need this later
-                            background: rgb(255, 203, 90); // don't need this later
+                            //background: rgb(255, 203, 90); // don't need this later
                         }
                         
                         & figcaption {
@@ -265,6 +266,18 @@
                             & > p:nth-of-type(2), & > a {
                                 margin-top: 0;
                             }
+                        }
+                    }
+                }
+            }
+
+            // Main Sub Section Area
+            & > .mainsubsection {
+                & > .linkwrapper {
+                    & figure {               
+                        & img {
+                            object-fit: contain;
+                            height: auto;
                         }
                     }
                 }

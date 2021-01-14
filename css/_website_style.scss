@@ -1609,6 +1609,12 @@
                             height: auto;
                             max-width: 100%;
                             min-width: 100%;
+                            
+                            & img {
+                                max-height: 282px;
+                                display: block;
+                                object-fit: cover;
+                            }
                         }
                     }
 

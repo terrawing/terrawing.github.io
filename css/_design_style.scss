@@ -100,13 +100,14 @@
                         & img {
                             display: block;
                             border-radius: 3px;
-                            box-shadow: 1px 1px 3px 1px #5d5d5d;
-                            -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
-                            -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
-                            //object-fit: cover;
+                            border: 1px solid var(--font-color-1, $fontColor01);
+                            //box-shadow: 1px 1px 3px 1px #5d5d5d;
+                            //-moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                            //-webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                            object-fit: cover;
 
                             height: 400px; // don't need this later
-                            background: rgb(255, 217, 4); // don't need this later
+                            //background: rgb(255, 217, 4); // don't need this later
                         }
                         
                         & figcaption {
@@ -154,6 +155,32 @@
             }
         }
     }
+
+    //Custom ones
+
+    // agpc business card
+    figure[aria-labelledby="id_FigCapAgpcBcard"] {
+        & > img {
+            object-position: 0 -15px;
+        }
+    }
+
+    // alberta k-4 digtal resource screens
+    .albertaresource_wrapper {
+        & figure[role="group"] {
+            & > figure:nth-of-type(-n+5) {
+                & > img {
+                    object-position: 0 -60px;
+                }                        
+            }
+            
+            & > figure:nth-of-type(n+5) {
+                & > img {
+                    object-position: 0 0;
+                } 
+            }
+        }
+    }
 }
 
 // 769 - 1024
@@ -185,6 +212,33 @@
             }
         }
     }
+
+    //Custom ones
+
+    // agpc business card
+    figure[aria-labelledby="id_FigCapAgpcBcard"] {
+        & > img {
+            object-position: 0 -10px;
+        }
+    }
+
+    // alberta k-4 digtal resource screens
+    .albertaresource_wrapper {
+        & figure[role="group"] {
+            & > figure:nth-of-type(-n+5) {
+                & > img {
+                    object-position: 0 -1px;
+                }                        
+            }
+            
+            & > figure:nth-of-type(n+5) {
+                & > img {
+                    object-fit: contain !important;
+                } 
+            }
+        }
+    }
+    
 }
 
 // < 768
@@ -241,6 +295,18 @@
                 }
             }
 
+            // Main Sub Section Area
+            & > .mainsubsection {
+                & > .linkwrapper {
+                    & figure {                          
+                        & img {
+                            object-fit: contain;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
             // Bottom view more cases section area
             & > .viewmorecases {
                 & > .linkwrapper {
@@ -255,6 +321,15 @@
                     }
                 }
             }
+        }
+    }
+
+    //Custom ones
+
+    // agpc business card
+    figure[aria-labelledby="id_FigCapAgpcBcard"] {
+        & > img {
+            object-position: 0 0;
         }
     }
 }
