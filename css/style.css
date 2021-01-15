@@ -1634,6 +1634,9 @@ figure[aria-labelledby="id_FigCapAgpcBcard"] > img {
 .albertaresource_wrapper figure[role="group"] > figure:nth-of-type(n+5) > img {
   object-position: 0 0; }
 
+.bcss_wrapper figure[role="group"] > figure > img {
+  object-position: 0 -3px; }
+
 .portfoliocode_wrapper > #id_SubSections {
   height: auto;
   margin: 0 auto;

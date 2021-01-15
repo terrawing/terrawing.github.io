@@ -181,6 +181,17 @@
             }
         }
     }
+
+    // bcss screens
+    .bcss_wrapper {
+        & figure[role="group"] {
+            & > figure {
+                & > img {
+                    object-position: 0 -3px;
+                }
+            }
+        }
+    }
 }
 
 // 769 - 1024
