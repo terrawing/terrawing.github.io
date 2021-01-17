@@ -1479,7 +1479,7 @@ li {
       display: block;
       border-radius: 3px;
       border: 1px solid var(--font-color-1, #000);
-      height: 400px; }
+      height: 450px; }
   .portfoliocasestudy_wrapper > #id_SubSections > .mainsubsection > .linkwrapper > section:last-of-type {
     padding-bottom: 1.75rem; }
   .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section > div p:first-of-type {
@@ -1596,10 +1596,21 @@ li {
         display: block;
         border-radius: 3px;
         border: 1px solid var(--font-color-1, #000);
-        object-fit: cover;
-        height: 400px; }
+        object-fit: contain;
+        height: 100%; }
       .portfoliodesign_wrapper > #id_SubSections > .mainsubsection > .linkwrapper figure figcaption {
         line-height: 0.5rem; }
+    .portfoliodesign_wrapper > #id_SubSections > .mainsubsection > .linkwrapper .breadcrumb {
+      color: var(--font-color1, #000);
+      text-decoration: none;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-image: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 90%);
+      border-image: -o-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+      border-image: -moz-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+      border-image: -ms-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+      border-image: -webkit-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+      border-image-slice: 1; }
   .portfoliodesign_wrapper > #id_SubSections > .viewmorecases {
     border-top-width: 1px;
     border-top-style: solid;
@@ -1625,17 +1636,6 @@ li {
         .portfoliodesign_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .designbutton:hover, .portfoliodesign_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .designbutton:focus, .portfoliodesign_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .designbutton:active {
           background: var(--background-color-4, #023047);
           color: var(--font-color-2, #FFF); }
-
-figure[aria-labelledby="id_FigCapAgpcBcard"] > img {
-  object-position: 0 -15px; }
-
-.albertaresource_wrapper figure[role="group"] > figure:nth-of-type(-n+5) > img {
-  object-position: 0 -60px; }
-.albertaresource_wrapper figure[role="group"] > figure:nth-of-type(n+5) > img {
-  object-position: 0 0; }
-
-.bcss_wrapper figure[role="group"] > figure > img {
-  object-position: 0 -3px; }
 
 .portfoliocode_wrapper > #id_SubSections {
   height: auto;
@@ -1709,8 +1709,8 @@ figure[aria-labelledby="id_FigCapAgpcBcard"] > img {
       display: block;
       border-radius: 3px;
       border: 1px solid var(--font-color-1, #000);
-      object-fit: cover;
-      height: 400px; }
+      object-fit: contain;
+      height: 100%; }
     .portfoliocode_wrapper > #id_SubSections > .mainsubsection > .linkwrapper figure figcaption {
       line-height: 0.5rem; }
   .portfoliocode_wrapper > #id_SubSections > .mainsubsection > .linkwrapper .examplesubsection {
@@ -1876,14 +1876,6 @@ figure[aria-labelledby="id_FigCapAgpcBcard"] > img {
   .portfoliodesign_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
     display: block;
     visibility: visible; }
-
-  figure[aria-labelledby="id_FigCapAgpcBcard"] > img {
-    object-position: 0 -10px; }
-
-  .albertaresource_wrapper figure[role="group"] > figure:nth-of-type(-n+5) > img {
-    object-position: 0 -1px; }
-  .albertaresource_wrapper figure[role="group"] > figure:nth-of-type(n+5) > img {
-    object-fit: contain !important; }
 
   .portfoliocode_wrapper > #id_SubSections > article > .linkwrapper {
     width: 600px;
@@ -2149,9 +2141,6 @@ figure[aria-labelledby="id_FigCapAgpcBcard"] > img {
     align-items: center; }
     .portfoliodesign_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .designbutton:last-of-type {
       margin: var(--margin, 1.5rem) 0; }
-
-  figure[aria-labelledby="id_FigCapAgpcBcard"] > img {
-    object-position: 0 0; }
 
   .portfoliocode_wrapper > #id_SubSections > article > .linkwrapper {
     width: calc(100% - 1.5rem) !important;

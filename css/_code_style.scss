@@ -124,9 +124,9 @@
                             //box-shadow: 1px 1px 3px 1px #5d5d5d;
                             //-moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
                             //-webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
-                            object-fit: cover;
+                            object-fit: contain;
 
-                            height: 400px; // don't need this later
+                            height: 100%; // don't need this later
                             //background: rgb(255, 203, 90); // don't need this later
                         }
                         
