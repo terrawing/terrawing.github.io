@@ -1664,6 +1664,18 @@
     .code_wrapper {
         & > #id_SubSections {
             background: var(--background-color-3, $bgColor03);
+
+            & > div[role="list"] {
+                & > div[role="listitem"]:first-of-type {
+                    & > .linkwrapper {
+                        & .imagebox {          
+                            & img {
+                                object-position: 50% 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
