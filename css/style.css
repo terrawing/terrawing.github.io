@@ -991,9 +991,7 @@ li {
             min-width: 320px;
             height: auto;
             border-radius: 3px;
-            box-shadow: 1px 1px 3px 1px #5d5d5d;
-            -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
-            -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
+            border: 1px solid var(--font-color-1, #000);
             margin: 0; }
     .home_wrapper > #id_SubSections > #id_PortfolioSubSection {
       background: var(--background-color-5, #219ebc);
@@ -1088,9 +1086,7 @@ li {
         width: 400px;
         height: auto;
         border-radius: 3px;
-        box-shadow: 1px 1px 3px 1px #5d5d5d;
-        -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
-        -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
+        border: 1px solid var(--font-color-1, #000);
         margin: 0 0 var(--margin, 1.5rem) var(--margin, 1.5rem); }
   .about_wrapper > #id_SubSections > #id_SkillsSubSection {
     background: var(--background-color-6, #8ecae6);
@@ -1403,6 +1399,8 @@ li {
 
 .casestudy_wrapper > #id_SubSections {
   background: var(--background-color-6, #8ecae6); }
+  .casestudy_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"]:first-of-type > .linkwrapper .imagebox img {
+    object-position: 0 -60px; }
 
 .design_wrapper > #id_SubSections {
   background: var(--background-color-2, #fb8500); }
@@ -1481,7 +1479,8 @@ li {
       display: block;
       border-radius: 3px;
       border: 1px solid var(--font-color-1, #000);
-      height: 450px; }
+      object-fit: contain;
+      height: 100%; }
   .portfoliocasestudy_wrapper > #id_SubSections > .mainsubsection > .linkwrapper > section:last-of-type {
     padding-bottom: 1.75rem; }
   .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section > div p:first-of-type {
@@ -1496,7 +1495,8 @@ li {
       display: block;
       border-radius: 3px;
       border: 1px solid var(--font-color-1, #000);
-      height: 400px; }
+      object-fit: contain;
+      height: 100%; }
   .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper .splitcolumnsection {
     display: flex;
     justify-content: space-between;
@@ -1853,6 +1853,11 @@ li {
         object-fit: cover;
         height: 100%; }
 
+  .casestudy_wrapper > #id_SubSections {
+    background: var(--background-color-6, #8ecae6); }
+    .casestudy_wrapper > #id_SubSections > div[role="list"] > div[role="listitem"]:first-of-type > .linkwrapper .imagebox img {
+      object-position: 0 -30px; }
+
   .portfoliocasestudy_wrapper > #id_SubSections > article:not(:first-of-type) > .linkwrapper {
     width: 600px;
     max-width: 600px;
@@ -2112,6 +2117,9 @@ li {
     align-items: center; }
     .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .casestudybutton:last-of-type {
       margin: var(--margin, 1.5rem) 0; }
+
+  .sparkreading_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > img {
+    object-position: -50vw 0; }
 
   .portfoliodesign_wrapper > #id_SubSections > article > .linkwrapper {
     width: calc(100% - 1.5rem) !important;

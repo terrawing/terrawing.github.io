@@ -506,9 +506,10 @@
                                 min-width: 320px;
                                 height: auto;
                                 border-radius: 3px;
-                                box-shadow: 1px 1px 3px 1px #5d5d5d;
-                                -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
-                                -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                border: 1px solid var(--font-color-1, $fontColor01);
+                                //box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                //-moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                                //-webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
                                 margin: 0;
                             }
                         }
@@ -819,9 +820,10 @@
                         width: 400px;
                         height: auto;
                         border-radius: 3px;
-                        box-shadow: 1px 1px 3px 1px #5d5d5d;
-                        -moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
-                        -webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                        border: 1px solid var(--font-color-1, $fontColor01);
+                        //box-shadow: 1px 1px 3px 1px #5d5d5d;
+                        //-moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
+                        //-webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
                         margin: 0 0 var(--margin, $margin) var(--margin, $margin);
                         
                     }
@@ -1652,6 +1654,18 @@
     .casestudy_wrapper {
         & > #id_SubSections {
             background: var(--background-color-6, $bgColor06);
+
+            & > div[role="list"] {
+                & > div[role="listitem"]:first-of-type {
+                    & > .linkwrapper {
+                        & .imagebox {          
+                            & img {
+                                object-position: 0 -60px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -1726,6 +1740,24 @@
                             & > img {
                                 object-fit: cover;
                                 height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .casestudy_wrapper {
+        & > #id_SubSections {
+            background: var(--background-color-6, $bgColor06);
+
+            & > div[role="list"] {
+                & > div[role="listitem"]:first-of-type {
+                    & > .linkwrapper {
+                        & .imagebox {          
+                            & img {
+                                object-position: 0 -30px;
                             }
                         }
                     }
