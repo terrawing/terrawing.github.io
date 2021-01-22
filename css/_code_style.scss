@@ -97,6 +97,7 @@
                                 border-image: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
                                 border-image: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 90%);
                                 border-image-slice: 1;
+                                padding-bottom: 5px;
 
                                 &:visited, &:hover, &:active {
                                     color: var(--font-color1, $fontColor01);

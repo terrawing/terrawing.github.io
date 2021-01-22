@@ -25,6 +25,7 @@
 @media only screen and (max-width: 1280px) {
     @include textStyleCSS_1280;
     @include homeStyleCSS_1280;
+    @include portfolioCaseStudyStyleCSS_1280;
 }
 
 // --------------------------------------------------------------
@@ -46,7 +47,8 @@
 // --------------------------------------------------------------
 // ## Phones (< 769px)
 // --------------------------------------------------------------
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px), 
+       only screen and (max-height: 768px) {
     @include pagesGeneralStyleCSS_768;
     @include navigationStyleCSS_768;
     @include homeStyleCSS_768;
@@ -57,4 +59,11 @@
     @include portfolioCaseStudyStyleCSS_768;
     @include portfolioDesignStyleCSS_768;
     @include portfolioCodeStyleCSS_768;
+}
+
+// --------------------------------------------------------------
+// ## Phones (landscape)
+// --------------------------------------------------------------
+@media only screen and (max-height: 600px) and (orientation: landscape) {
+    @include navigationStyleCSS_600_Landscape;
 }

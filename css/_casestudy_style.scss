@@ -177,7 +177,7 @@
                         //height: auto;
 
                         height: 325px; // don't need this later
-                        background: rgb(0, 174, 255); // don't need this later
+                        //background: rgb(0, 174, 255); // don't need this later
                     }
                 }
             }
@@ -341,8 +341,33 @@
 
     .mathology_wrapper {
         & > #id_SubSections {
+            // Title Area
+            & > .titleareasubsection {
+                & > .linkwrapper {
+                    & > img { //top banner
+                        object-position: 0 -75px;
+                    }
+                }
+            }
+
             & > .viewmorecases {
                 background: var(--background-color-1, $bgColor01) !important;
+            }
+        }
+    }
+}
+
+// 1025 - 1280
+@mixin portfolioCaseStudyStyleCSS_1280 {
+    .mathology_wrapper {
+        & > #id_SubSections {
+            // Title Area
+            & > .titleareasubsection {
+                & > .linkwrapper {
+                    & > img { //top banner
+                        object-position: 0 -55px;
+                    }
+                }
             }
         }
     }
@@ -513,7 +538,8 @@
             }
         }
     }
-
+    
+    //custom
     .sparkreading_wrapper {
         & > #id_SubSections {
             // Title Area
@@ -521,6 +547,32 @@
                 & > .linkwrapper {
                     & > img { //top banner
                         object-position: -50vw 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .religion_wrapper {
+        & > #id_SubSections {
+            // Title Area
+            & > .titleareasubsection {
+                & > .linkwrapper {
+                    & > img { //top banner
+                        object-position: -50vw 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .mathology_wrapper {
+        & > #id_SubSections {
+            // Title Area
+            & > .titleareasubsection {
+                & > .linkwrapper {
+                    & > img { //top banner
+                        object-position: 0 0;
                     }
                 }
             }

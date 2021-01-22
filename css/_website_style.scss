@@ -320,9 +320,10 @@
 
                 & img {
                     width: auto;
-                    height: 30px;
-                    max-height: 30px;
-                    min-height: 30px;
+                    height: clamp(30px, 30px, 30px);
+                    //height: 30px;
+                    //max-height: 30px;
+                    //min-height: 30px;
                 }
             }
         }
@@ -418,6 +419,20 @@
     }
 }
 
+// < 600 (landscape)
+@mixin navigationStyleCSS_600_Landscape {
+    #id_NavigationPopOutArea {
+        & > .navigation_subsection {
+            & > .navigation_links {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+                width: 75vw;
+            }
+        }
+    }
+}
+
 //--------------------------------------------------------------
 //# Home (Home Style CSS)
 //--------------------------------------------------------------
@@ -504,12 +519,10 @@
                                 width: 320px;
                                 max-width: 320px;
                                 min-width: 320px;
+                                //width: clamp(200px, 25vw, 320px);
                                 height: auto;
                                 border-radius: 3px;
                                 border: 1px solid var(--font-color-1, $fontColor01);
-                                //box-shadow: 1px 1px 3px 1px #5d5d5d;
-                                //-moz-box-shadow: 1px 1px 3px 1px #5d5d5d;
-                                //-webkit-box-shadow: 1px 1px 3px 1px #5d5d5d;
                                 margin: 0;
                             }
                         }
@@ -527,6 +540,7 @@
                     width: 240px;
                     max-width: 240px;
                     min-width: 240px;
+                    //width: clamp(200px, 20vw, 240px);
                     height: auto;
                     margin: 0 auto;
                     
@@ -543,6 +557,7 @@
                     width: 225px;
                     max-width: 225px;
                     min-width: 225px;
+                    //width: clamp(200px, 20vw, 225px);
                     height: auto;
                     margin: 0 auto;
                     
@@ -559,6 +574,7 @@
                     height: 175px;
                     max-height: 175px;
                     min-height: 175px;
+                    //height: clamp(150px, 20vh, 175px);
                     margin: 0 auto;
                     
                 }
@@ -654,6 +670,7 @@
                     min-height: 150px;
                 }
             }
+            
         }
     }
 }
@@ -1656,11 +1673,23 @@
             background: var(--background-color-6, $bgColor06);
 
             & > div[role="list"] {
-                & > div[role="listitem"]:first-of-type {
-                    & > .linkwrapper {
-                        & .imagebox {          
-                            & img {
-                                object-position: 0 -60px;
+                & > div[role="listitem"] {
+                    &:first-of-type {
+                        & > .linkwrapper {
+                            & .imagebox {          
+                                & img {
+                                    object-position: 0 -60px;
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        & > .linkwrapper {
+                            & .imagebox {          
+                                & img {
+                                    object-position: 50% 85%;
+                                }
                             }
                         }
                     }
