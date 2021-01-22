@@ -1536,8 +1536,6 @@ li {
           background: var(--background-color-4, #023047);
           color: var(--font-color-2, #FFF); }
 
-.mathology_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > img {
-  object-position: 0 -75px; }
 .mathology_wrapper > #id_SubSections > .viewmorecases {
   background: var(--background-color-1, #f5f5f5) !important; }
 
@@ -1764,7 +1762,7 @@ li {
     min-width: 300px; }
 
   .mathology_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > img {
-    object-position: 0 -55px; } }
+    object-position: -100px 25px; } }
 @media only screen and (max-width: 1024px) {
   .heading1 {
     font-size: var(--font-size-h1-1024, 1.5rem);
@@ -2131,7 +2129,7 @@ li {
     object-position: -50vw 0; }
 
   .mathology_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > img {
-    object-position: 0 0; }
+    object-position: 50% 0; }
 
   .portfoliodesign_wrapper > #id_SubSections > article > .linkwrapper {
     width: calc(100% - 1.5rem) !important;

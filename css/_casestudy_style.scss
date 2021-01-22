@@ -341,15 +341,6 @@
 
     .mathology_wrapper {
         & > #id_SubSections {
-            // Title Area
-            & > .titleareasubsection {
-                & > .linkwrapper {
-                    & > img { //top banner
-                        object-position: 0 -75px;
-                    }
-                }
-            }
-
             & > .viewmorecases {
                 background: var(--background-color-1, $bgColor01) !important;
             }
@@ -365,7 +356,7 @@
             & > .titleareasubsection {
                 & > .linkwrapper {
                     & > img { //top banner
-                        object-position: 0 -55px;
+                        object-position: -100px 25px;
                     }
                 }
             }
@@ -572,7 +563,7 @@
             & > .titleareasubsection {
                 & > .linkwrapper {
                     & > img { //top banner
-                        object-position: 0 0;
+                        object-position: 50% 0;
                     }
                 }
             }
