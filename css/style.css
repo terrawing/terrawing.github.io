@@ -1898,7 +1898,7 @@ li {
   .portfoliocode_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > div > .breadcrumb_tabletmobile_wrapper {
     display: block;
     visibility: visible; } }
-@media only screen and (max-width: 768px), only screen and (max-height: 768px) {
+@media only screen and (max-width: 768px), only screen and (max-height: 705px) {
   .footer_fixed {
     position: unset; }
 

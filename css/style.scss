@@ -48,7 +48,7 @@
 // ## Phones (< 769px)
 // --------------------------------------------------------------
 @media only screen and (max-width: 768px), 
-       only screen and (max-height: 768px) {
+       only screen and (max-height: 705px) {
     @include pagesGeneralStyleCSS_768;
     @include navigationStyleCSS_768;
     @include homeStyleCSS_768;
