@@ -2122,9 +2122,6 @@ li {
     .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .casestudybutton:last-of-type {
       margin: var(--margin, 1.5rem) 0; }
 
-  .sparkreading_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > img {
-    object-position: -50vw 0; }
-
   .mathology_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > img {
     object-position: 50% 0; }
 
@@ -2189,6 +2186,12 @@ li {
     align-items: center; }
     .portfoliocode_wrapper > #id_SubSections > .viewmorecases > .linkwrapper > div:last-of-type > .codebutton:last-of-type {
       margin: var(--margin, 1.5rem) 0; } }
+@media only screen and (max-width: 500px), only screen and (max-height: 705px) {
+  .sparkreading_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > img {
+    object-position: -50vw 0; }
+
+  .religion_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > img {
+    object-position: -50vw 0; } }
 @media only screen and (max-height: 600px) and (orientation: landscape) {
   #id_NavigationPopOutArea > .navigation_subsection > .navigation_links {
     display: flex;

@@ -61,6 +61,12 @@
     @include portfolioCodeStyleCSS_768;
 }
 
+//custom size hero image
+@media only screen and (max-width: 500px), 
+       only screen and (max-height: 705px) {
+    @include portfolioCaseStudyStyleCSS_500;
+}
+
 // --------------------------------------------------------------
 // ## Phones (landscape)
 // --------------------------------------------------------------

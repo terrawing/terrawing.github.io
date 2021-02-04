@@ -531,6 +531,23 @@
     }
     
     //custom
+    .mathology_wrapper {
+        & > #id_SubSections {
+            // Title Area
+            & > .titleareasubsection {
+                & > .linkwrapper {
+                    & > img { //top banner
+                        object-position: 50% 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin portfolioCaseStudyStyleCSS_500 {
+    //custom
+    
     .sparkreading_wrapper {
         & > #id_SubSections {
             // Title Area
@@ -544,13 +561,13 @@
         }
     }
 
-    .mathology_wrapper {
+    .religion_wrapper {
         & > #id_SubSections {
             // Title Area
             & > .titleareasubsection {
                 & > .linkwrapper {
                     & > img { //top banner
-                        object-position: 50% 0;
+                        object-position: -50vw 0;
                     }
                 }
             }
