@@ -1510,6 +1510,8 @@ li {
       width: 70%;
       min-width: 70%;
       max-width: 70%; }
+    .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper .splitcolumnsection ol {
+      padding-left: 22px; }
   .portfoliocasestudy_wrapper > #id_SubSections > .viewmorecases {
     border-top-width: 1px;
     border-top-style: solid;
