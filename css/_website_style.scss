@@ -84,6 +84,22 @@
     .casestudyquote2 {
         background: var(--font-color-2, $fontColor02);
     }
+
+    .cta {
+        @include generateGeneralFontCSS(var(--font-size-calltoaction, $pCallToActionFontSize), var(--font-lineheight-calltoaction, $pCallToActionLineHeight));
+    }
+
+    .cta-right {
+        display: block;
+    }
+
+    .cta-bottom {
+        display: none;
+    }
+
+    .no-widow {
+        display: inline-block;
+    }
 }
 
 // 1025 - 1280
@@ -107,8 +123,19 @@
         @include generateGeneralFontCSS(var(--font-size-h4-1024, $heading01FontSize_1024), var(--font-lineheight-h4-1024, $heading01LineHeight_1024));
     }
 
-    .maintext {
+    .maintext, .cta {
         @include generateGeneralFontCSS(var(--font-size-homemaintext-1024, $pHomeMainTextFontSize_1024), var(--font-lineheight-homemaintext-1024, $pHomeMainTextLineHeight_1024));
+    }
+}
+
+// < 768 
+@mixin textStyleCSS_768 {
+    .cta-right {
+        display: none;
+    }
+
+    .cta-bottom {
+        display: block;
     }
 }
 
@@ -516,13 +543,12 @@
                             column-gap: var(--margin, $margin);
       
                             & > img {
-                                width: 320px;
-                                max-width: 320px;
-                                min-width: 320px;
+                                width: 250px;
+                                max-width: 250px;
+                                min-width: 250px;
                                 //width: clamp(200px, 25vw, 320px);
                                 height: auto;
                                 border-radius: 3px;
-                                border: 1px solid var(--font-color-1, $fontColor01);
                                 margin: 0;
                             }
                         }
@@ -609,9 +635,9 @@
                     & > #id_HomeSidebar {
                         & > div {
                             & > img {
-                                width: 300px;
-                                max-width: 300px;
-                                min-width: 300px;
+                                width: 230px;
+                                max-width: 230px;
+                                min-width: 230px;
                             }
                         }
                     }
@@ -834,7 +860,7 @@
 
                     & > img {
                         float: right;
-                        width: 400px;
+                        width: 225px;
                         height: auto;
                         border-radius: 3px;
                         border: 1px solid var(--font-color-1, $fontColor01);

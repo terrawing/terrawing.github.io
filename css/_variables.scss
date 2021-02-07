@@ -25,6 +25,9 @@ $pLetterSpacing: 0.025rem;
 
 $pCopyRightFontSize: 0.75rem;
 
+$pCallToActionFontSize: 1.25rem;
+$pCallToActionLineHeight: 1.5rem;
+
 $pHomeMainTextFontSize: 1.5rem;
 $pHomeMainTextLineHeight: 1.75rem;
 $pHomeMainTextFontSize_1280: 1.25rem;
@@ -89,6 +92,9 @@ $padding: 1.5rem;
     --font-letterspacing-p: #{$pLetterSpacing};
     
     --font-size-copyright: #{$pCopyRightFontSize};
+
+    --font-size-calltoaction: #{$pCallToActionFontSize};
+    --font-lineheight-calltoaction: #{$pCallToActionLineHeight};
 
     --font-size-homemaintext: #{$pHomeMainTextFontSize};
     --font-lineheight-homemaintext: #{$pHomeMainTextLineHeight};
