@@ -103,10 +103,6 @@
         @include generateGeneralFontCSS(var(--font-size-p, $pFontSize), var(--font-lineheight-p, $pLineHeight), var(--font-weight-normal, $fontWeightNormal), var(--font-color-1, $fontColor01), var(--font-letterspacing-p, $pLetterSpacing));
     }
 
-    figcaption p {
-        color: var(--font-color-6, $fontColor06);
-    }
-
     a, a:active, a:hover {
         background-color: transparent;
         outline: 0;
