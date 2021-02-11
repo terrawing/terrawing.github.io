@@ -272,7 +272,20 @@
 
                                 height: 100%; // don't need this later
                                 //background: rgb(0, 174, 255); // don't need this later
-                            }                
+                            }
+                            
+                            & .breadcrumb {
+                                color: var(--font-color-6, $fontColor06);
+                                text-decoration: none;
+                                border-bottom-width: 1px;
+                                border-bottom-style: solid;
+                                border-image: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 90%);
+                                border-image: -o-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+                                border-image: -moz-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+                                border-image: -ms-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+                                border-image: -webkit-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+                                border-image-slice: 1;
+                            }
                         }
                     }
 

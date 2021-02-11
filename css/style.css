@@ -7,6 +7,7 @@
   --font-color-3: #AFAFAF;
   --font-color-4: #959595;
   --font-color-5: #6E6E6E;
+  --font-color-6: #5A5A5A;
   --background-color-1: #f5f5f5;
   --background-color-2: #fb8500;
   --background-color-3: #ffb703;
@@ -122,6 +123,9 @@ p {
   font-weight: var(--font-weight-normal, 300);
   color: var(--font-color-1, #000);
   letter-spacing: var(--font-letterspacing-p, 0.025rem); }
+
+figcaption p {
+  color: var(--font-color-6, #5A5A5A); }
 
 a, a:active, a:hover {
   background-color: transparent;
@@ -206,6 +210,7 @@ li {
   --font-color-3: #AFAFAF;
   --font-color-4: #959595;
   --font-color-5: #6E6E6E;
+  --font-color-6: #5A5A5A;
   --background-color-1: #f5f5f5;
   --background-color-2: #fb8500;
   --background-color-3: #ffb703;
@@ -321,6 +326,9 @@ p {
   font-weight: var(--font-weight-normal, 300);
   color: var(--font-color-1, #000);
   letter-spacing: var(--font-letterspacing-p, 0.025rem); }
+
+figcaption p {
+  color: var(--font-color-6, #5A5A5A); }
 
 a, a:active, a:hover {
   background-color: transparent;
@@ -405,6 +413,7 @@ li {
   --font-color-3: #AFAFAF;
   --font-color-4: #959595;
   --font-color-5: #6E6E6E;
+  --font-color-6: #5A5A5A;
   --background-color-1: #f5f5f5;
   --background-color-2: #fb8500;
   --background-color-3: #ffb703;
@@ -520,6 +529,9 @@ p {
   font-weight: var(--font-weight-normal, 300);
   color: var(--font-color-1, #000);
   letter-spacing: var(--font-letterspacing-p, 0.025rem); }
+
+figcaption p {
+  color: var(--font-color-6, #5A5A5A); }
 
 a, a:active, a:hover {
   background-color: transparent;
@@ -1514,6 +1526,17 @@ li {
       border: 1px solid var(--font-color-1, #000);
       object-fit: contain;
       height: 100%; }
+    .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper > section > figure .breadcrumb {
+      color: var(--font-color-6, #5A5A5A);
+      text-decoration: none;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-image: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 90%);
+      border-image: -o-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+      border-image: -moz-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+      border-image: -ms-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+      border-image: -webkit-linear-gradient(left, black 0%, rgba(0, 0, 0, 0) 90%);
+      border-image-slice: 1; }
   .portfoliocasestudy_wrapper > #id_SubSections > .componentsection > .linkwrapper .splitcolumnsection {
     display: flex;
     justify-content: space-between;
