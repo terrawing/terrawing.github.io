@@ -45,6 +45,7 @@
         @include generateGeneralFontCSS(var(--font-size-homemaintext, $pHomeMainTextFontSize), var(--font-lineheight-homemaintext, $pHomeMainTextLineHeight));
     }
 
+    /*
     .fancyborder {
         border: 10px solid var(--font-color-1, $fontColor01);
         border-image-source: url(../images/website/titleboxwrap.png);
@@ -52,7 +53,7 @@
         border-image-repeat: repeat;
         display: inline-table;
         margin-bottom: var(--margin, $margin);
-    }
+    }*/
 
     .yellowhighlight {
         background: var(--background-color-7, $bgColor07);
@@ -100,12 +101,49 @@
     .no-widow {
         display: inline-block;
     }
+
+    .linkbutton {
+        text-decoration: none;
+        color: var(--font-color-1, $fontColor01);
+        padding: #{$padding / 3} #{$padding / 3} #{$padding / 2.5} #{$padding / 3};
+        border: 1px solid var(--font-color1, $fontColor01);
+        width: 200px;
+        max-width: 200px;
+        min-width: 200px;
+        border-radius: 3px;
+        background: rgba(0, 0, 0, 0);
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        transition: transform .3s ease-out;
+        -webkit-transition: transform .3s ease-out;
+        -moz-transition: transform .3s ease-out;
+
+        &:hover, &:focus, &:active {
+            background: var(--background-color-4, $bgColor04);
+            color: var(--font-color-2, $fontColor02);
+            border: 1px solid var(--font-color1, $fontColor01) !important;
+            transform: scale(1.1);
+        }
+    }
+
+    .linkbutton-main {
+        background: var(--background-color-4, $bgColor04);
+        color: var(--font-color-2, $fontColor02);
+        display: block;
+    }
 }
 
 // 1025 - 1280
 @mixin textStyleCSS_1280 {
     .maintext {
         @include generateGeneralFontCSS(var(--font-size-homemaintext-1280, $pHomeMainTextFontSize_1280), var(--font-lineheight-homemaintext-1280, $pHomeMainTextLineHeight_1280));
+    }
+
+    .linkbutton-small {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
     }
 }
 
@@ -126,6 +164,25 @@
     .maintext, .cta {
         @include generateGeneralFontCSS(var(--font-size-homemaintext-1024, $pHomeMainTextFontSize_1024), var(--font-lineheight-homemaintext-1024, $pHomeMainTextLineHeight_1024));
     }
+
+    .linkbutton {
+        margin: 0 auto;
+        width: 225px;
+        max-width: 225px;
+        min-width: 225px;
+    }
+
+    .linkbutton-medium {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .linkbutton-small {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
 }
 
 // < 768 
@@ -136,6 +193,13 @@
 
     .cta-bottom {
         display: block;
+    }
+
+    .linkbutton-medium, .linkbutton-small {
+        margin: 0 auto;
+        width: 225px;
+        max-width: 225px;
+        min-width: 225px;
     }
 }
 
@@ -607,6 +671,7 @@
             }
 
             // Portfolio, About, Contact hover and clicked state
+            /*
             & > #id_PortfolioSubSection:hover, & > #id_PortfolioSubSection:active,
             & > #id_AboutSubSection:hover, & > #id_AboutSubSection:active,
             & > #id_ContactSubSection:hover, & > #id_ContactSubSection:active {
@@ -621,7 +686,7 @@
                 & .fancyborder {
                     border-image-source: url(../images/website/titleboxwrap2.png);
                 }
-            }
+            }*/
         }
     }
 }
@@ -942,6 +1007,7 @@
             }
 
             // Resume, Award hover and clicked state
+            /*
             & > #id_AwardsSubSection:hover, & > #id_AwardsSubSection:active,
             & > #id_ResumeSubSection:hover, & > & > #id_ResumeSubSection:active {
                 background: var(--background-color-4, $bgColor04);
@@ -955,7 +1021,7 @@
                 & .fancyborder {
                     border-image-source: url(../images/website/titleboxwrap2.png);
                 }
-            }
+            }*/
         }
     }
 }
@@ -1195,6 +1261,7 @@
             }
 
             // Email, linkedin, typeform hover and clicked state
+            /*
             & > #id_EmailSubSection:hover, & > #id_EmailSubSection:active,
             & > #id_LinkedinSubSection:hover, & > #id_LinkedinSubSection:active,
             & > #id_TypeformSubSection:hover, & > #id_TypeformSubSection:active {
@@ -1209,7 +1276,7 @@
                 & .fancyborder {
                     border-image-source: url(../images/website/titleboxwrap2.png);
                 }
-            }
+            }*/
         }
     }
 }
@@ -1454,6 +1521,7 @@
             }
 
             // case study, design, code hover and clicked state
+            /*
             & > #id_CaseStudySubSection:hover, & > #id_CaseStudySubSection:active,
             & > #id_DesignSubSection:hover, & > #id_DesignSubSection:active,
             & > #id_CodeSubSection:hover, & > #id_CodeSubSection:active {
@@ -1468,7 +1536,7 @@
                 & .fancyborder {
                     border-image-source: url(../images/website/titleboxwrap2.png);
                 }
-            }
+            }*/
         }
     }
 }
@@ -1646,7 +1714,7 @@
                         color: var(--font-color-1, $fontColor01);
 
                         & > div {
-                            padding: #{$padding / 2} var(--padding, 1.5rem) 0 var(--padding, $padding);
+                            padding: #{$padding / 2} var(--padding, $padding) #{$padding / 1.5} var(--padding, $padding);
                         }
 
                         & .imagebox {
@@ -1673,6 +1741,7 @@
                 }
 
                 // all cards hover and clicked state
+                /*
                 & > div:hover, & > div:active {
                     background: var(--background-color-4, $bgColor04);
                     transform: scale(1.025);
@@ -1689,7 +1758,7 @@
                             }
                         }
                     }
-                }
+                }*/
             }
         }
     }

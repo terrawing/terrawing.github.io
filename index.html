@@ -83,7 +83,7 @@
                 <!-- Home Sub section Starts -->
                 <article id="id_HomeSubSection">
                     <div class="linkwrapper">
-                        <div>
+                        <div class="sr-only">
                             <header>
                                 <h3 class="heading2 fancyborder mt-0 mb-0" aria-labelledby="id_HomeSubSection">Home</h3>
                             </header>
@@ -94,10 +94,14 @@
                                 <h4 class="heading1 fancyborder" aria-labelledby="id_HomeSidebar">Welcome!</h4>
                             </header>
                             <div>
-                                <p class="maintext mt-0">Hi, my name is William and I welcome you to my portfolio website! I am currently searching for opportunities that specialize in user experience, user interface, graphic design or web design.
+                                <p class="maintext mt-0">Hi, my name is William and welcome to my portfolio! I am currently searching for opportunities that specialize in user experience, user interface, graphic design or web design.
                                     <br /><br />
-                                    <span class="cta cta-right"><em>Click the panels to the right to browse through my</em> <span class="no-widow"><em>website.</em> &#11157;</span></span>
-                                    <span class="cta cta-bottom"><em>Click the panels at the bottom to browse through my</em> <span class="no-widow"><em>website.</em> &#11015;</span></span>
+                                    <span class="cta cta-right"><em>Click the panels to the right to browse through my website. <span class="no-widow">Especially to</span></em></span>
+                                    <span class="cta cta-bottom"><em>Click the panels at the bottom to browse through my website. <span class="no-widow">Especially to</span></em></span>
+                                    <br />
+                                    <span id="id_PortfolioCta" class="cta linkbutton linkbutton-main" tabindex="0" role="button" aria-pressed="false">
+                                        View Case Studies
+                                    </span>
                                 </p>
                                 <img src="./images/website/homeimg.png" alt="Home Image" aria-label="Home Image" />
                             </div>
@@ -108,49 +112,55 @@
 
                 <!-- Portfolio Sub section Starts -->
                 <article id="id_PortfolioSubSection">
-                    <a href="portfolio.html" class="linkwrapper" aria-label="Goes to the portfolio page">
+                    <div class="linkwrapper">
                         <div>
                             <header>
                                 <h3 class="heading2 fancyborder mt-0 mb-0" aria-labelledby="id_PortfolioSubSection">Portfolio</h3>
                             </header>
-                            <p>All the work I have done are displayed here.</p>
+                            <p class="mt-0 mb-0">View the work I have done.</p>
+                            <br />
+                            <a class="linkbutton" href="portfolio.html" aria-label="Goes to the portfolio page">View My Work</a>
                         </div>
                         <figure class="imagebox">           
                             <img role="link" src="./images/website/portfolioimg.png" alt="Portfolio Image" aria-label="Portfolio splash image" />
                         </figure>
-                    </a>
+                    </div>
                 </article>
                 <!-- Portfolio Sub section Ends -->
 
                 <!-- About Sub section Starts -->
                 <article id="id_AboutSubSection">
-                    <a href="about.html" class="linkwrapper" aria-label="Goes to the about page">
+                    <div class="linkwrapper" >
                         <div>
                             <header>
                                 <h3 class="heading2 fancyborder mt-0 mb-0" aria-labelledby="id_AboutSubSection">About</h3>
                             </header>
-                            <p>Detailed information about me.</p>
+                            <p class="mt-0 mb-0">View information about me.</p>
+                            <br />
+                            <a class="linkbutton" href="about.html" aria-label="Goes to the about page">Get to Know</a>
                         </div>
                         <figure class="imagebox">
                             <img role="link" src="./images/website/aboutimg.png" alt="About Image" aria-label="About splash image" />
                         </figure>
-                    </a>
+                    </div>
                 </article>
                 <!-- About Sub section Ends -->
 
                 <!-- Contact Sub section Starts -->
                 <article id="id_ContactSubSection">
-                    <a href="contact.html" class="linkwrapper" aria-label="Goes to the contact page">
+                    <div class="linkwrapper">
                         <div>
                             <header>
                                 <h3 class="heading2 fancyborder mt-0 mb-0" aria-labelledby="id_ContactSubSection">Contact</h3>
                             </header>
-                            <p>Let's talk here.</p>
+                            <p class="mt-0 mb-0">Lets get in touch.</p>
+                            <br />
+                            <a class="linkbutton linkbutton-small" href="contact.html" aria-label="Goes to the contact page">Contact me</a>
                         </div>
                         <figure class="imagebox">
                             <img role="link" src="./images/website/contactimg.png" alt="Contact Image" aria-label="Contact splash image" />
                         </figure>
-                    </a>
+                    </div>
                 </article>
                 <!-- Contact Sub section Ends -->
                 
@@ -166,5 +176,6 @@
     </section>
     <script src="./js/navigation.js"></script>
     <script src="./js/website.js"></script>
+    <script src="./js/homeredirect.js"></script>
 </body>
 </html>
