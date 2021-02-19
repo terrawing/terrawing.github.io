@@ -124,7 +124,7 @@
                 max-width: 800px;
                 min-width: 800px;
                 margin: 0 auto;
-                padding: 0 var(--padding, $padding);
+                padding: 1px var(--padding, $padding) 0 var(--padding, $padding);
             }
 
             // Applies to all odd articles except the first one, basically starting on second but is considered as first
@@ -342,10 +342,14 @@
                             min-width: 225px;
                             border-radius: 3px;
                             background: var(--font-color-2, $fontColor02);
+                            transition: transform .3s ease-out;
+                            -webkit-transition: transform .3s ease-out;
+                            -moz-transition: transform .3s ease-out;
 
                             &:hover, &:focus, &:active {
                                 background: var(--background-color-4, $bgColor04);
                                 color: var(--font-color-2, $fontColor02);
+                                transform: scale(1.1);  
                             }
                         }
 

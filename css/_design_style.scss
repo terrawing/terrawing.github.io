@@ -157,10 +157,14 @@
                             min-width: 225px;
                             border-radius: 3px;
                             background: var(--font-color-2, $fontColor02);
+                            transition: transform .3s ease-out;
+                            -webkit-transition: transform .3s ease-out;
+                            -moz-transition: transform .3s ease-out;
 
                             &:hover, &:focus, &:active {
                                 background: var(--background-color-4, $bgColor04);
                                 color: var(--font-color-2, $fontColor02);
+                                transform: scale(1.1);
                             }
                         }
 

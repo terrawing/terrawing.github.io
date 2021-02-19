@@ -243,10 +243,14 @@
         border-radius: 3px; 
         font-family: fieldwork, sans-serif;
         @include generateGeneralFontCSS(var(--font-size-p, $pFontSize), var(--font-lineheight-p, $pLineHeight), var(--font-weight-normal, $fontWeightNormal), var(--font-color-1, $fontColor01), var(--font-letterspacing-p, $pLetterSpacing));
+        transition: transform .3s ease-out;
+        -webkit-transition: transform .3s ease-out;
+        -moz-transition: transform .3s ease-out;
 
         &:hover, &:active, &:focus {
             background-color: var(--background-color-4, $bgColor04); 
-            color: var(--font-color-2, $fontColor02);  
+            color: var(--font-color-2, $fontColor02);
+            transform: scale(1.1);  
         }
     }
 
@@ -624,7 +628,7 @@
             & > #id_PortfolioSubSection {
                 background: var(--background-color-5, $bgColor05);
                 grid-column: 2 / span 2;
-                transition: .5s;
+                
 
                 & img {
                     width: 240px;
@@ -641,7 +645,7 @@
             & > #id_AboutSubSection {
                 background: var(--background-color-3, $bgColor03);
                 grid-column: 3 / 4;
-                transition: .5s;
+                
 
                 & img {
                     width: 225px;
@@ -657,7 +661,7 @@
             // Contact Area
             & > #id_ContactSubSection {
                 background: var(--background-color-6, $bgColor06);
-                transition: .5s;
+                
 
                 & img {
                     width: auto;
@@ -981,7 +985,7 @@
             & > #id_AwardsSubSection {
                 background: var(--background-color-2, $bgColor02);
                 grid-row: 3 / 4;
-                transition: .5s;
+                
 
                 & img {
                     width: 150px;
@@ -995,7 +999,7 @@
             // resume area
             & > #id_ResumeSubSection {
                 background: var(--background-color-5, $bgColor05);
-                transition: .5s;
+                
 
                 & img {
                     width: 200px;
@@ -1219,7 +1223,7 @@
             & > #id_EmailSubSection {
                 background: var(--background-color-3, $bgColor03);
                 grid-column: 3 / 4;
-                transition: .5s;
+                
 
                 & img {
                     width: 180px;
@@ -1234,7 +1238,7 @@
             & > #id_LinkedinSubSection {
                 background: var(--background-color-5, $bgColor05);
                 grid-column: 2 / 3;
-                transition: .5s;
+                
 
                 & img {
                     width: 180px;
@@ -1249,7 +1253,7 @@
             & > #id_TypeformSubSection {
                 background: var(--background-color-2, $bgColor02);
                 grid-column: 1 / 2;
-                transition: .5s;
+                
 
                 & img {
                     width: 180px;
@@ -1477,7 +1481,7 @@
                 background: var(--background-color-6, $bgColor06);
                 grid-row: 2 / 3;
                 grid-column: 3 / span 2;
-                transition: .5s;
+                
 
                 & img {
                     width: 250px;
@@ -1493,7 +1497,7 @@
                 background: var(--background-color-2, $bgColor02);
                 grid-row: 2 / 3;
                 grid-column: 1 / span 2;
-                transition: .5s;
+                
 
                 & img {
                     width: 200px;
@@ -1509,7 +1513,7 @@
                 background: var(--background-color-3, $bgColor03);
                 grid-row: 1 / 2;
                 grid-column: 4 / 5;
-                transition: .5s;
+                
 
                 & img {
                     width: 200px;
@@ -1705,7 +1709,7 @@
                 & > div[role="listitem"] {
                     background: var(--background-color-1, $bgColor01);
                     margin-bottom: var(--margin, $margin);
-                    transition: .5s;
+                    
 
                     & > .linkwrapper {
                         display: flex;
@@ -1907,22 +1911,22 @@
 
             // applies to all sub section areas
             & > div[role="list"] {
-                width: 100% !important;
-                max-width: 100% !important;
-                min-width: 100% !important;
-                padding: 0;
+                padding: 0 var(--padding, $padding);
+                width: calc(100% - #{$padding}) !important;
+                max-width: calc(100% - #{$padding}) !important;
+                min-width: calc(100% - #{$padding}) !important;
 
                 & > div[role="listitem"] {
-                    margin-bottom: 0;
+                    margin-bottom: #{$margin + .5rem};
 
                     & > .linkwrapper {
                         & > div {
-                            padding: var(--padding, 1.5rem) #{$padding + ($padding / 2)} #{$padding / 2} #{$padding + ($padding / 2)};
+                            padding: var(--padding, 1.5rem) #{$padding + ($padding / 2)};
                         }
                     }
 
                     &:last-of-type {
-                        margin-bottom: 0;
+                        margin-bottom: #{$margin + .5rem};
                     }
                 }
             }
