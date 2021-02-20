@@ -2083,6 +2083,7 @@ li {
       .home_wrapper > #id_SubSections > #id_HomeSubSection {
         grid-row: 1 / 2; }
         .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_HomeSidebar > div > svg {
+          margin-top: 1rem;
           margin-bottom: 1rem; }
       .home_wrapper > #id_SubSections > #id_PortfolioSubSection {
         grid-column: 1 / 2;
