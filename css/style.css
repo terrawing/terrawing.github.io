@@ -657,7 +657,10 @@ li {
 }*/
 .yellowhighlight {
   background: var(--background-color-7, #ffff00);
-  display: inline-table; }
+  display: inline-table;
+  border-right-color: rgba(0, 0, 0, 0);
+  border-right-width: 3px;
+  border-right-style: solid; }
 
 .disabled {
   border-bottom-width: 0 !important;
@@ -697,7 +700,7 @@ li {
 .linkbutton {
   text-decoration: none;
   color: var(--font-color-1, #000);
-  padding: 0.5rem 0.5rem 0.6rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5494505495rem 0.5rem;
   border: 1px solid var(--font-color1, #000);
   width: 200px;
   max-width: 200px;
@@ -1063,11 +1066,10 @@ li {
           grid-template-columns: minmax(0, 47.5%) 1fr;
           column-gap: var(--margin, 1.5rem); }
           .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_HomeSidebar > div > svg {
-            width: 250px;
-            max-width: 250px;
-            min-width: 250px;
+            width: 92.5%;
+            max-width: 92.5%;
+            min-width: 92.5%;
             height: auto;
-            border-radius: 3px;
             margin: 0; }
     .home_wrapper > #id_SubSections > #id_PortfolioSubSection {
       background: var(--background-color-5, #219ebc);
@@ -1879,9 +1881,9 @@ li {
     min-width: 100%; }
 
   .home_wrapper > #id_SubSections > #id_HomeSubSection > .linkwrapper > #id_HomeSidebar > div > svg {
-    width: 230px;
-    max-width: 230px;
-    min-width: 230px; }
+    width: 90%;
+    max-width: 90%;
+    min-width: 90%; }
 
   .mathology_wrapper > #id_SubSections > .titleareasubsection > .linkwrapper > img {
     object-position: -100px 0; } }

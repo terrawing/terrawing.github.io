@@ -58,6 +58,9 @@
     .yellowhighlight {
         background: var(--background-color-7, $bgColor07);
         display: inline-table;
+        border-right-color: rgba(0, 0, 0, 0);
+        border-right-width: 3px;
+        border-right-style: solid;
     }
 
     .disabled {
@@ -105,7 +108,7 @@
     .linkbutton {
         text-decoration: none;
         color: var(--font-color-1, $fontColor01);
-        padding: #{$padding / 3} #{$padding / 3} #{$padding / 2.5} #{$padding / 3};
+        padding: #{$padding / 3} #{$padding / 3} #{$padding / 2.73} #{$padding / 3};
         border: 1px solid var(--font-color1, $fontColor01);
         width: 200px;
         max-width: 200px;
@@ -611,12 +614,14 @@
                             column-gap: var(--margin, $margin);
       
                             & > svg {
-                                width: 250px;
-                                max-width: 250px;
-                                min-width: 250px;
+                                //width: 250px;
+                                //max-width: 250px;
+                                //min-width: 250px;
                                 //width: clamp(200px, 25vw, 320px);
+                                width: 92.5%;
+                                max-width: 92.5%;
+                                min-width: 92.5%;
                                 height: auto;
-                                border-radius: 3px;
                                 margin: 0;
                             }
                         }
@@ -704,9 +709,9 @@
                     & > #id_HomeSidebar {
                         & > div {
                             & > svg {
-                                width: 230px;
-                                max-width: 230px;
-                                min-width: 230px;
+                                width: 90%;
+                                max-width: 90%;
+                                min-width: 90%;
                             }
                         }
                     }
