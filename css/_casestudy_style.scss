@@ -362,6 +362,12 @@
 
     .mathology_wrapper {
         & > #id_SubSections {
+            & > .componentsection {
+                & ul {
+                    padding-left: 22px;
+                }
+            }
+
             & > .viewmorecases {
                 background: var(--background-color-1, $bgColor01) !important;
             }
